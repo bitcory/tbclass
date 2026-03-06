@@ -4,9 +4,17 @@ import { NextResponse } from 'next/server';
 const isClerkConfigured = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY &&
   !process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY.includes('placeholder');
 
-export default isClerkConfigured
-  ? clerkMiddleware()
-  : function middleware() { return NextResponse.next(); };
+const clerk = isClerkConfigured ? clerkMiddleware() : null;
+
+export default async function middleware(request, event) {
+  if (!clerk) return NextResponse.next();
+  try {
+    return await clerk(request, event);
+  } catch (error) {
+    console.error('Clerk middleware error, falling through:', error.message);
+    return NextResponse.next();
+  }
+}
 
 export const config = {
   matcher: [
