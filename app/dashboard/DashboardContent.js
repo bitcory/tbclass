@@ -4,9 +4,29 @@ import { useUser } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import Header from '../components/Header';
+import { useClerkConfigured } from '../components/ClerkWrapper';
 import { getUserRole, isAdmin } from '../lib/auth';
 
 export default function DashboardContent() {
+  const clerkConfigured = useClerkConfigured();
+  if (!clerkConfigured) return <DashboardNoAuth />;
+  return <DashboardInner />;
+}
+
+function DashboardNoAuth() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Header alwaysScrolled={true} />
+      <main className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center py-20">
+          <p className="text-xl text-gray-600">인증 서비스를 사용할 수 없습니다.</p>
+        </div>
+      </main>
+    </div>
+  );
+}
+
+function DashboardInner() {
   const { isLoaded, isSignedIn, user } = useUser();
   const router = useRouter();
 

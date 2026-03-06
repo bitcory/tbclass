@@ -4,9 +4,49 @@ import Link from 'next/link';
 import { useAuth, SignInButton } from '@clerk/nextjs';
 import { useClerkConfigured } from './ClerkWrapper';
 
+function HeroAuthButton() {
+  const { isSignedIn } = useAuth();
+  return !isSignedIn ? (
+    <SignInButton mode="modal">
+      <button className="group relative w-auto px-8 sm:px-10 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full text-base sm:text-lg font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:from-orange-600 hover:to-red-600">
+        <span className="relative z-10 flex items-center gap-2">
+          가이드 시작하기
+          <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
+        </span>
+        <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 opacity-0 group-hover:opacity-20 transition-opacity" />
+      </button>
+    </SignInButton>
+  ) : (
+    <Link
+      href="/guide"
+      className="group relative w-auto px-8 sm:px-10 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full text-base sm:text-lg font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:from-orange-600 hover:to-red-600"
+    >
+      <span className="relative z-10 flex items-center gap-2">
+        가이드 시작하기
+        <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
+      </span>
+      <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 opacity-0 group-hover:opacity-20 transition-opacity" />
+    </Link>
+  );
+}
+
+function DefaultHeroButton() {
+  return (
+    <Link
+      href="/guide"
+      className="group relative w-auto px-8 sm:px-10 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full text-base sm:text-lg font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:from-orange-600 hover:to-red-600"
+    >
+      <span className="relative z-10 flex items-center gap-2">
+        가이드 시작하기
+        <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
+      </span>
+      <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 opacity-0 group-hover:opacity-20 transition-opacity" />
+    </Link>
+  );
+}
+
 export default function Hero() {
   const clerkConfigured = useClerkConfigured();
-  const { isSignedIn } = useAuth();
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) element.scrollIntoView({ behavior: 'smooth' });
@@ -37,28 +77,7 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-row gap-3 justify-center items-center mb-16">
-          {clerkConfigured && !isSignedIn ? (
-            <SignInButton mode="modal">
-              <button className="group relative w-auto px-8 sm:px-10 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full text-base sm:text-lg font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:from-orange-600 hover:to-red-600">
-                <span className="relative z-10 flex items-center gap-2">
-                  가이드 시작하기
-                  <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 opacity-0 group-hover:opacity-20 transition-opacity" />
-              </button>
-            </SignInButton>
-          ) : (
-            <Link
-              href="/guide"
-              className="group relative w-auto px-8 sm:px-10 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full text-base sm:text-lg font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:from-orange-600 hover:to-red-600"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                가이드 시작하기
-                <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 opacity-0 group-hover:opacity-20 transition-opacity" />
-            </Link>
-          )}
+          {clerkConfigured ? <HeroAuthButton /> : <DefaultHeroButton />}
           <button
             onClick={() => scrollToSection('features')}
             className="group relative w-auto px-5 sm:px-9 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white rounded-full text-base sm:text-lg font-bold overflow-hidden transition-all hover:scale-105 hover:bg-white/20 hover:border-white hover:shadow-xl"

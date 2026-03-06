@@ -7,8 +7,10 @@ import { useClerkConfigured } from './ClerkWrapper';
 import { useUser, useAuth, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
 import { isAdmin } from '../lib/auth';
 
-function ClerkAuthButtons({ isScrolled, isAdminUser }) {
+function ClerkAuthButtons({ isScrolled }) {
   const { isSignedIn } = useAuth();
+  const { user } = useUser();
+  const isAdminUser = isSignedIn && isAdmin(user);
 
   return (
     <div className="hidden md:flex items-center gap-3">
@@ -43,8 +45,9 @@ function ClerkAuthButtons({ isScrolled, isAdminUser }) {
   );
 }
 
-function ClerkMobileAuth({ onMenuClose, user }) {
+function ClerkMobileAuth({ onMenuClose }) {
   const { isSignedIn } = useAuth();
+  const { user } = useUser();
 
   return (
     <>
@@ -82,8 +85,6 @@ function ClerkMobileAuth({ onMenuClose, user }) {
 
 export default function Header({ alwaysScrolled = false }) {
   const clerkConfigured = useClerkConfigured();
-  const clerkUser = useUser();
-  const { isSignedIn, user } = clerkConfigured ? clerkUser : { isSignedIn: false, user: null };
   const [isScrolled, setIsScrolled] = useState(alwaysScrolled);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [guideDropdownOpen, setGuideDropdownOpen] = useState(false);
@@ -244,7 +245,7 @@ export default function Header({ alwaysScrolled = false }) {
           </nav>
 
           {/* Right section - Auth */}
-          {clerkConfigured && <ClerkAuthButtons isScrolled={isScrolled} isAdminUser={isSignedIn && isAdmin(user)} />}
+          {clerkConfigured && <ClerkAuthButtons isScrolled={isScrolled} />}
 
           {/* Mobile hamburger */}
           <button
@@ -295,7 +296,7 @@ export default function Header({ alwaysScrolled = false }) {
           <Link href="/#pricing" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             요금제
           </Link>
-          {clerkConfigured && <ClerkMobileAuth onMenuClose={() => setIsMobileMenuOpen(false)} user={user} />}
+          {clerkConfigured && <ClerkMobileAuth onMenuClose={() => setIsMobileMenuOpen(false)} />}
         </nav>
       </div>
 

@@ -11,8 +11,12 @@ import { Users, UserCheck, Clock, ShieldX, Shield } from 'lucide-react';
 
 export default function AdminContent() {
   const clerkConfigured = useClerkConfigured();
-  const clerkUser = useUser();
-  const { isLoaded, isSignedIn, user } = clerkConfigured ? clerkUser : { isLoaded: true, isSignedIn: false, user: null };
+  if (!clerkConfigured) return null;
+  return <AdminInner />;
+}
+
+function AdminInner() {
+  const { isLoaded, isSignedIn, user } = useUser();
   const router = useRouter();
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
