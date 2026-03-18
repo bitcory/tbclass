@@ -91,6 +91,9 @@ export default function Header({ alwaysScrolled = false }) {
   const [toolbDropdownOpen, setToolbDropdownOpen] = useState(false);
   const [videoDropdownOpen, setVideoDropdownOpen] = useState(false);
   const [showLoginAlert, setShowLoginAlert] = useState(false);
+  const [showAdminModal, setShowAdminModal] = useState(false);
+  const [adminPassword, setAdminPassword] = useState('');
+  const [adminError, setAdminError] = useState(false);
 
   useEffect(() => {
     if (alwaysScrolled) return;
@@ -244,8 +247,17 @@ export default function Header({ alwaysScrolled = false }) {
             </Link>
           </nav>
 
-          {/* Right section - Auth */}
-          {clerkConfigured && <ClerkAuthButtons isScrolled={isScrolled} />}
+          {/* Right section */}
+          <div className="hidden lg:flex items-center gap-3">
+            {clerkConfigured && <ClerkAuthButtons isScrolled={isScrolled} />}
+            <button
+              onClick={() => setShowAdminModal(true)}
+              className={`p-2 rounded-full transition-colors ${isScrolled ? 'hover:bg-gray-100 text-gray-400' : 'hover:bg-white/10 text-white/40'}`}
+              title="관리자"
+            >
+              <Settings className="w-5 h-5" />
+            </button>
+          </div>
 
           {/* Mobile hamburger */}
           <button
@@ -299,6 +311,52 @@ export default function Header({ alwaysScrolled = false }) {
           {clerkConfigured && <ClerkMobileAuth onMenuClose={() => setIsMobileMenuOpen(false)} />}
         </nav>
       </div>
+
+      {/* Admin password modal */}
+      {showAdminModal && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/50 backdrop-blur-sm" onClick={() => { setShowAdminModal(false); setAdminPassword(''); setAdminError(false); }}>
+          <div className="bg-white rounded-2xl p-6 w-80 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center gap-2 mb-4">
+              <Shield className="w-5 h-5 text-orange-500" />
+              <h3 className="font-bold text-gray-900">관리자 인증</h3>
+            </div>
+            <input
+              type="password"
+              value={adminPassword}
+              onChange={(e) => { setAdminPassword(e.target.value); setAdminError(false); }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  if (adminPassword === '1124') {
+                    setShowAdminModal(false);
+                    setAdminPassword('');
+                    window.location.href = '/admin/bookings';
+                  } else {
+                    setAdminError(true);
+                  }
+                }
+              }}
+              placeholder="비밀번호를 입력하세요"
+              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:border-orange-500 mb-2"
+              autoFocus
+            />
+            {adminError && <p className="text-red-500 text-xs mb-2">비밀번호가 올바르지 않습니다.</p>}
+            <button
+              onClick={() => {
+                if (adminPassword === '1124') {
+                  setShowAdminModal(false);
+                  setAdminPassword('');
+                  window.location.href = '/admin/bookings';
+                } else {
+                  setAdminError(true);
+                }
+              }}
+              className="w-full py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold hover:opacity-90 transition-opacity"
+            >
+              확인
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Login alert */}
       {showLoginAlert && (
