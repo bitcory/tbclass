@@ -223,21 +223,21 @@ export default function Header({ alwaysScrolled = false }) {
               )}
             </div>
 
-            <Link href="/guide?tab=expert" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
+            {/* <Link href="/guide?tab=expert" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
               전문가과정
-            </Link>
+            </Link> */}
 
-            <Link href="/practice" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
+            {/* <Link href="/practice" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
               실습과제
-            </Link>
+            </Link> */}
 
             <Link href="/library" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
               자료실
             </Link>
 
-            <Link href="/prompt-restaurant" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
+            {/* <Link href="/prompt-restaurant" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
               프롬프트맛집
-            </Link>
+            </Link> */}
 
             <Link href="/#pricing" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
               요금제
@@ -269,18 +269,18 @@ export default function Header({ alwaysScrolled = false }) {
           <Link href="/video-guide" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             영상가이드
           </Link>
-          <Link href="/guide?tab=expert" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+          {/* <Link href="/guide?tab=expert" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             전문가과정
-          </Link>
-          <Link href="/practice" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+          </Link> */}
+          {/* <Link href="/practice" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             실습과제
-          </Link>
+          </Link> */}
           <Link href="/library" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             자료실
           </Link>
-          <Link href="/prompt-restaurant" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+          {/* <Link href="/prompt-restaurant" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             프롬프트맛집
-          </Link>
+          </Link> */}
           <div className="py-2 space-y-1">
             <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">TOOLB</p>
             <Link href="/guide/instructor-intro" className="block py-1.5 pl-3 text-gray-800 hover:text-orange-500 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
