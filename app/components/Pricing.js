@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function Pricing() {
   return (
@@ -21,18 +22,18 @@ export default function Pricing() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* 초급클래스 */}
+          {/* 초급클래스 (4시간) */}
           <div className="group relative p-8 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-orange-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-900/10">
-            <h3 className="text-2xl font-bold text-white mb-2">초급클래스</h3>
+            <h3 className="text-2xl font-bold text-white mb-2">초급클래스 <span className="text-red-500">(4시간)</span></h3>
             <div className="flex items-baseline mb-6">
               <span className="text-4xl font-bold text-white">₩100,000</span>
             </div>
             <p className="text-gray-400 mb-8 h-12">
               AI 이미지 생성의 기초를 배우는<br />입문자를 위한 클래스
             </p>
-            <button className="w-full py-4 rounded-xl bg-gray-800 text-white font-semibold hover:bg-gray-700 transition-colors mb-8">
+            <Link href="/booking/beginner" className="block text-center w-full py-4 rounded-xl bg-gray-800 text-white font-semibold hover:bg-gray-700 transition-colors mb-8">
               신청하기
-            </button>
+            </Link>
             <ul className="space-y-4 text-gray-300">
               <PricingCheck color="text-green-500">기본 가이드 접근</PricingCheck>
               <PricingCheck color="text-green-500">튜토리얼 콘텐츠</PricingCheck>
@@ -40,45 +41,44 @@ export default function Pricing() {
             </ul>
           </div>
 
-          {/* 중급클래스 */}
+          {/* 중급클래스*/}
           <div className="group relative p-8 rounded-2xl bg-gray-900/80 border border-orange-500/30 hover:border-orange-500 transition-all duration-300 hover:-translate-y-2 shadow-2xl shadow-orange-900/20">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full text-xs font-bold text-white tracking-wider uppercase">
               Most Popular
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">중급클래스</h3>
+            <h3 className="text-2xl font-bold text-white mb-2">중급클래스 <span className="text-red-500">(8시간)</span></h3>
             <div className="flex items-baseline mb-6">
               <span className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">₩250,000</span>
             </div>
             <p className="text-gray-400 mb-8 h-12">
               본격적인 창작 활동을 위한<br />심화 과정 클래스
             </p>
-            <button className="w-full py-4 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold hover:opacity-90 transition-opacity mb-8 shadow-lg shadow-orange-900/30">
+            <Link href="/booking/intermediate" className="block text-center w-full py-4 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold hover:opacity-90 transition-opacity mb-8 shadow-lg shadow-orange-900/30">
               신청하기
-            </button>
+            </Link>
             <ul className="space-y-4 text-gray-300">
               <PricingCheck color="text-orange-500">전체 가이드 무제한 접근</PricingCheck>
               <PricingCheck color="text-orange-500">전문가 과정 포함</PricingCheck>
               <PricingCheck color="text-orange-500">실습 과제 및 피드백</PricingCheck>
-              <PricingCheck color="text-orange-500">우선 고객 지원</PricingCheck>
             </ul>
           </div>
 
           {/* 마스터클래스 */}
           <div className="group relative p-8 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-orange-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-900/10">
-            <h3 className="text-2xl font-bold text-white mb-2">마스터클래스</h3>
+            <h3 className="text-2xl font-bold text-white mb-2">마스터클래스 <span className="text-red-500">(12시간)</span></h3>
             <div className="flex items-baseline mb-6">
               <span className="text-4xl font-bold text-white">₩450,000</span>
             </div>
             <p className="text-gray-400 mb-8 h-12">
               팀과 기업을 위한<br />맞춤형 프리미엄 교육
             </p>
-            <button className="w-full py-4 rounded-xl bg-white text-black font-semibold hover:bg-gray-200 transition-colors mb-8">
+            <Link href="/booking/master" className="block text-center w-full py-4 rounded-xl bg-white text-black font-semibold hover:bg-gray-200 transition-colors mb-8">
               신청하기
-            </button>
+            </Link>
             <ul className="space-y-4 text-gray-300">
-              <PricingCheck color="text-gray-400">기업 맞춤 커리큘럼</PricingCheck>
-              <PricingCheck color="text-gray-400">전담 강사 배정</PricingCheck>
-              <PricingCheck color="text-gray-400">팀 단위 특강</PricingCheck>
+              <PricingCheck color="text-red-400">초.중급 클래스 전과정 마스터</PricingCheck>
+              <PricingCheck color="text-red-400">툴비 각종 젬지침 공개 및 개발교육</PricingCheck>
+              <PricingCheck color="text-red-400">툴비 협업 클래스 제공</PricingCheck>
             </ul>
           </div>
         </div>

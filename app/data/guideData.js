@@ -33,10 +33,18 @@ export const categories = [
     id: 'style',
     name: '스타일(STYLE)',
     icon: 'Palette',
-    items: [
-      'digital-painting', 'concept-art', 'matte-painting', '3d-render',
-      'anime-style', 'cartoon-style', 'comic-book', 'watercolor',
+    subcategories: [
+      { name: '디지털 아트', items: ['digital-painting', 'concept-art', 'matte-painting'] },
+      { name: '3D/CG', items: ['3d-render', 'isometric', 'low-poly', 'claymation', 'voxel-art'] },
+      { name: '일러스트레이션', items: ['flat-illustration', 'line-art', 'vector-art', 'children-illustration', 'botanical-art'] },
+      { name: '전통 미술 사조', items: ['watercolor', 'impressionism', 'expressionism', 'surrealism', 'art-nouveau', 'art-deco', 'baroque', 'renaissance', 'ukiyo-e'] },
+      { name: '팝 컬처/현대', items: ['pop-art', 'psychedelic', 'steampunk', 'cyberpunk', 'biopunk', 'solarpunk', 'retro-vintage', 'synthwave', 'minimalism', 'maximalism'] },
+      { name: '애니메이션/만화', items: ['anime-style', 'manga', 'cartoon-style', 'comic-book', 'webtoon-style'] },
+      { name: '캐릭터/피규어/토이 ⭐', items: ['pixar-style', 'disney-style', 'ghibli-style', 'chibi-style', 'kawaii-style', 'funko-pop', 'blind-box', 'gashapon', 'enamel-pin', 'knitted-doll', 'lego-style', 'toy-photography', 'crystal-ball'] },
+      { name: '사진/영화', items: ['photorealism', 'cinematic', 'film-noir', 'documentary'] },
+      { name: '특수 효과', items: ['glitch-art', 'double-exposure', 'pixel-art', 'papercraft', 'stained-glass'] },
     ],
+    get items() { return this.subcategories.flatMap(sub => sub.items); },
   },
   {
     id: 'medium',
@@ -136,7 +144,7 @@ export const categories = [
     name: '자료실',
     icon: 'FolderOpen',
     items: [
-      'blog-post-1', 'blog-post-2', 'blog-post-3',
+      'curriculum-beginner', 'curriculum-intermediate', 'curriculum-advanced',
     ],
   },
   {

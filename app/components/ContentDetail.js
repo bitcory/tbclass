@@ -13,6 +13,22 @@ function HtmlContent({ html, className = '' }) {
   return <div className={className} dangerouslySetInnerHTML={{ __html: processed }} />;
 }
 
+// Highlight keyword in prompt text with red bold
+function HighlightKeyword({ text, keyword }) {
+  if (!keyword || !text) return <>{text}</>;
+  const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const parts = text.split(new RegExp(`(${escaped})`, 'gi'));
+  return (
+    <>
+      {parts.map((part, i) =>
+        part.toLowerCase() === keyword.toLowerCase()
+          ? <span key={i} className="text-red-400 font-bold">{part}</span>
+          : <span key={i}>{part}</span>
+      )}
+    </>
+  );
+}
+
 function CopyButton({ text, className = '' }) {
   const [copied, setCopied] = useState(false);
   const handleCopy = async () => {
@@ -481,25 +497,22 @@ function BlogContent({ item, setImageModalIndex }) {
         </div>
       )}
 
-      {/* Images */}
+      {/* Image */}
       {item.images && item.images.length > 0 && (
         <div>
           <h2 className="text-xl font-bold text-black mb-4">첨부 이미지</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {item.images.map((img, idx) => (
-              <div
-                key={idx}
-                className="group relative aspect-video rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all"
-                onClick={() => setImageModalIndex(idx)}
-              >
-                <img src={img.src} alt={img.caption || ''} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" />
-                {img.caption && (
-                  <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                    <p className="text-white text-xs">{img.caption}</p>
-                  </div>
-                )}
-              </div>
-            ))}
+          <div className="max-w-md">
+            <div
+              className="group relative aspect-video rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all"
+              onClick={() => setImageModalIndex(0)}
+            >
+              <img src={item.images[0].src} alt={item.images[0].caption || ''} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" />
+              {item.images[0].caption && (
+                <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p className="text-white text-xs">{item.images[0].caption}</p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
@@ -507,57 +520,128 @@ function BlogContent({ item, setImageModalIndex }) {
   );
 }
 
+// ===== SUB STYLE COPY BUTTON (light bg variant) =====
+function SubStyleCopyButton({ text, className = '' }) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+  return (
+    <button onClick={handleCopy} className={`flex-shrink-0 p-1.5 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors ${className}`} title="복사">
+      {copied ? <Check className="w-3.5 h-3.5 text-green-500" /> : <Copy className="w-3.5 h-3.5 text-gray-400" />}
+    </button>
+  );
+}
+
 // ===== DEFAULT RENDERER (camera, lighting, style, medium, etc.) =====
-function DefaultContent({ item, setImageModalIndex, setVideoModal, isVideoCategory }) {
+function DefaultContent({ item, setImageModalIndex, setVideoModal, isVideoCategory, copiedPrompt, handleCopyPrompt }) {
   const usageTips = item.usage ? item.usage.filter(tip => tip && tip.trim() !== '') : [];
+  const hasImages = !isVideoCategory && item.images && item.images.length > 0;
 
   return (
     <div className="space-y-8">
-      {item.description && (
-        <div>
-          <h2 className="text-xl font-bold text-black mb-3">설명</h2>
-          <HtmlContent html={item.description} className="text-black leading-relaxed" />
-        </div>
-      )}
+      {/* Top 2-column: Left(description+badges+prompt+tips) / Right(carousel) */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="space-y-4">
+          {item.description && (
+            <div>
+              <h2 className="text-xl font-bold text-black mb-3">설명</h2>
+              <HtmlContent html={item.description} className="text-black leading-relaxed" />
+            </div>
+          )}
 
-      {usageTips.length > 0 && (
-        <div>
-          <h2 className="text-xl font-bold text-black mb-3">활용 팁</h2>
-          <ul className="space-y-2">
-            {usageTips.map((tip, idx) => (
-              <li key={idx} className="flex items-start gap-3 text-black">
-                <span className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold mt-0.5">
-                  {idx + 1}
-                </span>
-                <HtmlContent html={tip} className="leading-relaxed" />
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+          {/* Keyword + Features + Mood Badges */}
+          {(item.prompt || item.features || item.mood) && (
+            <div className="flex flex-wrap gap-2.5">
+              {item.prompt && (
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-bold text-gray-500">키워드</span>
+                  <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg px-3 py-1.5 text-sm font-bold font-mono">{item.prompt}</span>
+                  <button
+                    onClick={handleCopyPrompt}
+                    className="p-1.5 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+                    title="키워드 복사"
+                  >
+                    {copiedPrompt ? <Check className="w-3.5 h-3.5 text-green-500" /> : <Copy className="w-3.5 h-3.5 text-gray-400" />}
+                  </button>
+                </div>
+              )}
+              {item.features && (
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-bold text-gray-500">특징</span>
+                  <span className="bg-orange-500/10 text-orange-600 rounded-lg px-3 py-1 text-sm font-medium">{item.features}</span>
+                </div>
+              )}
+              {item.mood && (
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-bold text-gray-500">분위기</span>
+                  <span className="bg-red-500/10 text-red-600 rounded-lg px-3 py-1 text-sm font-medium">{item.mood}</span>
+                </div>
+              )}
+            </div>
+          )}
 
-      {!isVideoCategory && item.images && item.images.length > 0 && (
-        <div>
-          <h2 className="text-xl font-bold text-black mb-4">예시 이미지</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {item.images.map((img, idx) => (
+          {/* Usage Tips — moved to left column */}
+          {usageTips.length > 0 && (
+            <div>
+              <h2 className="text-xl font-bold text-black mb-3">활용 팁</h2>
+              <ul className="space-y-2">
+                {usageTips.map((tip, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-black">
+                    <span className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold mt-0.5">
+                      {idx + 1}
+                    </span>
+                    <HtmlContent html={tip} className="leading-relaxed" />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+
+        {/* RIGHT — Single Image */}
+        {hasImages && (
+          <div className="space-y-3">
+            <div className="relative rounded-2xl overflow-hidden shadow-lg bg-gray-900">
               <div
-                key={idx}
-                className="group relative aspect-square rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all"
-                onClick={() => setImageModalIndex(idx)}
+                className="aspect-video cursor-pointer"
+                onClick={() => setImageModalIndex(0)}
               >
-                <img src={img.src} alt={img.caption || ''} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
-                {img.caption && (
-                  <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                    <p className="text-white text-xs">{img.caption}</p>
-                  </div>
-                )}
+                <img
+                  src={item.images[0].src}
+                  alt={item.images[0].caption || ''}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
-            ))}
+            </div>
+
+            {/* Caption */}
+            {item.images[0].caption && (
+              <div className="bg-gray-800 rounded-xl px-4 py-2.5">
+                <p className="text-white text-sm font-bold">{item.images[0].caption}</p>
+              </div>
+            )}
+
+            {/* Prompt card */}
+            {(item.images[0].prompt || item.images[0].caption) && (
+              <div className="bg-gray-900 rounded-xl p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs text-gray-400 mb-1.5 uppercase tracking-wider font-medium">예시 프롬프트</p>
+                    <p className="text-white font-mono text-sm leading-relaxed break-words">
+                      <HighlightKeyword text={item.images[0].prompt || item.images[0].caption || ''} keyword={item.prompt} />
+                    </p>
+                  </div>
+                  <CopyButton text={item.images[0].prompt || item.images[0].caption || ''} />
+                </div>
+              </div>
+            )}
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       {item.videos && item.videos.length > 0 && (
         <div>
@@ -593,7 +677,7 @@ function DefaultContent({ item, setImageModalIndex, setVideoModal, isVideoCatego
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {item.womanHairstyles.map((hs, idx) => (
               <div key={idx} className="text-center">
-                {hs.image && <img src={hs.image} alt={hs.name} className="w-full aspect-square object-cover rounded-xl mb-2" loading="lazy" />}
+                {hs.image && <img src={hs.image} alt={hs.name} className="w-full aspect-video object-cover rounded-xl mb-2" loading="lazy" />}
                 <p className="text-sm font-medium text-black">{hs.name}</p>
                 {hs.keyword && <p className="text-xs text-gray-600">{hs.keyword}</p>}
               </div>
@@ -607,7 +691,7 @@ function DefaultContent({ item, setImageModalIndex, setVideoModal, isVideoCatego
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {item.manHairstyles.map((hs, idx) => (
               <div key={idx} className="text-center">
-                {hs.image && <img src={hs.image} alt={hs.name} className="w-full aspect-square object-cover rounded-xl mb-2" loading="lazy" />}
+                {hs.image && <img src={hs.image} alt={hs.name} className="w-full aspect-video object-cover rounded-xl mb-2" loading="lazy" />}
                 <p className="text-sm font-medium text-black">{hs.name}</p>
                 {hs.keyword && <p className="text-xs text-gray-600">{hs.keyword}</p>}
               </div>
@@ -634,6 +718,7 @@ export default function ContentDetail({ item, category, prevItem, nextItem }) {
   const isTeamVideos = item.type === 'team-videos';
   const isBlog = item.type === 'blog';
   const isInstructor = !!item.instructorInfo;
+  const isDefault = !isTutorial && !isExpert && !isInstructor && !isPractice && !isVeoPrompts && !isTeamVideos && !isBlog;
 
   const handleCopyPrompt = async () => {
     if (item.prompt) {
@@ -664,12 +749,12 @@ export default function ContentDetail({ item, category, prevItem, nextItem }) {
         <p className="text-lg text-gray-600 mb-6">{item.koreanTitle}</p>
       )}
 
-      {/* Prompt Box */}
-      {item.prompt && (
-        <div className="bg-gray-900 text-white rounded-2xl p-6 mb-8 flex items-center justify-between gap-4">
+      {/* Prompt Box - only for non-default types (default renders it inline) */}
+      {item.prompt && !isDefault && (
+        <div className="bg-gray-900 text-white rounded-2xl p-6 mb-8 flex items-center justify-between gap-4 border-l-4 border-orange-500">
           <div className="min-w-0 flex-1">
             <p className="text-xs text-gray-400 mb-1 uppercase tracking-wider">Prompt</p>
-            <p className="text-lg font-mono font-medium break-words">{item.prompt}</p>
+            <p className="text-xl font-mono font-bold break-words text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">{item.prompt}</p>
           </div>
           <button
             onClick={handleCopyPrompt}
@@ -697,24 +782,22 @@ export default function ContentDetail({ item, category, prevItem, nextItem }) {
       ) : isBlog ? (
         <BlogContent item={item} setImageModalIndex={setImageModalIndex} />
       ) : (
-        <DefaultContent item={item} setImageModalIndex={setImageModalIndex} setVideoModal={setVideoModal} isVideoCategory={category?.id === 'video'} />
+        <DefaultContent item={item} setImageModalIndex={setImageModalIndex} setVideoModal={setVideoModal} isVideoCategory={category?.id === 'video'} copiedPrompt={copiedPrompt} handleCopyPrompt={handleCopyPrompt} />
       )}
 
-      {/* Images for tutorial/expert if they have them */}
+      {/* Image for tutorial/expert if they have one */}
       {(isTutorial || isExpert) && item.images && item.images.length > 0 && (
         <div className="mt-8">
           <h2 className="text-xl font-bold text-black mb-4">예시 이미지</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {item.images.map((img, idx) => (
-              <div key={idx} className="group relative aspect-square rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all" onClick={() => setImageModalIndex(idx)}>
-                <img src={img.src} alt={img.caption || ''} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" />
-                {img.caption && (
-                  <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                    <p className="text-white text-xs">{img.caption}</p>
-                  </div>
-                )}
-              </div>
-            ))}
+          <div className="max-w-md">
+            <div className="group relative aspect-video rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all" onClick={() => setImageModalIndex(0)}>
+              <img src={item.images[0].src} alt={item.images[0].caption || ''} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" />
+              {item.images[0].caption && (
+                <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p className="text-white text-xs">{item.images[0].caption}</p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}

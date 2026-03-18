@@ -21,7 +21,10 @@ export const cameraData = {
             'AI관련 바이브코딩, 자동화개발 경력보유',
             'AI 이미지/영상 생성 전문가',
             'EBS 디지털영상제작 강의, 기업특강, 팀단위 특강',
-        ]
+        ],
+        images: [
+            { src: '/images/guide/toolb/instructor-intro-1.jpg', caption: 'instructor intro example 1', prompt: 'AI TOOLBEE feature demonstration 1, tool interface showcase, modern UI design, professional quality, informative visual' }
+        ],
     },
 
     'instructor-reviews': {
@@ -29,14 +32,7 @@ export const cameraData = {
         koreanTitle: 'Course Reviews',
         type: 'reviews',
         images: [
-            { src: '/images/gang1.jpg', caption: 'EBS 특별강의' },
-            { src: '/images/gang2.jpg', caption: '기업특강' },
-            { src: '/images/gang3.jpg', caption: '팀 특강' },
-            { src: '/images/gang4.jpg', caption: '실습 강의' },
-            { src: '/images/gang5.jpg', caption: '워크샵' },
-            { src: '/images/gang6.jpg', caption: '세미나' },
-            { src: '/images/gang7.jpg', caption: '특강' },
-            { src: '/images/gang8.jpg', caption: '교육 현장' }
+            { src: '/images/gang1.jpg', caption: 'EBS 특별강의', prompt: 'EBS 특별강의 현장, 전문 강사가 대형 스크린 앞에서 AI 기술 설명, 교육 환경, documentary photography' }
         ],
         description: 'AI TOOLBEE 강의를 수강하신 분들의 생생한 후기입니다.'
     },
@@ -46,7 +42,10 @@ export const cameraData = {
         title: 'AI툴박스툴',
         koreanTitle: 'AI Image & Video Prompt Generator',
         type: 'tool',
-        description: 'Gemini AI를 활용한 이미지 및 영상 프롬프트 생성 도구'
+        description: 'Gemini AI를 활용한 이미지 및 영상 프롬프트 생성 도구',
+        images: [
+            { src: '/images/guide/toolb/aifi-tool-1.jpg', caption: 'aifi tool example 1', prompt: 'AI TOOLBEE feature demonstration 1, tool interface showcase, modern UI design, professional quality, informative visual' }
+        ],
     },
 
     // 바나나만들기 - 마법의프롬프트
@@ -59,7 +58,10 @@ export const cameraData = {
             '이미지 생성: 텍스트 프롬프트로 새로운 이미지 생성',
             '이미지 편집: 기존 이미지를 텍스트로 편집',
             '이미지 합성: 두 이미지를 합성하여 새로운 이미지 생성'
-        ]
+        ],
+        images: [
+            { src: '/images/guide/practice/banana-magic-1.jpg', caption: 'banana magic example 1', prompt: 'banana magic practice exercise example 1, creative project demonstration, step-by-step visual guide, educational content, clear composition' }
+        ],
     },
 
     // ============= CAMERA SHOTS =============
@@ -76,10 +78,7 @@ export const cameraData = {
             '피사체의 세밀한 디테일을 강조할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/ecfcd186-90cd-4674-a321-8643dbac907c/0_3.png', caption: 'Eye extreme close-up' },
-            { src: 'https://cdn.midjourney.com/78fd0ea7-2a19-4442-8ab0-9e652c69ab52/0_1.png', caption: 'Detail shot' },
-            { src: 'https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?w=600&h=400&fit=crop', caption: 'Texture emphasis' },
-            { src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=400&fit=crop', caption: 'Emotion focus' }
+            { src: '/images/guide/camera/extreme-closeup-1.jpg', caption: 'Eye extreme close-up', prompt: 'extreme close-up of a woman’s eye with vivid amber iris, individual eyelashes in sharp detail, light reflections in the pupil, shallow depth of field, macro photography, water droplet on lower lash, 8K' }
         ]
     },
 
@@ -95,10 +94,7 @@ export const cameraData = {
             '대화 장면에서 인물의 반응을 보여줄 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/c5198e9d-612f-46fa-b06f-9c63064b80d4/0_3.png', caption: 'Portrait close-up' },
-            { src: 'https://cdn.midjourney.com/dae4392d-4bae-4e1d-882b-46817dfed2cb/0_1.png', caption: 'Emotional expression' },
-            { src: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=400&fit=crop', caption: 'Character detail' },
-            { src: 'https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=600&h=400&fit=crop', caption: 'Face focus' }
+            { src: '/images/guide/camera/closeup-1.jpg', caption: 'Portrait close-up', prompt: 'close-up portrait of a young woman with soft freckles, natural window light creating catchlights in her eyes, shallow depth of field, 85mm lens, warm skin tones, intimate emotional connection, photorealistic, 8K' }
         ]
     },
 
@@ -114,10 +110,7 @@ export const cameraData = {
             '안정적인 느낌을 줄 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/d21ac535-abd1-4dd4-a9fb-7e0160cb9f3a/0_3.png', caption: 'Standard medium shot' },
-            { src: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=400&fit=crop', caption: 'Conversation shot' },
-            { src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=400&fit=crop', caption: 'Waist-up framing' },
-            { src: 'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=600&h=400&fit=crop', caption: 'Natural perspective' }
+            { src: '/images/guide/camera/medium-shot-1.jpg', caption: 'Standard medium shot', prompt: 'medium shot of a barista crafting latte art in a cozy cafe, waist-up framing, warm ambient light, steam rising from cup, professional lifestyle photography, shallow background blur, inviting atmosphere' }
         ]
     },
 
@@ -133,10 +126,7 @@ export const cameraData = {
             '액션 장면의 준비 상태를 보여줄 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/51ec9dbc-30a4-4fd2-910e-b70bd468630f/0_2.png', caption: 'Classic cowboy shot' },
-            { src: 'https://cdn.midjourney.com/42973f1e-0776-479c-a943-efb1ffc6acd8/0_2.png', caption: 'Action ready stance' },
-            { src: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&h=400&fit=crop', caption: 'Mid-thigh framing' },
-            { src: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&h=400&fit=crop', caption: 'Power pose' }
+            { src: '/images/guide/camera/cowboy-shot-1.jpg', caption: 'Classic cowboy shot', prompt: 'cowboy shot of a confident woman in tailored blazer, mid-thigh framing, urban rooftop background, golden hour backlight, fashion editorial photography, powerful stance, wind in hair, sharp focus' }
         ]
     },
 
@@ -152,10 +142,7 @@ export const cameraData = {
             '캐릭터의 전체적인 모습을 소개할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/5da09c9c-3c66-4c57-915e-b299e7ba4640/0_1.png', caption: 'Full body shot' },
-            { src: 'https://cdn.midjourney.com/992308ef-59aa-49d0-a99e-d790c52c1213/0_3.png', caption: 'Complete figure' },
-            { src: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=400&fit=crop', caption: 'Head to toe view' },
-            { src: 'https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=600&h=400&fit=crop', caption: 'Character reveal' }
+            { src: '/images/guide/camera/full-shot-1.jpg', caption: 'Full body shot', prompt: 'full shot of a ballet dancer in white tutu performing arabesque, head to toe framing, studio spotlight casting elegant shadow on wooden floor, graceful form, fine art dance photography, 8K' }
         ]
     },
 
@@ -171,10 +158,7 @@ export const cameraData = {
             '장면 전체의 분위기를 설정할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/61484eb1-c523-4aeb-88af-46c56c7ea91d/0_2.png', caption: 'Wide landscape' },
-            { src: 'https://cdn.midjourney.com/06cb726a-cf6d-4526-97ef-e14f45000cba/0_3.png', caption: 'Environmental context' },
-            { src: 'https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=600&h=400&fit=crop', caption: 'Spatial relationship' },
-            { src: 'https://images.unsplash.com/photo-1444927714506-8492d94b4e3d?w=600&h=400&fit=crop', caption: 'Scene setting' }
+            { src: '/images/guide/camera/wide-shot-1.jpg', caption: 'Wide landscape', prompt: 'wide shot of a lone surfer walking toward ocean waves at sunrise, small figure against vast beach landscape, golden morning light, environmental storytelling, cinematic atmosphere, contemplative mood' }
         ]
     },
 
@@ -190,10 +174,7 @@ export const cameraData = {
             '웅장한 스케일을 보여줄 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/01c90d39-d174-443b-89dd-e1c799a2fa2a/0_0.png', caption: 'Vast landscape' },
-            { src: 'https://cdn.midjourney.com/bbe2c719-f087-48ad-bd89-717e9160465c/0_1.png', caption: 'Epic scale' },
-            { src: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop', caption: 'Environmental dominance' },
-            { src: 'https://images.unsplash.com/photo-1444927714506-8492d94b4e3d?w=600&h=400&fit=crop', caption: 'Grand establishing shot' }
+            { src: '/images/guide/camera/extreme-wide-1.jpg', caption: 'Vast landscape', prompt: 'extreme wide shot of a tiny mountaineer on vast snowy peak ridge, epic Himalayan landscape, dramatic cloud formations, sense of human scale against nature, landscape photography, breathtaking grandeur, 8K' }
         ]
     },
 
@@ -210,10 +191,7 @@ export const cameraData = {
             '편안하고 친근한 느낌을 줄 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/38bd6991-5210-4ac1-aaef-36a3ac8c72a0/0_3.png', caption: 'Neutral perspective' },
-            { src: 'https://cdn.midjourney.com/a3851e06-e287-4455-8dc6-06142d7b5fdb/0_2.png', caption: 'Natural eye contact' },
-            { src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&h=400&fit=crop', caption: 'Equal relationship' },
-            { src: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=400&fit=crop', caption: 'Standard angle' }
+            { src: '/images/guide/camera/eye-level-1.jpg', caption: 'Neutral perspective', prompt: 'eye level portrait of a chef plating a dish in restaurant kitchen, natural height perspective, direct eye contact with camera, warm kitchen lighting, authentic working moment, lifestyle documentary style' }
         ]
     },
 
@@ -229,10 +207,7 @@ export const cameraData = {
             '위협적인 분위기를 조성할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/8a422d4f-d700-4229-9502-480a5f751470/0_1.png', caption: 'Power perspective' },
-            { src: 'https://cdn.midjourney.com/3173d561-014c-42c0-a409-e27a869922fa/0_3.png', caption: 'Heroic angle' },
-            { src: 'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=600&h=400&fit=crop', caption: 'Dominant view' },
-            { src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=400&fit=crop', caption: 'Looking up' }
+            { src: '/images/guide/camera/low-angle-1.jpg', caption: 'Power perspective', prompt: 'low angle shot looking up at a confident businesswoman in glass skyscraper lobby, powerful imposing perspective, geometric ceiling lines converging, corporate authority, dramatic upward composition, cinematic lighting' }
         ]
     },
 
@@ -248,10 +223,7 @@ export const cameraData = {
             '관찰자의 시점을 제공할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/73b6717f-27ec-4209-bf84-fd052c4fb13f/0_1.png', caption: 'Looking down' },
-            { src: 'https://cdn.midjourney.com/5dfe60ae-2b2c-43bf-8691-abdb78d18db1/0_1.png', caption: 'Vulnerable angle' },
-            { src: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&h=400&fit=crop', caption: 'Overview perspective' },
-            { src: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&h=400&fit=crop', caption: 'Superior view' }
+            { src: '/images/guide/camera/high-angle-1.jpg', caption: 'Looking down', prompt: 'high angle shot looking down at a little girl playing with paper boats in rain puddle, gentle vulnerability emphasized, colorful raincoat and yellow boots, urban street, tender childhood moment, storytelling perspective' }
         ]
     },
 
@@ -267,10 +239,7 @@ export const cameraData = {
             '지도와 같은 관점을 제공할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/60dc7d0d-5723-490e-8aff-aabe07a8ba86/0_1.png', caption: 'Aerial view' },
-            { src: 'https://cdn.midjourney.com/6f7202ee-2943-4106-953b-a7acb87bc199/0_0.png', caption: 'Top-down perspective' },
-            { src: 'https://images.unsplash.com/photo-1444927714506-8492d94b4e3d?w=600&h=400&fit=crop', caption: 'Pattern view' },
-            { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop', caption: 'Map-like angle' }
+            { src: '/images/guide/camera/birds-eye-1.jpg', caption: 'Aerial view', prompt: 'birds eye view of a spiral staircase from directly above, mesmerizing geometric pattern, black and white architectural photography, vertigo-inducing depth, minimalist abstract composition, sharp symmetrical lines, 8K' }
         ]
     },
 
@@ -286,10 +255,7 @@ export const cameraData = {
             '독특한 시각적 효과를 원할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/5a913eff-45cc-4722-b443-61640fdde23a/0_1.png', caption: 'Food overhead' },
-            { src: 'https://cdn.midjourney.com/10a4ddbb-f471-4f5a-91ad-41de26782a81/0_2.png', caption: 'Table top view' },
-            { src: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&h=400&fit=crop', caption: 'Flat lay style' },
-            { src: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&h=400&fit=crop', caption: 'Direct overhead' }
+            { src: '/images/guide/camera/overhead-1.jpg', caption: 'Food overhead', prompt: 'overhead flat lay of an artist’s workspace with paint palette, brushes, and half-finished watercolor painting, creative mess arrangement, natural window light, lifestyle photography, colorful artistic tools' }
         ]
     },
 
@@ -305,10 +271,7 @@ export const cameraData = {
             '액션 씬에서 역동성을 더할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/1ec7b0a2-cf1d-4e61-8ed4-e3ed66af22b9/0_3.png', caption: 'Tilted perspective' },
-            { src: 'https://cdn.midjourney.com/1ec7b0a2-cf1d-4e61-8ed4-e3ed66af22b9/0_0.png', caption: 'Dynamic angle' },
-            { src: 'https://images.unsplash.com/photo-1508847154043-be5407fcaa5a?w=600&h=400&fit=crop', caption: 'Unstable feeling' },
-            { src: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop', caption: 'Dramatic tilt' }
+            { src: '/images/guide/camera/dutch-angle-1.jpg', caption: 'Tilted perspective', prompt: 'dutch angle tilted shot of a jazz musician playing trumpet in smoky club, dramatic disorienting perspective, warm amber spotlight, noir atmosphere, dynamic diagonal composition, cinematic tension, 8K' }
         ]
     },
 
@@ -324,10 +287,7 @@ export const cameraData = {
             '관객에게 작고 무력한 느낌을 줄 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/653f8a92-a2f9-4316-bd05-0594cb3348e0/0_0.png', caption: 'Ground perspective' },
-            { src: 'https://cdn.midjourney.com/7b03ce40-99f9-4eca-a268-7c948c708571/0_1.png', caption: 'Looking up' },
-            { src: 'https://images.unsplash.com/photo-1486718448742-163732cd1544?w=600&h=400&fit=crop', caption: 'Extreme low angle' },
-            { src: 'https://images.unsplash.com/photo-1508138221679-760a23a2285b?w=600&h=400&fit=crop', caption: 'Heroic angle' }
+            { src: '/images/guide/camera/worms-eye-1.jpg', caption: 'Ground perspective', prompt: 'worms eye view looking up at a child blowing dandelion seeds against bright blue sky, extreme low ground perspective, seeds floating upward, magical childhood moment, backlit sun flare, dreamy atmosphere' }
         ]
     },
 
@@ -343,10 +303,7 @@ export const cameraData = {
             '색다른 관점을 제공할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/74aede5c-1cf3-42d3-900c-48858fb17363/0_2.png', caption: 'Floor level' },
-            { src: 'https://cdn.midjourney.com/ab7951b4-0f65-467a-bebe-acc759f54395/0_2.png', caption: 'Ground perspective' },
-            { src: 'https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=600&h=400&fit=crop', caption: 'Low position' },
-            { src: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=400&fit=crop', caption: 'Surface level' }
+            { src: '/images/guide/camera/ground-level-1.jpg', caption: 'Floor level', prompt: 'ground level shot of a golden retriever running toward camera through autumn leaves, camera on floor level, joyful energy, shallow depth of field, falling leaves in motion, warm sunlight, pet photography' }
         ]
     },
 
@@ -363,10 +320,7 @@ export const cameraData = {
             '제품의 측면 디자인을 보여줄 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/a0710f91-79ad-40fe-909a-4545c37e8ece/0_0.png', caption: 'Profile portrait' },
-            { src: 'https://cdn.midjourney.com/f7620359-b4cb-4b5c-a916-884d513e1e29/0_1.png', caption: 'Side silhouette' },
-            { src: 'https://images.unsplash.com/photo-1507114845806-0347f6150324?w=600&h=400&fit=crop', caption: 'Lateral view' },
-            { src: 'https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?w=600&h=400&fit=crop', caption: 'Profile angle' }
+            { src: '/images/guide/camera/side-view-1.jpg', caption: 'Profile portrait', prompt: 'side profile view of an elegant ballerina in perfect pose, classical silhouette against soft backlight, graceful neck line, hair in bun, dramatic rim lighting, fine art photography, timeless composition' }
         ]
     },
 
@@ -382,10 +336,7 @@ export const cameraData = {
             '여정의 시작을 암시할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/5955ef5b-7be0-40a6-a036-f5f746e85bd6/0_0.png', caption: 'Back silhouette' },
-            { src: 'https://cdn.midjourney.com/b9f049fd-63d7-4509-a1cb-79889845dbda/0_1.png', caption: 'Rear perspective' },
-            { src: 'https://images.unsplash.com/photo-1513097633097-329a3a64e0d4?w=600&h=400&fit=crop', caption: 'From behind' },
-            { src: 'https://images.unsplash.com/photo-1492681290082-e932832941e6?w=600&h=400&fit=crop', caption: 'Walking away' }
+            { src: '/images/guide/camera/back-view-1.jpg', caption: 'Back silhouette', prompt: 'back view of a woman in flowing red dress standing at the edge of a cliff overlooking dramatic coastline, windswept hair, golden sunset, romantic cinematic photography, wanderlust atmosphere, ethereal' }
         ]
     },
 
@@ -401,10 +352,7 @@ export const cameraData = {
             '제품의 형태를 효과적으로 보여줄 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/9c48b1a3-8c09-4535-bafe-96ce308604a6/0_0.png', caption: 'Three-quarter portrait' },
-            { src: 'https://cdn.midjourney.com/2075f43a-1663-47bd-be27-e4af8e9db1b4/0_3.png', caption: '45-degree angle' },
-            { src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=400&fit=crop', caption: 'Classic angle' },
-            { src: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=400&fit=crop', caption: 'Natural pose' }
+            { src: '/images/guide/camera/three-quarter-1.jpg', caption: 'Three-quarter portrait', prompt: 'three-quarter view portrait of a young man with warm smile, 45-degree angle face catching soft golden hour light, natural outdoor background bokeh, classic portrait composition, authentic expression, 8K' }
         ]
     },
 
@@ -420,10 +368,7 @@ export const cameraData = {
             '출발이나 이별의 순간을 표현할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/687b9db2-7c89-41b3-8106-7386dbad9be0/0_3.png', caption: 'Rear quarter angle' },
-            { src: 'https://cdn.midjourney.com/063df8f1-c026-48ad-94bc-92bc8342b678/0_2.png', caption: 'Back diagonal view' },
-            { src: 'https://images.unsplash.com/photo-1495078065017-564723e7e3e7?w=600&h=400&fit=crop', caption: 'Behind angle' },
-            { src: 'https://images.unsplash.com/photo-1470093851219-69951fcbb533?w=600&h=400&fit=crop', caption: 'Departure angle' }
+            { src: '/images/guide/camera/rear-three-quarter-1.jpg', caption: 'Rear quarter angle', prompt: 'rear three-quarter angle of a woman in vintage dress looking back over shoulder with mysterious smile, autumn garden setting, dramatic warm lighting, cinematic composition, fashion editorial, atmospheric' }
         ]
     },
 
@@ -440,10 +385,7 @@ export const cameraData = {
             '공포 영화나 액션 씨퀀에서'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/06cb4cc7-c0af-48de-80d0-1fffa21b9fe0/0_1.png', caption: 'First person view' },
-            { src: 'https://cdn.midjourney.com/1e242962-cae4-41f8-b92b-3607635148f2/0_1.png', caption: 'Eyes perspective' },
-            { src: 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=600&h=400&fit=crop', caption: 'Subjective camera' },
-            { src: 'https://images.unsplash.com/photo-1525296141-b09a774890e8?w=600&h=400&fit=crop', caption: 'POV angle' }
+            { src: '/images/guide/camera/pov-shot-1.jpg', caption: 'First person view', prompt: 'POV first person view of hands opening an old leather journal revealing pressed flowers and handwritten letters, subjective camera perspective, warm desk lamp light, intimate discovery moment, nostalgic detail' }
         ]
     },
 
@@ -459,10 +401,7 @@ export const cameraData = {
             '인물의 반응을 포착할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/dcf0a650-031a-4946-94c6-0fde0f74a24a/0_3.png', caption: 'OTS dialogue' },
-            { src: 'https://cdn.midjourney.com/df89236a-54ff-44ca-9899-6c3fd31cc954/0_0.png', caption: 'Shoulder frame' },
-            { src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop', caption: 'Conversation angle' },
-            { src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop', caption: 'OTS perspective' }
+            { src: '/images/guide/camera/over-shoulder-1.jpg', caption: 'OTS dialogue', prompt: 'over the shoulder shot of a photographer reviewing images on camera screen, foreground shoulder silhouette, bokeh city lights background, depth composition, creative process moment, warm evening tones' }
         ]
     },
 
@@ -478,10 +417,7 @@ export const cameraData = {
             '공동체 의식을 강조할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/4269eb8b-a48e-4088-98ce-f919f8191e96/0_3.png', caption: 'Two people' },
-            { src: 'https://cdn.midjourney.com/4d77bc10-14d2-4539-a028-2e9d721431f7/0_0.png', caption: 'Group dynamics' },
-            { src: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop', caption: 'Team shot' },
-            { src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop', caption: 'Multiple subjects' }
+            { src: '/images/guide/camera/two-shot-1.jpg', caption: 'Two people', prompt: 'two shot of grandmother teaching young granddaughter to cook, dual subject framing at kitchen counter, warm home lighting, generational bond, flour-dusted hands, genuine smiles, family documentary photography' }
         ]
     },
 
@@ -497,10 +433,7 @@ export const cameraData = {
             '세계관을 구축할 때'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop', caption: 'City establishing' },
-            { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop', caption: 'Location setup' },
-            { src: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&h=400&fit=crop', caption: 'Environment shot' },
-            { src: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop', caption: 'Scene setting' }
+            { src: '/images/guide/camera/establishing-1.jpg', caption: 'City establishing', prompt: 'establishing shot of a grand Venetian canal with gondolas at sunrise, wide view of historic architecture, morning mist on water, travel photography, golden early light reflecting on facades, cinematic scope, 8K' }
         ]
     },
 
@@ -516,10 +449,7 @@ export const cameraData = {
             '연극적인 연출에서'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/2e366ab0-7897-447a-b2d0-d471fc497fca/0_2.png', caption: 'Full scene view' },
-            { src: 'https://cdn.midjourney.com/41f6bc5b-c4cf-47ad-9e90-3a24f6b6025f/0_3.png', caption: 'Wide coverage' },
-            { src: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&h=400&fit=crop', caption: 'Complete action' },
-            { src: 'https://images.unsplash.com/photo-1460881680858-30d872d5b530?w=600&h=400&fit=crop', caption: 'Stage view' }
+            { src: '/images/guide/camera/master-shot-1.jpg', caption: 'Full scene view', prompt: 'master shot of an entire orchestra on grand concert hall stage during performance, full scene coverage from balcony perspective, dramatic stage lighting, wide view of all musicians, symphonic grandeur' }
         ]
     },
 
@@ -535,10 +465,7 @@ export const cameraData = {
             '정보나 단서를 제공할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/30d736f5-c5f1-4a8a-afd2-4f35980095e1/0_0.png', caption: 'Detail insert' },
-            { src: 'https://cdn.midjourney.com/1c40d32b-f3ce-4b7d-b9e9-d4f8a1867ba1/0_3.png', caption: 'Close detail' },
-            { src: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=600&h=400&fit=crop', caption: 'Information shot' },
-            { src: 'https://images.unsplash.com/photo-1524634126442-357e0eac3c14?w=600&h=400&fit=crop', caption: 'Cutaway detail' }
+            { src: '/images/guide/camera/insert-shot-1.jpg', caption: 'Detail insert', prompt: 'insert shot detail of weathered hands pouring tea from a ceramic pot into a delicate cup, close detail of golden liquid, steam rising, warm side lighting, Japanese tea ceremony, mindful moment, 8K' }
         ]
     },
 
@@ -555,10 +482,7 @@ export const cameraData = {
             '풍경 사진에서 수평선 배치'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/11557617-e77f-406a-9e6c-85df3e6172b7/0_3.png', caption: 'Third lines' },
-            { src: 'https://cdn.midjourney.com/fae22985-04ae-42d0-a533-bba482e2e853/0_3.png', caption: 'Intersection points' },
-            { src: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop', caption: 'Balanced composition' },
-            { src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop', caption: 'Grid placement' }
+            { src: '/images/guide/camera/rule-of-thirds-1.jpg', caption: 'Third lines', prompt: 'rule of thirds composition of a lone fisherman casting line at lake, placed at right intersection point, misty morning landscape, mountains in background, balanced asymmetric framing, serene atmosphere, 8K' }
         ]
     },
 
@@ -574,10 +498,7 @@ export const cameraData = {
             '인물 초상에 적합'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/707e3cb8-f4e9-4db8-801b-ff27d6149990/0_0.png', caption: 'Central focus' },
-            { src: 'https://cdn.midjourney.com/24e95385-d267-4e57-94d1-c0fa4e5fd0c1/0_0.png', caption: 'Middle placement' },
-            { src: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=400&fit=crop', caption: 'Centered subject' },
-            { src: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=400&fit=crop', caption: 'Direct composition' }
+            { src: '/images/guide/camera/center-comp-1.jpg', caption: 'Central focus', prompt: 'center composition of a monk in orange robes meditating in a grand temple corridor, perfectly centered subject, symmetrical architecture receding, vanishing point perspective, spiritual calm, powerful symmetry' }
         ]
     },
 
@@ -593,10 +514,7 @@ export const cameraData = {
             '예술적인 효과를 원할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/b9923de1-02c8-4102-90c1-54a671f82c58/0_2.png', caption: 'Perfect symmetry' },
-            { src: 'https://cdn.midjourney.com/18ae1a6d-08f8-4f21-bab7-04c75b2e4bcd/0_2.png', caption: 'Mirror composition' },
-            { src: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600&h=400&fit=crop', caption: 'Balanced structure' },
-            { src: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=400&fit=crop', caption: 'Symmetric design' }
+            { src: '/images/guide/camera/symmetrical-1.jpg', caption: 'Perfect symmetry', prompt: 'perfectly symmetrical composition of the Taj Mahal reflected in still water pool, mirror image architecture, morning golden light, classical balanced framing, breathtaking architectural photography, serene precision, 8K' }
         ]
     },
 
@@ -612,10 +530,7 @@ export const cameraData = {
             '스토리텔링에 효과적'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/fc2d46e4-5147-4b45-94e5-27e22a38de4b/0_1.png', caption: 'Natural frame' },
-            { src: 'https://cdn.midjourney.com/8894ecf6-5d3c-4627-9142-9200fdfad06a/0_0.png', caption: 'Doorway frame' },
-            { src: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=600&h=400&fit=crop', caption: 'Window frame' },
-            { src: 'https://images.unsplash.com/photo-1445109673451-c511bb51bd17?w=600&h=400&fit=crop', caption: 'Nested frames' }
+            { src: '/images/guide/camera/frame-in-frame-1.jpg', caption: 'Natural frame', prompt: 'frame within a frame composition of a woman reading in a window seat, window frame creating natural border, warm interior vs cool exterior, layers of depth, intimate storytelling, creative framing technique' }
         ]
     },
 
@@ -631,10 +546,7 @@ export const cameraData = {
             '독특한 구도를 원할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/10f8acdb-55ab-45e4-ac66-79076f2da806/0_0.png', caption: 'Diagonal lines' },
-            { src: 'https://cdn.midjourney.com/3a24a4e3-4559-434f-a880-2592c0f84fc8/0_2.png', caption: 'Dynamic angle' },
-            { src: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600&h=400&fit=crop', caption: 'Tilted composition' },
-            { src: 'https://images.unsplash.com/photo-1505739998589-00fc191ce01d?w=600&h=400&fit=crop', caption: 'Energy lines' }
+            { src: '/images/guide/camera/diagonal-1.jpg', caption: 'Diagonal lines', prompt: 'diagonal composition of a skateboarder grinding down a handrail, dynamic diagonal line cutting across frame, urban background, frozen action, energetic movement, street photography, bold angular composition, 8K' }
         ]
     },
 
@@ -650,10 +562,7 @@ export const cameraData = {
             '풍경 사진에 효과적'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/7c85f633-9ce2-41de-a997-6e1214f5b345/0_2.png', caption: 'Multiple layers' },
-            { src: 'https://cdn.midjourney.com/b6ce553f-a266-4f73-bfec-0583345c74f9/0_3.png', caption: 'Depth layers' },
-            { src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop', caption: 'Foreground-background' },
-            { src: 'https://images.unsplash.com/photo-1431794062232-2a99a5431c6c?w=600&h=400&fit=crop', caption: 'Dimensional depth' }
+            { src: '/images/guide/camera/layered-1.jpg', caption: 'Multiple layers', prompt: 'layered composition with cherry blossoms in foreground, bride in traditional kimono in midground, ancient temple in background, three distinct depth layers, Japanese spring scene, atmospheric perspective, 8K' }
         ]
     },
 
@@ -669,10 +578,7 @@ export const cameraData = {
             '예술적 효과를 원할 때'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/001e51a5-1535-45e7-96a9-60e9e7155ad6/0_2.png', caption: 'Empty space' },
-            { src: 'https://cdn.midjourney.com/189a0627-065e-4341-b69d-5eb6d2f267e5/0_3.png', caption: 'Minimalist composition' },
-            { src: 'https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=600&h=400&fit=crop', caption: 'Isolation effect' },
-            { src: 'https://images.unsplash.com/photo-1521405924368-64c5b84bec60?w=600&h=400&fit=crop', caption: 'White space' }
+            { src: '/images/guide/camera/negative-space-1.jpg', caption: 'Empty space', prompt: 'negative space composition of single red umbrella on vast snowy white landscape, minimal subject against expansive emptiness, minimalist photography, isolation emphasis, striking color contrast, contemplative, 8K' }
         ]
     },
 
@@ -690,8 +596,7 @@ export const cameraData = {
             '마법 같은 분위기 연출'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/7d1356ab-4c07-4ff1-81d3-041e8362cc73/0_2.png', caption: 'Warm golden light' },
-            { src: 'https://cdn.midjourney.com/d10a0b2e-7a41-41d2-a7f7-06971c628062/0_3.png', caption: 'Sunset glow' }
+            { src: '/images/guide/lighting/golden-hour-1.jpg', caption: 'Warm golden light', prompt: 'golden hour portrait of a young couple on a hilltop, warm amber backlight creating hair glow and lens flare, long gentle shadows, romantic atmosphere, soft golden skin tones, dreamy sunset photography, 8K' }
         ]
     },
 
@@ -707,10 +612,7 @@ export const cameraData = {
             '신비로운 느낌 연출'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1514539079130-25950c84af65?w=600&h=400&fit=crop', caption: 'Blue twilight' },
-            { src: 'https://images.unsplash.com/photo-1493514789931-586cb221d7a7?w=600&h=400&fit=crop', caption: 'Urban blue hour' },
-            { src: 'https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?w=600&h=400&fit=crop', caption: 'Mystical atmosphere' },
-            { src: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=600&h=400&fit=crop', caption: 'Evening blues' }
+            { src: '/images/guide/lighting/blue-hour-1.jpg', caption: 'Blue twilight', prompt: 'blue hour portrait of a violinist playing on a rooftop terrace, deep indigo twilight sky, city lights twinkling below, cool blue tones wrapping the scene, serene evening mood, long exposure city glow, magical' }
         ]
     },
 
@@ -726,8 +628,7 @@ export const cameraData = {
             '피부톤을 자연스럽게 표현'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/bf83ba48-3509-439a-9173-42b2144b6d7d/0_2.png', caption: 'Soft diffused light' },
-            { src: 'https://cdn.midjourney.com/d92e6b97-10d7-4677-8f68-7d387bc93a63/0_1.png', caption: 'Even lighting' }
+            { src: '/images/guide/lighting/overcast-1.jpg', caption: 'Soft diffused light', prompt: 'overcast day portrait of a woman in a flower garden, soft diffused lighting without harsh shadows, cloudy sky acting as natural softbox, even skin illumination, flattering gentle light, editorial fashion photography' }
         ]
     },
 
@@ -743,10 +644,7 @@ export const cameraData = {
             '고대비 흑백 사진'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=600&h=400&fit=crop', caption: 'Strong shadows' },
-            { src: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=600&h=400&fit=crop', caption: 'High contrast' },
-            { src: 'https://images.unsplash.com/photo-1506765515384-028b60a970df?w=600&h=400&fit=crop', caption: 'Direct sunlight' },
-            { src: 'https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?w=600&h=400&fit=crop', caption: 'Sharp definition' }
+            { src: '/images/guide/lighting/harsh-sunlight-1.jpg', caption: 'Strong shadows', prompt: 'harsh midday sunlight portrait with strong geometric shadows from venetian blinds falling across a woman’s face, high contrast light stripes, dramatic shadow pattern, graphic composition, bold artistic portrait' }
         ]
     },
 
@@ -763,8 +661,7 @@ export const cameraData = {
             '진중한 느낌의 포트레이트'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/5ced8630-9548-4815-9d04-101416c6091f/0_1.png', caption: 'Classic portrait' },
-            { src: 'https://cdn.midjourney.com/e7570d7b-c644-4b22-82c7-a1c5f65a6b78/0_3.png', caption: 'Triangle of light' }
+            { src: '/images/guide/lighting/rembrandt-1.jpg', caption: 'Classic portrait', prompt: 'Rembrandt lighting portrait of a bearded man, signature triangle of light on shadowed cheek, dramatic chiaroscuro against dark background, one key light at 45 degrees, classical painting quality, studio mastery, 8K' }
         ]
     },
 
@@ -780,8 +677,7 @@ export const cameraData = {
             '이상적인 아름다움 표현'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/686815c8-2fd7-426b-8cd5-04b08da5f3cb/0_2.png', caption: 'Glamour lighting' },
-            { src: 'https://cdn.midjourney.com/686815c8-2fd7-426b-8cd5-04b08da5f3cb/0_1.png', caption: 'Beauty shot' }
+            { src: '/images/guide/lighting/butterfly-1.jpg', caption: 'Glamour lighting', prompt: 'butterfly lighting glamour portrait of a model, symmetrical shadow beneath nose forming butterfly shape, beauty dish directly overhead, flawless luminous skin, high-fashion beauty shot, Hollywood golden age elegance' }
         ]
     },
 
@@ -797,8 +693,7 @@ export const cameraData = {
             '내적 갈등의 표현'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/59125b2d-47e7-4c1d-b885-968ad468f946/0_1.png', caption: 'Half-lit face' },
-            { src: 'https://cdn.midjourney.com/1b5a31d7-5f49-45f1-9af9-4ec860fea2eb/0_1.png', caption: 'Film noir style' }
+            { src: '/images/guide/lighting/split-lighting-1.jpg', caption: 'Half-lit face', prompt: 'split lighting dramatic portrait of a pianist, face divided perfectly into light and deep shadow halves, single side light source, high contrast noir mood, mysterious artistic character study, cinematic intensity' }
         ]
     },
 
@@ -814,8 +709,7 @@ export const cameraData = {
             '실루엣 강조'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/57943433-2b1e-446c-9882-b3dcd82d96f2/0_1.png', caption: 'Edge lighting' },
-            { src: 'https://cdn.midjourney.com/179a1289-1570-423f-a45b-70cb1c15c961/0_3.png', caption: 'Backlit outline' }
+            { src: '/images/guide/lighting/rim-lighting-1.jpg', caption: 'Edge lighting', prompt: 'rim lighting portrait of a dancer with luminous edge glow outlining entire silhouette, dark studio background, backlit contour highlighting hair and shoulders, ethereal glowing outline, dramatic separation, 8K' }
         ]
     },
 
@@ -832,8 +726,7 @@ export const cameraData = {
             '레트로 또는 미래적 느낌'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/4af97fe2-2693-49d4-b3ec-0f7a6fc176c4/0_1.png', caption: 'Cyberpunk neon' },
-            { src: 'https://cdn.midjourney.com/4938d176-c472-46fc-97dd-a05c078ec5ee/0_0.png', caption: 'Urban neon' }
+            { src: '/images/guide/lighting/neon-lights-1.jpg', caption: 'Cyberpunk neon', prompt: 'neon lights portrait of a young woman in rain-soaked Tokyo alley, vivid pink and blue neon reflections on wet skin, colorful sign glow, cyberpunk night atmosphere, futuristic urban portrait, vibrant cinematic colors' }
         ]
     },
 
@@ -849,8 +742,7 @@ export const cameraData = {
             '종교적이거나 의식적인 장면'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/8dabe2d6-6f2b-42bb-b587-4525adc0405e/0_2.png', caption: 'Warm candle glow' },
-            { src: 'https://cdn.midjourney.com/a5f77818-07f2-4f0f-b826-3af8625ead47/0_2.png', caption: 'Romantic mood' }
+            { src: '/images/guide/lighting/candlelight-1.jpg', caption: 'Warm candle glow', prompt: 'candlelight intimate portrait of a woman reading an old book, soft warm orange flickering glow on face, single candle source, dark cozy room, romantic chiaroscuro, Renaissance painting atmosphere, gentle warm shadows' }
         ]
     },
 
@@ -866,10 +758,7 @@ export const cameraData = {
             '꿈같은 분위기'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/c59c229a-70d8-43f7-8db9-9163c4fb3f07/0_3.png', caption: 'Blue moonlight' },
-            { src: 'https://cdn.midjourney.com/151c05d8-bba3-4cd6-af08-c82d771ac7f7/0_3.png', caption: 'Night atmosphere' },
-            { src: 'https://images.unsplash.com/photo-1505506874110-6a7a69069a08?w=600&h=400&fit=crop', caption: 'Mystical moon' },
-            { src: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600&h=400&fit=crop', caption: 'Lunar glow' }
+            { src: '/images/guide/lighting/moonlight-1.jpg', caption: 'Blue moonlight', prompt: 'moonlight portrait of a couple slow dancing on a terrace, silvery blue lunar illumination, cool ethereal color temperature, stars visible, romantic mysterious atmosphere, night photography, dreamlike gentle glow' }
         ]
     },
 
@@ -885,10 +774,7 @@ export const cameraData = {
             '생존이나 모험 테마'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/a2a6fe7d-0d3c-40eb-bc7d-f3b81810a1b0/0_0.png', caption: 'Campfire glow' },
-            { src: 'https://cdn.midjourney.com/111691e6-6254-448c-bc8a-9c12733c0ec6/0_3.png', caption: 'Fire warmth' },
-            { src: 'https://images.unsplash.com/photo-1414124488080-0188dcbb8834?w=600&h=400&fit=crop', caption: 'Flickering light' },
-            { src: 'https://images.unsplash.com/photo-1453365607868-7deed8cc7d26?w=600&h=400&fit=crop', caption: 'Orange flames' }
+            { src: '/images/guide/lighting/firelight-1.jpg', caption: 'Campfire glow', prompt: 'firelight portrait of a storyteller by campfire, warm dancing orange glow illuminating animated expression, flickering shadows on surrounding faces of listeners, outdoor night gathering, cozy warmth, folk tale atmosphere' }
         ]
     },
 
@@ -906,10 +792,7 @@ export const cameraData = {
             '디지털 휴먼'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/d2fe4f03-1643-4b45-ad5a-87017e5a19c4/0_0.png', caption: 'Realistic portrait' },
-            { src: 'https://cdn.midjourney.com/b39be7d5-1837-4321-ae3a-cf50fb17e6c7/0_0.png', caption: 'Photo-real render' },
-            { src: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=400&fit=crop', caption: 'Ultra detailed' },
-            { src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=400&fit=crop', caption: 'Lifelike quality' }
+            { src: '/images/guide/style/photorealistic-1.jpg', caption: 'Realistic portrait', prompt: 'photorealistic portrait of a young woman, every pore and hair strand visible, natural skin texture, soft studio lighting, ultra-high resolution, indistinguishable from photograph, 8K detail' }
         ]
     },
 
@@ -925,219 +808,1380 @@ export const cameraData = {
             '극세밀 묘사'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/052cd281-1382-4bd6-8e79-7e9dd0218282/0_3.png', caption: 'Extreme detail' },
-            { src: 'https://cdn.midjourney.com/7281badd-7f38-4704-96d8-d603f747c986/0_1.png', caption: 'Beyond reality' },
-            { src: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=400&fit=crop', caption: 'Micro details' },
-            { src: 'https://images.unsplash.com/photo-1514846226882-28b324ef7f28?w=600&h=400&fit=crop', caption: 'Ultra precision' }
+            { src: '/images/guide/style/hyperrealistic-1.jpg', caption: 'Extreme detail', prompt: 'hyperrealistic extreme detail portrait, individual skin pores visible, micro hair detail, photographic precision beyond reality, studio lighting, uncanny valley quality, 8K resolution' }
         ]
     },
 
-    'surrealism': {
-        title: '초현실주의(Surrealism)',
-        koreanTitle: '초현실주의',
-        prompt: 'surrealism',
-        description: '현실과 꿈, 의식과 무의식이 혼합된 비논리적이고 환상적인 이미지를 창조하는 스타일입니다.',
-        usage: [
-            '예술 작품',
-            '창의적인 광고',
-            '앨범 커버',
-            '콘셉추얼 아트'
-        ],
-        images: [
-            { src: 'https://cdn.midjourney.com/3db3c134-87da-4db0-87cf-eafc57fb46bc/0_0.png', caption: 'Dreamlike scene' },
-            { src: 'https://cdn.midjourney.com/fa3d4d5d-8a1b-4396-a61e-f9e40417882e/0_1.png', caption: 'Surreal composition' },
-            { src: 'https://images.unsplash.com/photo-1482245294234-b3f2f8d5f1a4?w=600&h=400&fit=crop', caption: 'Fantasy elements' },
-            { src: 'https://images.unsplash.com/photo-1495195129352-aeb325a55b65?w=600&h=400&fit=crop', caption: 'Impossible reality' }
-        ]
-    },
-
-    'impressionism': {
-        title: '인상주의(Impressionism)',
-        koreanTitle: '인상주의',
-        prompt: 'impressionism',
-        description: '빛과 색채의 순간적인 인상을 포착하여 붓터치가 보이는 회화적 스타일입니다.',
-        usage: [
-            '풍경화',
-            '감성적인 포트레이트',
-            '일상 장면',
-            '빛의 효과 강조'
-        ],
-        images: [
-            { src: 'https://cdn.midjourney.com/31d32c66-4308-4d03-ba1c-9e5bcfbbdd7a/0_1.png', caption: 'Painterly style' },
-            { src: 'https://cdn.midjourney.com/225a11b4-c839-4e69-bfd5-6d3b2943fcce/0_2.png', caption: 'Light effects' },
-            { src: 'https://images.unsplash.com/photo-1505506874110-6a7a69069a08?w=600&h=400&fit=crop', caption: 'Color impressions' },
-            { src: 'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=600&h=400&fit=crop', caption: 'Brushstroke texture' }
-        ]
-    },
-
-    'minimalism': {
-        title: '미니멀리즘(Minimalism)',
-        koreanTitle: '미니멀리즘',
-        prompt: 'minimalism',
-        description: '필수적인 요소만을 사용하여 단순하고 깔끔한 구성을 추구하는 스타일입니다.',
-        usage: [
-            '현대 건축',
-            '브랜드 디자인',
-            '추상 예술',
-            '제품 디자인'
-        ],
-        images: [
-            { src: 'https://cdn.midjourney.com/19d2d425-aa59-4c35-92af-ff2a278fb95a/0_1.png', caption: 'Simple forms' },
-            { src: 'https://cdn.midjourney.com/e63b8047-e15d-4b5a-9613-3e06c73478b0/0_1.png', caption: 'Clean composition' },
-            { src: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=600&h=400&fit=crop', caption: 'Essential elements' },
-            { src: 'https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=600&h=400&fit=crop', caption: 'Reduced aesthetic' }
-        ]
-    },
 
     // Digital Art
     'digital-painting': {
         title: '디지털 페인팅(Digital Painting)',
         koreanTitle: '디지털 페인팅',
-        prompt: 'digital painting',
-        description: '디지털 도구를 사용하여 전통적인 회화 기법을 모방하거나 새로운 스타일을 창조하는 아트입니다.',
+        prompt: 'digital painting, soft brushstrokes, rich colors, detailed',
+        features: '디지털 브러시로 전통 회화를 모방, 부드러운 블렌딩과 풍부한 색감',
+        mood: '판타지, 시네마틱, 감성적',
+        description: '디지털 도구를 사용하여 전통적인 회화 기법을 모방하거나 새로운 스타일을 창조하는 아트입니다. 레이어와 블렌딩 모드를 활용해 깊이 있는 표현이 가능합니다.',
         usage: [
-            '콘셉트 아트',
-            '일러스트레이션',
-            '게임 아트',
-            '팬 아트'
+            '캐릭터 일러스트',
+            '판타지 풍경',
+            '북커버 아트',
+            '게임 아트'
+        ],
+        examplePrompts: [
+            { title: '판타지 캐릭터', prompt: 'digital painting of a warrior princess in enchanted forest, vibrant colors, detailed armor, soft brushstrokes' },
+            { title: '풍경 아트', prompt: 'digital painting, serene mountain lake at golden hour, rich colors, atmospheric depth' },
+            { title: '사이버펑크 씬', prompt: 'digital painting, futuristic cityscape, neon lights, cinematic composition, detailed' },
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/d7cb8ae6-8e12-4fb5-829f-106a8d1a9862/0_2.png', caption: 'Digital artwork' },
-            { src: 'https://cdn.midjourney.com/00d6475e-4689-4912-ace1-c32394fe6486/0_3.png', caption: 'Painted digitally' },
-            { src: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=600&h=400&fit=crop', caption: 'Digital brushwork' },
-            { src: 'https://images.unsplash.com/photo-1502899576159-f224dc2349fa?w=600&h=400&fit=crop', caption: 'Digital canvas' }
+            { src: '/images/guide/style/digital-painting-1.jpg', caption: 'Digital artwork', prompt: 'digital painting of an enchanted forest with bioluminescent mushrooms, rich vibrant colors, soft luminous brushstrokes, fantasy atmosphere, detailed foliage, magical woodland, painterly' }
         ]
     },
 
     'concept-art': {
         title: '컨셉 아트(Concept Art)',
         koreanTitle: '컨셉 아트',
-        prompt: 'concept art',
-        description: '영화, 게임, 애니메이션 등의 시각적 개념을 개발하고 전달하는 일러스트레이션입니다.',
+        prompt: 'concept art, detailed, cinematic lighting, dramatic composition',
+        features: '빠른 시각화와 아이디어 전달, 디테일보다 무드와 구도 중심',
+        mood: '시네마틱, 드라마틱, 서사적',
+        description: '영화, 게임, 애니메이션 등의 시각적 개념을 개발하고 전달하는 일러스트레이션입니다. 프리프로덕션 단계에서 월드빌딩과 캐릭터 디자인의 방향을 설정합니다.',
         usage: [
             '영화 프리프로덕션',
-            '게임 개발',
+            '게임 월드빌딩',
             '캐릭터 디자인',
             '환경 디자인'
         ],
+        examplePrompts: [
+            { title: '판타지 환경', prompt: 'concept art, ancient floating city above clouds, dramatic lighting, epic scale, detailed architecture' },
+            { title: '크리처 디자인', prompt: 'concept art of a biomechanical dragon, detailed anatomy, dark fantasy, cinematic' },
+            { title: 'SF 인테리어', prompt: 'concept art, spaceship interior corridor, sci-fi, volumetric lighting, highly detailed' },
+        ],
         images: [
-            { src: 'https://cdn.midjourney.com/42848a4c-d7f9-402c-9a02-d69b847deaed/0_0.png', caption: 'Character concept' },
-            { src: 'https://cdn.midjourney.com/bf513a5b-1cc5-44b1-b9ea-2f28173320f7/0_3.png', caption: 'Environment art' },
-            { src: 'https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=600&h=400&fit=crop', caption: 'Visual development' },
-            { src: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=600&h=400&fit=crop', caption: 'Concept design' }
+            { src: '/images/guide/style/concept-art-1.jpg', caption: 'Character concept', prompt: 'concept art of an ancient floating city above clouds, dramatic lighting, epic scale, detailed architecture, fantasy environment design, cinematic atmosphere, visual development, 8K' }
         ]
     },
 
     'matte-painting': {
         title: '매트 페인팅(Matte Painting)',
         koreanTitle: '매트 페인팅',
-        prompt: 'matte painting',
-        description: '영화나 게임의 배경을 위해 제작되는 고도로 사실적인 디지털 또는 전통 페인팅입니다.',
+        prompt: 'matte painting, photorealistic, epic scale, cinematic atmosphere',
+        features: '사진과 페인팅을 합성, 포토리얼리스틱한 거대 스케일의 배경',
+        mood: '장대한, 신비로운, 영화적',
+        description: '영화나 게임의 배경을 위해 제작되는 고도로 사실적인 디지털 페인팅입니다. 사진 합성과 디지털 페인팅을 결합하여 현실에서 촬영 불가능한 장면을 구현합니다.',
         usage: [
-            '영화 배경',
-            '판타지 환경',
-            'VFX 제작',
-            '대규모 풍경'
+            '영화 VFX 배경',
+            '판타지 세계관',
+            '대규모 풍경',
+            '게임 환경 아트'
+        ],
+        examplePrompts: [
+            { title: '판타지 왕국', prompt: 'matte painting, ancient kingdom on cliff edge, waterfalls, dramatic sunset, photorealistic, epic scale' },
+            { title: 'SF 도시', prompt: 'matte painting, futuristic megacity skyline, atmospheric haze, cinematic lighting, ultra detailed' },
+            { title: '고대 유적', prompt: 'matte painting, overgrown ancient temple in jungle, volumetric light rays, mystical atmosphere' },
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/d40dce8b-9ad9-4b26-a7c1-6e0735d40a6b/0_1.png', caption: 'Epic landscape' },
-            { src: 'https://cdn.midjourney.com/78a28f07-f5d9-4611-9406-345930da1465/0_2.png', caption: 'Film background' },
-            { src: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop', caption: 'Fantasy world' },
-            { src: 'https://images.unsplash.com/photo-1444927714506-8492d94b4e3d?w=600&h=400&fit=crop', caption: 'Set extension' }
+            { src: '/images/guide/style/matte-painting-1.jpg', caption: 'Epic landscape', prompt: 'matte painting of an ancient kingdom on cliff edge overlooking vast ocean, waterfalls cascading into mist, dramatic sunset sky, photorealistic epic landscape, cinematic scale, 8K' }
         ]
     },
 
     '3d-render': {
         title: '3D 렌더(3D Render)',
         koreanTitle: '3D 렌더링',
-        prompt: '3D render',
-        description: '3D 모델링 소프트웨어를 사용하여 생성된 컴퓨터 그래픽 이미지입니다.',
+        prompt: '3D render, octane render, highly detailed, studio lighting',
+        features: '사실적인 질감과 조명, 정밀한 형태와 재질 표현',
+        mood: '깔끔한, 전문적, 사실적',
+        description: '3D 모델링 소프트웨어를 사용하여 생성된 컴퓨터 그래픽 이미지입니다. Octane, V-Ray 등의 렌더러를 활용해 사실적인 질감과 조명을 구현합니다.',
         usage: [
             '제품 시각화',
             '건축 비주얼',
-            '캐릭터 모델',
+            '캐릭터 모델링',
             'VFX와 애니메이션'
         ],
+        examplePrompts: [
+            { title: '제품 렌더링', prompt: '3D render of a luxury perfume bottle, glass material, studio lighting, octane render, photorealistic' },
+            { title: '캐릭터', prompt: '3D render, stylized robot character, metallic surface, subsurface scattering, dramatic lighting' },
+            { title: '건축 비주얼', prompt: '3D render, modern minimalist house, interior design, warm lighting, unreal engine' },
+        ],
         images: [
-            { src: 'https://cdn.midjourney.com/31eeae82-57d2-4e27-84b0-65cd6a0349f4/0_0.png', caption: '3D model' },
-            { src: 'https://cdn.midjourney.com/92fb90a9-1eca-434c-8812-e74a4b9f1f18/0_0.png', caption: 'CGI render' },
-            { src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop', caption: 'Product viz' },
-            { src: 'https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=600&h=400&fit=crop', caption: 'Architectural render' }
+            { src: '/images/guide/style/3d-render-1.jpg', caption: '3D model', prompt: 'octane render 3D model of a translucent crystal dragon figurine, subsurface scattering, caustic light effects, studio lighting, highly detailed, product visualization, photorealistic' }
         ]
     },
 
-    // Illustration Styles
+    // ===== 3D/CG 계열 - 신규 =====
+    'isometric': {
+        title: '아이소메트릭(Isometric)',
+        koreanTitle: '아이소메트릭',
+        prompt: 'isometric view, 3D render, miniature diorama, clean design',
+        features: '45도 각도의 등각 투영, 미니어처 느낌의 귀여운 3D 장면',
+        mood: '깔끔한, 귀여운, 체계적',
+        description: '등각 투영법(Isometric Projection)으로 그린 3D 스타일입니다. 건물, 방, 도시 등을 미니어처처럼 표현하며 게임이나 인포그래픽에 많이 사용됩니다.',
+        usage: [
+            '게임 맵 디자인',
+            '인포그래픽',
+            '건축 다이어그램',
+            'SNS 일러스트'
+        ],
+        examplePrompts: [
+            { title: '미니어처 카페', prompt: 'isometric view of a cozy coffee shop interior, miniature diorama, warm lighting, detailed furniture, 3D render' },
+            { title: '게임 맵', prompt: 'isometric fantasy game map, medieval village, pixel-perfect, colorful buildings, top-down 45 degree angle' },
+            { title: '오피스', prompt: 'isometric modern office workspace, clean design, pastel colors, miniature scale, 3D illustration' },
+        ],
+        images: [
+            { src: '/images/guide/style/isometric-1.jpg', caption: 'isometric example 1', prompt: 'isometric view of a cozy coffee shop interior, tiny detailed furniture, warm lighting through windows, miniature people sitting at tables, diorama style, pastel color palette, cute architectural cutaway, highly detailed, 8K' }
+        ]
+    },
+
+    'low-poly': {
+        title: '로우폴리(Low Poly)',
+        koreanTitle: '로우폴리',
+        prompt: 'low poly art, geometric, faceted surfaces, vibrant colors',
+        features: '적은 폴리곤으로 구성된 기하학적 형태, 면이 드러나는 독특한 질감',
+        mood: '모던, 미니멀, 그래픽적',
+        description: '적은 수의 폴리곤으로 구성된 3D 아트 스타일입니다. 기하학적이고 각진 면들이 만들어내는 독특한 미감이 특징이며, 게임과 모션 그래픽에서 인기입니다.',
+        usage: [
+            '게임 에셋',
+            '모션 그래픽',
+            '배경 일러스트',
+            '앱 아이콘'
+        ],
+        examplePrompts: [
+            { title: '산 풍경', prompt: 'low poly mountain landscape, geometric terrain, sunset colors, faceted surfaces, minimal 3D art' },
+            { title: '동물', prompt: 'low poly fox, geometric facets, vibrant orange, white background, clean 3D render' },
+            { title: '도시', prompt: 'low poly city scene, colorful buildings, geometric shapes, isometric view, stylized 3D' },
+        ],
+        images: [
+            { src: '/images/guide/style/low-poly-1.jpg', caption: 'low poly example 1', prompt: 'low poly 3D render of a majestic wolf standing on a rocky cliff, geometric faceted surfaces, dramatic sunset gradient background, minimal polygon aesthetic, stylized nature scene, vibrant angular shapes, modern digital art' }
+        ]
+    },
+
+    'claymation': {
+        title: '클레이메이션(Claymation)',
+        koreanTitle: '클레이메이션',
+        prompt: 'claymation style, clay figure, stop motion, handmade texture',
+        features: '점토 재질감, 수작업 느낌, 스톱모션 애니메이션 질감',
+        mood: '따뜻한, 아날로그, 귀여운',
+        description: '점토(클레이)로 만든 듯한 캐릭터와 장면을 표현하는 스타일입니다. 월리스와 그로밋, 치킨런 같은 스톱모션 애니메이션의 질감을 디지털로 구현합니다.',
+        usage: [
+            '어린이 콘텐츠',
+            '광고 캐릭터',
+            'SNS 콘텐츠',
+            '뮤직비디오'
+        ],
+        examplePrompts: [
+            { title: '클레이 캐릭터', prompt: 'claymation style cute robot character, clay texture, handmade feel, stop motion aesthetic, soft lighting' },
+            { title: '미니어처 씬', prompt: 'claymation miniature kitchen scene, clay figures cooking, warm colors, stop motion animation style' },
+            { title: '동물', prompt: 'claymation style puppy, sculpted clay texture, big eyes, colorful, studio photography' },
+        ],
+        images: [
+            { src: '/images/guide/style/claymation-1.jpg', caption: 'claymation example 1', prompt: 'claymation style cheerful baker character holding a fresh baguette in a tiny bakery, soft clay texture, handmade stop-motion aesthetic, warm cozy atmosphere, Aardman Studios quality, charming imperfections, detailed miniature set' }
+        ]
+    },
+
+    'voxel-art': {
+        title: '복셀 아트(Voxel Art)',
+        koreanTitle: '복셀 아트',
+        prompt: 'voxel art, 3D pixel art, cubic blocks, colorful',
+        features: '3D 픽셀로 구성된 블록형 세계, 마인크래프트 같은 큐빅 스타일',
+        mood: '레트로, 게임적, 장난스러운',
+        description: '3D 공간에서 픽셀(복셀)을 쌓아 만드는 아트 스타일입니다. 마인크래프트에서 영감 받은 블록 기반 미학으로, 레트로 게임 감성과 3D를 결합합니다.',
+        usage: [
+            '인디 게임 아트',
+            'NFT 아트',
+            'SNS 프로필',
+            '건축 모델링'
+        ],
+        examplePrompts: [
+            { title: '복셀 도시', prompt: 'voxel art city, cubic buildings, colorful blocks, isometric view, magicavoxel style' },
+            { title: '복셀 캐릭터', prompt: 'voxel art character, 3D pixel knight, blocky armor, retro game aesthetic' },
+            { title: '복셀 방', prompt: 'voxel art cozy bedroom, cubic furniture, warm lighting, miniature diorama, detailed' },
+        ],
+        images: [
+            { src: '/images/guide/style/voxel-art-1.jpg', caption: 'voxel art example 1', prompt: 'voxel art bustling Japanese street market at night, glowing lanterns and neon signs, tiny cube-built characters shopping, colorful food stalls, Minecraft-meets-Tokyo aesthetic, detailed blocky architecture, warm atmospheric lighting' }
+        ]
+    },
+
+    // ===== 일러스트레이션 계열 - 신규 =====
+    'flat-illustration': {
+        title: '플랫 일러스트(Flat Illustration)',
+        koreanTitle: '플랫 일러스트',
+        prompt: 'flat illustration, minimal design, bold colors, clean shapes',
+        features: '그림자와 그라데이션 최소화, 깔끔한 면 분할과 대담한 색상',
+        mood: '모던, 깔끔한, 친근한',
+        description: '입체감을 최소화하고 평면적인 색면으로 구성하는 일러스트레이션 스타일입니다. UI/UX 디자인, 웹사이트, 앱 일러스트에서 가장 많이 사용되는 현대적 스타일입니다.',
+        usage: [
+            '웹/앱 UI 일러스트',
+            '프레젠테이션',
+            '인포그래픽',
+            '브랜드 아이덴티티'
+        ],
+        examplePrompts: [
+            { title: '업무 장면', prompt: 'flat illustration of people working in modern office, bold colors, minimal shadows, clean geometric shapes' },
+            { title: '풍경', prompt: 'flat illustration, countryside landscape, simple shapes, limited color palette, minimal design' },
+            { title: '캐릭터', prompt: 'flat illustration character design, friendly person with laptop, bold outlines, pastel colors' },
+        ],
+        images: [
+            { src: '/images/guide/style/flat-illustration-1.jpg', caption: 'flat illustration example 1', prompt: 'flat illustration of a young woman riding a bicycle through a colorful city street, bold geometric shapes, limited color palette, modern graphic design style, clean lines, editorial illustration quality, contemporary minimalist art' }
+        ]
+    },
+
+    'line-art': {
+        title: '라인 아트(Line Art)',
+        koreanTitle: '라인 아트',
+        prompt: 'line art, black and white, clean lines, minimal, ink drawing',
+        features: '선만으로 구성, 면의 채움 없이 윤곽과 디테일 표현',
+        mood: '세련된, 미니멀, 우아한',
+        description: '선(line)만을 사용하여 형태를 표현하는 아트 스타일입니다. 채색 없이 선의 굵기와 밀도만으로 깊이와 질감을 표현하며, 타투 디자인이나 일러스트에 많이 활용됩니다.',
+        usage: [
+            '타투 디자인',
+            '컬러링 북',
+            '로고 디자인',
+            '패션 스케치'
+        ],
+        examplePrompts: [
+            { title: '보태니컬', prompt: 'line art botanical illustration, delicate flowers, fine black ink lines, white background, detailed' },
+            { title: '인물', prompt: 'continuous line art portrait, single line drawing, minimalist face, elegant curves' },
+            { title: '건축', prompt: 'line art architectural sketch, detailed building facade, fine pen strokes, black and white' },
+        ],
+        images: [
+            { src: '/images/guide/style/line-art-1.jpg', caption: 'line art example 1', prompt: 'fine line art portrait of an elegant woman with flowing hair intertwined with flowers, intricate detailed linework, black ink on white background, botanical elements, delicate crosshatching, pen and ink style, haute couture fashion illustration' }
+        ]
+    },
+
+    'vector-art': {
+        title: '벡터 아트(Vector Art)',
+        koreanTitle: '벡터 아트',
+        prompt: 'vector art, clean edges, scalable design, bold colors, Adobe Illustrator style',
+        features: '수학적 곡선 기반, 무한 확대 가능한 깔끔한 엣지',
+        mood: '전문적, 깔끔한, 그래픽적',
+        description: '수학적 곡선(베지어)으로 구성된 디지털 아트입니다. 확대해도 깨지지 않는 특성으로 로고, 아이콘, 인쇄물 디자인에 필수적이며, 깔끔하고 정교한 느낌이 특징입니다.',
+        usage: [
+            '로고 디자인',
+            '아이콘 세트',
+            '인쇄물 디자인',
+            '스티커/이모지'
+        ],
+        examplePrompts: [
+            { title: '동물 캐릭터', prompt: 'vector art cute animal character, clean edges, bold flat colors, geometric shapes, Adobe Illustrator style' },
+            { title: '풍경 일러스트', prompt: 'vector art landscape, sunset over mountains, clean gradients, scalable design, minimal' },
+            { title: '아이콘', prompt: 'vector art icon set, food items, flat design, consistent style, bold outlines, colorful' },
+        ],
+        images: [
+            { src: '/images/guide/style/vector-art-1.jpg', caption: 'vector art example 1', prompt: 'vector art of a stylish astronaut floating in space surrounded by colorful planets, clean sharp edges, flat bold colors, Adobe Illustrator style, graphic design poster, scalable crisp artwork, modern space exploration theme' }
+        ]
+    },
+
+    'children-illustration': {
+        title: '동화 일러스트(Children\'s Illustration)',
+        koreanTitle: '동화 일러스트',
+        prompt: 'children book illustration, whimsical, soft colors, storybook art',
+        features: '부드러운 색감, 동글동글한 형태, 동화적 세계관',
+        mood: '따뜻한, 꿈같은, 순수한',
+        description: '어린이 그림책에서 볼 수 있는 따뜻하고 상상력 넘치는 일러스트레이션 스타일입니다. 부드러운 색감과 과장된 비율의 캐릭터가 특징입니다.',
+        usage: [
+            '그림책 삽화',
+            '어린이 교육 콘텐츠',
+            '캐릭터 상품',
+            '벽지/인테리어'
+        ],
+        examplePrompts: [
+            { title: '숲 속 모험', prompt: 'children book illustration, little fox exploring magical forest, soft watercolors, whimsical, dreamy atmosphere' },
+            { title: '밤하늘', prompt: 'children book illustration, child looking at starry sky, gentle colors, storybook art, heartwarming' },
+            { title: '동물 친구들', prompt: 'children book illustration, group of cute animals having tea party, pastel colors, rounded shapes, cozy' },
+        ],
+        images: [
+            { src: '/images/guide/style/children-illustration-1.jpg', caption: 'children illustration example 1', prompt: 'children’s book illustration of a little girl and her fox friend exploring a magical garden with oversized flowers, soft watercolor textures, whimsical storytelling, warm gentle colors, storybook charm, Beatrix Potter inspired' }
+        ]
+    },
+
+    'botanical-art': {
+        title: '보태니컬 아트(Botanical Art)',
+        koreanTitle: '보태니컬 아트',
+        prompt: 'botanical illustration, scientific accuracy, detailed flora, natural colors',
+        features: '식물의 정밀한 묘사, 과학적 정확성과 예술적 아름다움의 결합',
+        mood: '자연적, 우아한, 학문적',
+        description: '식물을 정밀하게 묘사하는 예술 형식으로, 과학적 정확성과 예술적 아름다움을 동시에 추구합니다. 식물도감이나 인테리어 아트에 활용됩니다.',
+        usage: [
+            '식물 도감',
+            '인테리어 아트 프린트',
+            '패턴 디자인',
+            '화장품/식품 패키지'
+        ],
+        examplePrompts: [
+            { title: '장미', prompt: 'botanical illustration of a rose, detailed petals and leaves, scientific accuracy, vintage parchment background' },
+            { title: '허브 컬렉션', prompt: 'botanical art, collection of culinary herbs, labeled specimens, watercolor on cream paper, detailed' },
+            { title: '열대 식물', prompt: 'botanical illustration, tropical monstera and palm leaves, detailed veins, natural green tones, scientific style' },
+        ],
+        images: [
+            { src: '/images/guide/style/botanical-art-1.jpg', caption: 'botanical art example 1', prompt: 'botanical art scientific illustration of a blooming peony flower, precise anatomical detail, vintage naturalist style, labeled cross-section, muted parchment background, hand-painted watercolor accuracy, museum specimen quality' }
+        ]
+    },
+
+    // ===== 전통 미술 사조 - 신규 =====
+    'impressionism': {
+        title: '인상주의(Impressionism)',
+        koreanTitle: '인상주의',
+        prompt: 'impressionism painting, visible brushstrokes, light and color, plein air',
+        features: '눈에 보이는 붓터치, 빛과 색의 인상 포착, 야외 풍경 선호',
+        mood: '밝은, 유동적, 자연적',
+        description: '19세기 프랑스에서 시작된 미술 사조로, 빛과 색채의 순간적 인상을 포착하는 것이 특징입니다. 모네, 르누아르, 드가 등의 화가가 대표적입니다.',
+        usage: [
+            '풍경 아트',
+            '인테리어 장식',
+            '감성 콘텐츠',
+            '아트 프린트'
+        ],
+        examplePrompts: [
+            { title: '호수 풍경', prompt: 'impressionism painting, water lilies on a tranquil pond, visible brushstrokes, dappled sunlight, Monet style' },
+            { title: '파리 거리', prompt: 'impressionism painting, rainy Paris street scene, soft focus, warm light, visible brushwork, plein air' },
+            { title: '정원', prompt: 'impressionism style garden in bloom, vibrant flowers, natural light, loose brushstrokes, Renoir inspired' },
+        ],
+        images: [
+            { src: '/images/guide/style/impressionism-1.jpg', caption: 'Painterly style', prompt: 'impressionism painting of water lilies on tranquil pond, visible loose brushstrokes, dappled sunlight on water, Monet inspired, plein air atmosphere, soft natural colors, serene beauty' }
+        ]
+    },
+
+    'expressionism': {
+        title: '표현주의(Expressionism)',
+        koreanTitle: '표현주의',
+        prompt: 'expressionism art, bold distorted forms, intense colors, emotional',
+        features: '왜곡된 형태, 강렬한 색상 대비, 감정의 극적 표현',
+        mood: '격렬한, 불안한, 감정적',
+        description: '20세기 초 독일에서 발전한 미술 사조로, 객관적 현실보다 내면의 감정과 주관적 경험을 강렬하게 표현합니다. 뭉크, 키르히너 등이 대표적입니다.',
+        usage: [
+            '감정 표현 아트',
+            '앨범 커버',
+            '포스터 디자인',
+            '실험 영상'
+        ],
+        examplePrompts: [
+            { title: '도시 풍경', prompt: 'expressionism painting, distorted cityscape, bold angular shapes, intense contrasting colors, emotional brushwork' },
+            { title: '초상', prompt: 'expressionism portrait, exaggerated features, vivid unnatural colors, thick impasto, raw emotion, Munch inspired' },
+            { title: '풍경', prompt: 'expressionism landscape, twisted trees, swirling sky, intense sunset colors, dramatic mood' },
+        ],
+        images: [
+            { src: '/images/guide/style/expressionism-1.jpg', caption: 'expressionism example 1', prompt: 'expressionism portrait of a tormented musician playing violin, distorted features conveying raw emotion, bold aggressive brushstrokes, intense contrasting colors, Edvard Munch inspired, psychological intensity, powerful inner turmoil' }
+        ]
+    },
+
+    'surrealism': {
+        title: '초현실주의(Surrealism)',
+        koreanTitle: '초현실주의',
+        prompt: 'surrealism art, dreamlike, impossible scenes, Salvador Dali style',
+        features: '꿈과 무의식의 세계, 불가능한 조합, 사실적 기법으로 비현실 표현',
+        mood: '몽환적, 기이한, 신비로운',
+        description: '무의식과 꿈의 세계를 탐구하는 미술 사조입니다. 현실에서 불가능한 장면을 사실적 기법으로 표현하여 기이하고 신비로운 분위기를 연출합니다. 달리, 마그리트 등이 대표적입니다.',
+        usage: [
+            '아트 포스터',
+            '앨범 커버',
+            '광고 비주얼',
+            'NFT 아트'
+        ],
+        examplePrompts: [
+            { title: '녹는 시계', prompt: 'surrealism art, melting clocks draped over barren landscape, dreamlike atmosphere, Salvador Dali style' },
+            { title: '떠다니는 섬', prompt: 'surrealism painting, floating islands in the sky, impossible architecture, hyper-detailed, Magritte inspired' },
+            { title: '꿈의 방', prompt: 'surrealism interior, room where floor becomes ocean, fish swimming through furniture, photorealistic, dreamlike' },
+        ],
+        images: [
+            { src: '/images/guide/style/surrealism-1.jpg', caption: 'Dreamlike scene', prompt: 'surrealism dreamlike scene of melting clocks draped over barren landscape, impossible physics, Salvador Dali inspired, hyper-detailed, warm desert tones, subconscious imagery, dreamscape' }
+        ]
+    },
+
+    'art-nouveau': {
+        title: '아르누보(Art Nouveau)',
+        koreanTitle: '아르누보',
+        prompt: 'art nouveau style, organic flowing lines, floral ornaments, Alphonse Mucha',
+        features: '유기적 곡선, 꽃과 식물 모티프, 장식적 테두리와 프레임',
+        mood: '우아한, 장식적, 로맨틱',
+        description: '19세기 말~20세기 초의 장식 미술 양식으로, 자연에서 영감받은 유기적 곡선과 꽃 모티프가 특징입니다. 알폰스 무하의 포스터가 대표적입니다.',
+        usage: [
+            '포스터 디자인',
+            '패키지 디자인',
+            '타투 디자인',
+            '주얼리 디자인'
+        ],
+        examplePrompts: [
+            { title: '여성 초상', prompt: 'art nouveau portrait of elegant woman, flowing hair with flowers, ornate border, Alphonse Mucha style, pastel colors' },
+            { title: '사계절', prompt: 'art nouveau illustration, four seasons allegory, floral ornaments, organic curves, decorative frame, Mucha poster' },
+            { title: '자연 패턴', prompt: 'art nouveau pattern design, intertwining vines and lilies, golden accents, flowing organic lines, decorative' },
+        ],
+        images: [
+            { src: '/images/guide/style/art-nouveau-1.jpg', caption: 'art nouveau example 1', prompt: 'art nouveau portrait of an elegant woman with flowing auburn hair adorned with lilies, sinuous organic lines, decorative floral border, Alphonse Mucha inspired, ornamental patterns, gold accents, ethereal beauty, poster design' }
+        ]
+    },
+
+    'art-deco': {
+        title: '아르데코(Art Deco)',
+        koreanTitle: '아르데코',
+        prompt: 'art deco style, geometric patterns, gold and black, luxurious, 1920s',
+        features: '기하학적 패턴, 금색과 검은색, 직선과 지그재그, 럭셔리 무드',
+        mood: '럭셔리, 화려한, 레트로 글래머',
+        description: '1920~30년대에 유행한 장식 미술 양식으로, 기하학적 패턴과 대칭 구조가 특징입니다. 금색, 검은색 등 고급스러운 색상을 주로 사용하며 그레이트 개츠비의 시대상을 대표합니다.',
+        usage: [
+            '럭셔리 브랜딩',
+            '초대장/포스터',
+            '인테리어 디자인',
+            '타이포그래피'
+        ],
+        examplePrompts: [
+            { title: '건축', prompt: 'art deco skyscraper, geometric patterns, gold and black facade, 1920s New York, dramatic perspective' },
+            { title: '포스터', prompt: 'art deco poster design, elegant woman silhouette, geometric sunburst, gold foil on black, vintage 1920s' },
+            { title: '인테리어', prompt: 'art deco luxury hotel lobby, marble floors, geometric brass fixtures, rich velvet, golden accents' },
+        ],
+        images: [
+            { src: '/images/guide/style/art-deco-1.jpg', caption: 'art deco example 1', prompt: 'art deco glamorous ballroom scene with elegant couple dancing, geometric patterns, gold and black color scheme, 1920s luxury, Gatsby era opulence, symmetrical ornamental design, chrome and crystal details, sophisticated nightlife' }
+        ]
+    },
+
+    'baroque': {
+        title: '바로크(Baroque)',
+        koreanTitle: '바로크',
+        prompt: 'baroque painting, dramatic chiaroscuro, rich details, ornate, Caravaggio style',
+        features: '극적인 명암 대비, 풍부한 장식, 역동적 구도와 감정 표현',
+        mood: '극적인, 장엄한, 화려한',
+        description: '17세기 유럽의 미술 양식으로, 극적인 명암 대비(키아로스쿠로)와 역동적 구도가 특징입니다. 카라바조, 렘브란트, 루벤스 등이 대표적입니다.',
+        usage: [
+            '드라마틱 초상화',
+            '영화 포스터',
+            '고전적 아트',
+            '럭셔리 브랜딩'
+        ],
+        examplePrompts: [
+            { title: '정물화', prompt: 'baroque still life painting, fruits and flowers, dramatic chiaroscuro lighting, rich colors, Dutch Golden Age' },
+            { title: '초상화', prompt: 'baroque portrait, noble figure in ornate clothing, dramatic side lighting, Rembrandt style, oil on canvas' },
+            { title: '종교화', prompt: 'baroque religious painting, angelic scene, dramatic light rays, dynamic composition, Caravaggio inspired' },
+        ],
+        images: [
+            { src: '/images/guide/style/baroque-1.jpg', caption: 'baroque example 1', prompt: 'baroque dramatic scene of an angel descending from stormy clouds with golden light rays, rich chiaroscuro, ornate flowing fabric, Caravaggio inspired intensity, theatrical divine illumination, museum masterpiece quality, oil painting texture' }
+        ]
+    },
+
+    'renaissance': {
+        title: '르네상스(Renaissance)',
+        koreanTitle: '르네상스',
+        prompt: 'Renaissance painting, classical composition, sfumato technique, Leonardo da Vinci style',
+        features: '원근법, 인체 해부학적 정확성, 스푸마토 기법, 고전적 균형',
+        mood: '고전적, 조화로운, 숭고한',
+        description: '14~16세기 이탈리아에서 시작된 미술 양식으로, 고대 그리스-로마의 이상적 아름다움을 추구합니다. 레오나르도 다빈치, 미켈란젤로, 라파엘로가 대표적입니다.',
+        usage: [
+            '클래식 아트',
+            '초상화',
+            '교육 자료',
+            '고급 브랜딩'
+        ],
+        examplePrompts: [
+            { title: '초상화', prompt: 'Renaissance portrait painting, young woman with mysterious smile, sfumato technique, warm earth tones, da Vinci style' },
+            { title: '성당 벽화', prompt: 'Renaissance ceiling fresco, mythological figures, perfect human anatomy, dramatic perspective, Michelangelo style' },
+            { title: '풍경', prompt: 'Renaissance landscape painting, Tuscan countryside, golden light, classical composition, atmospheric perspective' },
+        ],
+        images: [
+            { src: '/images/guide/style/renaissance-1.jpg', caption: 'renaissance example 1', prompt: 'renaissance portrait of a noble woman in a Florentine garden, sfumato technique, classical composition, Leonardo da Vinci inspired, rich velvet dress, serene expression, architectural columns, golden ratio proportions, tempera on panel' }
+        ]
+    },
+
+    'ukiyo-e': {
+        title: '우키요에(Ukiyo-e)',
+        koreanTitle: '우키요에',
+        prompt: 'ukiyo-e style, Japanese woodblock print, flat colors, bold outlines',
+        features: '목판화 기법, 평면적 색면, 굵은 윤곽선, 일본 전통 구도',
+        mood: '전통적, 우아한, 동양적',
+        description: '에도시대 일본의 목판화 예술로, 풍경, 미인, 가부키 배우 등을 소재로 합니다. 가츠시카 호쿠사이의 "가나가와 앞바다의 큰 파도"가 세계적으로 유명합니다.',
+        usage: [
+            '동양풍 아트',
+            '포스터/엽서',
+            '타투 디자인',
+            '패턴 디자인'
+        ],
+        examplePrompts: [
+            { title: '파도', prompt: 'ukiyo-e style great wave, dramatic ocean waves, Mount Fuji background, Japanese woodblock print, Hokusai style' },
+            { title: '벚꽃', prompt: 'ukiyo-e cherry blossom scene, geisha under sakura tree, flat colors, bold outlines, traditional Japanese art' },
+            { title: '풍경', prompt: 'ukiyo-e landscape, misty mountains and lake, Japanese woodblock print style, muted colors, peaceful atmosphere' },
+        ],
+        images: [
+            { src: '/images/guide/style/ukiyo-e-1.jpg', caption: 'ukiyo e example 1', prompt: 'ukiyo-e Japanese woodblock print of a geisha crossing a bridge during cherry blossom season, Hokusai wave patterns in background, traditional flat perspective, bold outlines, limited color palette, Edo period aesthetic, washi paper texture' }
+        ]
+    },
+
+    // ===== 애니메이션/만화 계열 =====
     'anime-style': {
         title: '애니메 스타일(Anime Style)',
         koreanTitle: '애니메 스타일',
-        prompt: 'anime style',
-        description: '일본 애니메이션의 특징적인 스타일로, 큰 눈과 과장된 표정이 특징입니다.',
+        prompt: 'anime style, cel shading, vibrant colors, detailed eyes',
+        features: '큰 눈, 뾰족한 헤어, 셀 셰이딩, 과장된 표정과 감정',
+        mood: '역동적, 감성적, 화려한',
+        description: '일본 애니메이션의 특징적인 스타일로, 큰 눈과 과장된 표정이 특징입니다. 지브리, 신카이 마코토, 소년/소녀 만화 등 다양한 하위 스타일이 존재합니다.',
         usage: [
             '캐릭터 일러스트',
-            '만화',
-            '팬 아트',
-            '게임 캐릭터'
+            '라이트노벨 표지',
+            '게임 캐릭터',
+            '팬 아트'
+        ],
+        subStyles: [
+            { name: '지브리 스타일', prompt: 'Studio Ghibli style, hand-painted watercolor background, soft pastel colors, whimsical characters, lush nature scenery, gentle lighting', description: '자연과 모험, 따뜻한 색감의 수채화풍 배경' },
+            { name: '신카이 마코토', prompt: 'Makoto Shinkai style, detailed sky with dramatic clouds, lens flare, hyper-detailed cityscape, golden hour lighting, photorealistic background with anime characters', description: '빛과 하늘의 극적 표현, 사실적 배경' },
+            { name: '소년 만화(Shonen)', prompt: 'shonen anime style, dynamic action pose, intense battle scene, speed lines, glowing aura, bold colors, muscular characters, dramatic lighting', description: '액션, 우정, 역동적 배틀 장면' },
+            { name: '소녀 만화(Shoujo)', prompt: 'shoujo anime style, sparkles and flower petals, soft dreamy lighting, beautiful bishounen character, pastel color palette, romantic atmosphere, delicate linework', description: '로맨스, 꽃, 반짝이는 연출' },
+        ],
+        examplePrompts: [
+            { title: '액션 캐릭터', prompt: 'anime style warrior character, dynamic action pose, glowing sword, cel shading, vibrant colors, detailed' },
+            { title: '일상 장면', prompt: 'anime style, high school girl at sunset rooftop, golden hour lighting, soft colors, Makoto Shinkai style' },
+            { title: '판타지', prompt: 'anime style fantasy mage, flowing robes, magical particles, detailed eyes, sakimichan inspired' },
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&h=400&fit=crop', caption: 'Anime character' },
-            { src: 'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=600&h=400&fit=crop', caption: 'Manga style' },
-            { src: 'https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=600&h=400&fit=crop', caption: 'Japanese animation' },
-            { src: 'https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=600&h=400&fit=crop', caption: 'Anime art' }
+            { src: '/images/guide/style/anime-style-1.jpg', caption: 'Anime character', prompt: 'anime style warrior character in dynamic battle pose, glowing magical sword, cel shading, vibrant saturated colors, detailed eyes and hair, Japanese animation quality, action scene' }
+        ]
+    },
+
+    'manga': {
+        title: '만화(Manga)',
+        koreanTitle: '만화(망가)',
+        prompt: 'manga style, black and white, screentone, dynamic panels, Japanese comic',
+        features: '흑백 스크린톤, 역동적 패널 구성, 속도감 있는 선',
+        mood: '역동적, 드라마틱, 긴장감',
+        description: '일본 만화의 독특한 흑백 아트 스타일입니다. 스크린톤(망점)을 활용한 명암 표현과 역동적인 구도, 다양한 감정선이 특징입니다.',
+        usage: [
+            '만화/코믹스',
+            '팬 아트',
+            '스토리보드',
+            '캐릭터 디자인'
+        ],
+        examplePrompts: [
+            { title: '액션 장면', prompt: 'manga style action scene, dynamic speed lines, black and white, screentone shading, dramatic angle' },
+            { title: '소녀 만화', prompt: 'shoujo manga style, romantic scene, sparkles and flowers, delicate linework, screentone, emotional' },
+            { title: '배틀 장면', prompt: 'manga style intense battle, bold ink strokes, dramatic shadows, speed lines, shonen manga aesthetic' },
+        ],
+        images: [
+            { src: '/images/guide/style/manga-1.jpg', caption: 'manga example 1', prompt: 'manga style intense close-up of a young hero with determined eyes, speed lines radiating outward, dramatic shading, screentone texture, Japanese comic panel composition, expressive hair movement, Shonen Jump quality, black and white ink' }
         ]
     },
 
     'cartoon-style': {
         title: '카툰 스타일(Cartoon Style)',
         koreanTitle: '카툰 스타일',
-        prompt: 'cartoon style',
-        description: '단순화되고 과장된 형태로 유머러스하고 친근한 느낌을 주는 스타일입니다.',
+        prompt: 'cartoon style, bold outlines, exaggerated proportions, fun colors',
+        features: '과장된 비율, 굵은 아웃라인, 단순화된 형태, 유머러스한 표현',
+        mood: '밝은, 유쾌한, 친근한',
+        description: '단순화되고 과장된 형태로 유머러스하고 친근한 느낌을 주는 스타일입니다. TV 애니메이션, 웹 콘텐츠, 광고 등에 폭넓게 사용됩니다.',
         usage: [
             '어린이 콘텐츠',
-            '웹툰',
+            '웹 애니메이션',
             '마스코트 디자인',
-            '애니메이션'
+            '광고 캐릭터'
+        ],
+        examplePrompts: [
+            { title: '캐릭터', prompt: 'cartoon style funny cat character, bold outlines, exaggerated expressions, bright colors, Cartoon Network style' },
+            { title: '장면', prompt: 'cartoon style underwater adventure, colorful sea creatures, exaggerated proportions, fun and playful' },
+            { title: '마스코트', prompt: 'cartoon style brand mascot, friendly robot, round shapes, bold colors, simple clean design' },
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/668a82a1-c1f7-499b-92bd-caacb8f54646/0_2.png', caption: 'Cartoon character' },
-            { src: 'https://cdn.midjourney.com/80c4bf03-2ac1-4e59-b3f9-92736e41b81a/0_0.png', caption: 'Simplified style' },
-            { src: 'https://images.unsplash.com/photo-1561494653-744c43aed0c1?w=600&h=400&fit=crop', caption: 'Fun illustration' },
-            { src: 'https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=600&h=400&fit=crop', caption: 'Toon style' }
+            { src: '/images/guide/style/cartoon-style-1.jpg', caption: 'Cartoon character', prompt: 'cartoon style funny animal character with exaggerated big eyes, bold clean outlines, bright cheerful colors, Cartoon Network style, playful design, simple shapes, fun personality' }
         ]
     },
 
     'comic-book': {
         title: '코믹북 스타일(Comic Book)',
         koreanTitle: '코믹북 스타일',
-        prompt: 'comic book style',
-        description: '미국 만화책의 특징적인 스타일로, 굵은 선과 망점, 선명한 색상이 특징입니다.',
+        prompt: 'comic book style, halftone dots, bold ink lines, vibrant colors, Marvel style',
+        features: '하프톤 망점, 굵은 잉크 선, 역동적 구도, 강렬한 명암',
+        mood: '액션, 히어로적, 역동적',
+        description: '미국 만화책의 특징적인 스타일로, 굵은 선과 망점(하프톤), 선명한 색상이 특징입니다. 마블/DC 코믹스의 슈퍼히어로 아트가 대표적입니다.',
         usage: [
             '슈퍼히어로 콘텐츠',
             '그래픽 노블',
-            '액션 씬',
+            '영화 포스터',
             '팝 아트'
         ],
+        examplePrompts: [
+            { title: '히어로', prompt: 'comic book style superhero, dynamic action pose, bold ink lines, halftone dots, vibrant colors, Marvel style' },
+            { title: '액션 씬', prompt: 'comic book style epic battle scene, dramatic lighting, speed lines, onomatopoeia effects, bold colors' },
+            { title: '커버 아트', prompt: 'comic book cover art, hero standing on rooftop, city skyline, dramatic perspective, vintage halftone' },
+        ],
         images: [
-            { src: 'https://cdn.midjourney.com/c09d35ad-6780-4e83-b6a9-9413f5fa1c0f/0_0.png', caption: 'Comic art' },
-            { src: 'https://images.unsplash.com/photo-1601645191163-3fc0d5d64e35?w=600&h=400&fit=crop', caption: 'Superhero style' },
-            { src: 'https://images.unsplash.com/photo-1588862081167-d5b98006637e?w=600&h=400&fit=crop', caption: 'Pop art effect' },
-            { src: 'https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=600&h=400&fit=crop', caption: 'Action comic' }
+            { src: '/images/guide/style/comic-book-1.jpg', caption: 'Comic art', prompt: 'comic book style superhero standing on rooftop at night, bold ink lines, halftone dot pattern, dramatic pose, vibrant primary colors, Marvel style illustration, action ready' }
+        ]
+    },
+
+    'webtoon-style': {
+        title: '웹툰 스타일(Webtoon Style)',
+        koreanTitle: '웹툰 스타일',
+        prompt: 'webtoon style, Korean manhwa, clean linework, vibrant colors, digital comic',
+        features: '깔끔한 디지털 라인워크, 풀컬러, 세로 스크롤 최적화',
+        mood: '세련된, 감성적, 현대적',
+        description: '한국 웹툰의 독특한 디지털 만화 스타일입니다. 깔끔한 디지털 선과 풀컬러 채색, 세로 스크롤에 최적화된 구도가 특징입니다.',
+        usage: [
+            '웹툰 제작',
+            '캐릭터 디자인',
+            'SNS 일러스트',
+            '광고 콘텐츠'
+        ],
+        examplePrompts: [
+            { title: '로맨스', prompt: 'webtoon style romantic scene, two characters under cherry blossoms, clean linework, soft pastel colors, Korean manhwa' },
+            { title: '액션', prompt: 'webtoon style action scene, dynamic martial arts pose, speed effects, vibrant colors, digital comic art' },
+            { title: '일상', prompt: 'webtoon style daily life scene, cafe interior, detailed background, clean digital art, warm colors' },
+        ],
+        images: [
+            { src: '/images/guide/style/webtoon-style-1.jpg', caption: 'webtoon style example 1', prompt: 'webtoon style romantic scene of a couple sharing an umbrella in soft rain, Korean manhwa aesthetic, clean digital coloring, soft pastel tones, vertical scroll composition, emotional character expressions, sweet atmosphere, modern love story' }
+        ]
+    },
+
+    // ===== 팝 컬처/현대 스타일 =====
+    'pop-art': {
+        title: '팝 아트(Pop Art)',
+        koreanTitle: '팝 아트',
+        prompt: 'pop art style, bold primary colors, Ben-Day dots, Andy Warhol style',
+        features: '대중문화 이미지 차용, 원색 대비, 반복과 변주, 벤데이 도트',
+        mood: '대담한, 아이코닉, 팝적',
+        description: '1950~60년대 대중문화와 소비사회를 예술로 끌어올린 미술 사조입니다. 앤디 워홀, 로이 리히텐슈타인 등이 대표적이며, 원색의 대비와 반복이 특징입니다.',
+        usage: [
+            '포스터/아트 프린트',
+            '상품 디자인',
+            'SNS 콘텐츠',
+            '인테리어 아트'
+        ],
+        examplePrompts: [
+            { title: '초상', prompt: 'pop art portrait, bold primary colors, Ben-Day dots, high contrast, Andy Warhol style, screen print aesthetic' },
+            { title: '오브제', prompt: 'pop art style illustration of a hamburger, bold outlines, Roy Lichtenstein dots, primary colors, comic book aesthetic' },
+            { title: '반복 패턴', prompt: 'pop art repeated portrait grid, four color variations, silk screen print style, Warhol inspired, vibrant' },
+        ],
+        images: [
+            { src: '/images/guide/style/pop-art-1.jpg', caption: 'pop art example 1', prompt: 'pop art bold portrait of a glamorous woman with bright red lips, Warhol style screen print, Ben-Day dots pattern, vibrant primary colors, comic book aesthetics, bold black outlines, repeated image variation, consumer culture icon' }
+        ]
+    },
+
+    'psychedelic': {
+        title: '사이키델릭(Psychedelic)',
+        koreanTitle: '사이키델릭',
+        prompt: 'psychedelic art, trippy visuals, vivid neon colors, kaleidoscopic patterns',
+        features: '만화경 패턴, 네온 컬러, 유동적 형태, 시각적 환각 효과',
+        mood: '몽환적, 트리피, 자유로운',
+        description: '1960년대 히피 문화에서 발전한 시각 스타일로, 만화경 같은 패턴과 네온 컬러, 유동적 형태가 특징입니다. 음악 앨범 커버와 포스터에 많이 사용됩니다.',
+        usage: [
+            '앨범 커버',
+            '뮤직 페스티벌 포스터',
+            '패션 패턴',
+            '배경화면'
+        ],
+        examplePrompts: [
+            { title: '만화경', prompt: 'psychedelic kaleidoscopic pattern, vivid neon colors, swirling fractals, trippy visuals, 1960s poster art' },
+            { title: '인물', prompt: 'psychedelic portrait, face melting into colorful patterns, rainbow hair, third eye, vibrant acid colors' },
+            { title: '풍경', prompt: 'psychedelic landscape, melting mountains, rainbow sky, fractal trees, neon colors, surreal trip art' },
+        ],
+        images: [
+            { src: '/images/guide/style/psychedelic-1.jpg', caption: 'psychedelic example 1', prompt: 'psychedelic portrait of a woman with kaleidoscopic flowing hair, swirling vibrant rainbow patterns, optical illusion fractals, 1960s counterculture aesthetic, trippy liquid colors, acid art style, mind-expanding visual experience' }
+        ]
+    },
+
+    'steampunk': {
+        title: '스팀펑크(Steampunk)',
+        koreanTitle: '스팀펑크',
+        prompt: 'steampunk style, Victorian machinery, brass gears, steam-powered, industrial',
+        features: '빅토리아 시대 + 증기기관 기술, 황동 기어, 가죽과 금속',
+        mood: '빈티지, 산업적, 모험적',
+        description: '빅토리아 시대의 미학과 증기기관 기술이 결합된 레트로퓨처리즘 장르입니다. 황동 기어, 시계 장치, 증기 파이프 등의 요소가 특징적입니다.',
+        usage: [
+            '캐릭터 디자인',
+            '게임/영화 컨셉',
+            '코스프레 레퍼런스',
+            '장신구/소품 디자인'
+        ],
+        examplePrompts: [
+            { title: '비행선', prompt: 'steampunk airship, Victorian design, brass and copper details, steam pipes, gears, dramatic sky, detailed' },
+            { title: '캐릭터', prompt: 'steampunk inventor character, top hat with goggles, mechanical arm, brass gears, Victorian clothing' },
+            { title: '도시', prompt: 'steampunk city, Victorian architecture with pipes and gears, steam clouds, copper rooftops, industrial aesthetic' },
+        ],
+        images: [
+            { src: '/images/guide/style/steampunk-1.jpg', caption: 'steampunk example 1', prompt: 'steampunk Victorian inventor woman in her workshop, brass goggles on forehead, surrounded by clockwork mechanisms and copper pipes, steam-powered gadgets, leather and metal aesthetic, gaslight ambiance, industrial revolution fantasy' }
+        ]
+    },
+
+    'cyberpunk': {
+        title: '사이버펑크(Cyberpunk)',
+        koreanTitle: '사이버펑크',
+        prompt: 'cyberpunk style, neon lights, rain-soaked streets, high tech low life, futuristic',
+        features: '네온 조명, 빗속의 어두운 도시, 사이버네틱 임플란트, 홀로그램',
+        mood: '디스토피아, 네온누아르, 미래적',
+        description: '높은 기술력과 낮은 삶의 질(High tech, Low life)을 핵심으로 하는 SF 장르입니다. 블레이드 러너, 사이버펑크 2077 등에서 볼 수 있는 네온 빛 가득한 미래 도시가 대표적입니다.',
+        usage: [
+            'SF 컨셉 아트',
+            '게임 비주얼',
+            '영화 포스터',
+            '뮤직비디오'
+        ],
+        examplePrompts: [
+            { title: '거리', prompt: 'cyberpunk street scene, neon signs in Japanese and Korean, rain reflections, holographic ads, Blade Runner aesthetic' },
+            { title: '캐릭터', prompt: 'cyberpunk female hacker, neon-lit face, cybernetic eye implant, holographic interface, dark urban background' },
+            { title: '도시 전경', prompt: 'cyberpunk megacity aerial view, massive skyscrapers, flying cars, neon lights, smog, futuristic dystopia' },
+        ],
+        images: [
+            { src: '/images/guide/style/cyberpunk-1.jpg', caption: 'cyberpunk example 1', prompt: 'cyberpunk street samurai woman with neon-lit cybernetic arm, rain-soaked Tokyo alley, holographic advertisements, purple and cyan neon reflections, Blade Runner atmosphere, futuristic dystopia, augmented reality overlays, cinematic night' }
+        ]
+    },
+
+    'biopunk': {
+        title: '바이오펑크(Biopunk)',
+        koreanTitle: '바이오펑크',
+        prompt: 'biopunk style, organic technology, bio-mechanical, living architecture',
+        features: '유기적 기술, 생체 기계, 돌연변이, 바이오루미네센스',
+        mood: '기이한, 유기적, 불안한',
+        description: '생물학과 기술이 융합된 SF 장르입니다. 유전자 조작, 생체 기계, 유기적 건축물 등 생물학적 요소가 기술과 결합된 세계관을 표현합니다.',
+        usage: [
+            'SF 컨셉 아트',
+            '크리처 디자인',
+            '게임 환경',
+            '소설 표지'
+        ],
+        examplePrompts: [
+            { title: '생체 건축', prompt: 'biopunk living building, organic architecture, pulsating walls, bioluminescent veins, alien vegetation' },
+            { title: '캐릭터', prompt: 'biopunk character, bio-mechanical augmentations, organic circuitry under skin, glowing green veins, dark lab' },
+            { title: '도시', prompt: 'biopunk city, buildings grown from living tissue, organic tubes connecting towers, bioluminescent lighting' },
+        ],
+        images: [
+            { src: '/images/guide/style/biopunk-1.jpg', caption: 'biopunk example 1', prompt: 'biopunk scientist in organic laboratory, bioluminescent plant-technology hybrid organisms growing from walls, living circuits, DNA helix structures, green-tinted biological aesthetic, genetic engineering lab, ethereal bio-luminescence' }
+        ]
+    },
+
+    'solarpunk': {
+        title: '솔라펑크(Solarpunk)',
+        koreanTitle: '솔라펑크',
+        prompt: 'solarpunk style, green architecture, solar panels, lush vegetation, utopian future',
+        features: '친환경 기술, 식물과 건축의 조화, 태양광 패널, 유토피아적 비전',
+        mood: '희망적, 자연친화적, 유토피아적',
+        description: '지속가능한 기술과 자연이 조화를 이루는 유토피아적 미래를 그리는 장르입니다. 솔라펑크는 사이버펑크의 디스토피아에 대한 낙관적 대안으로 등장했습니다.',
+        usage: [
+            '건축 컨셉',
+            '환경 캠페인',
+            '미래 도시 비주얼',
+            '교육 콘텐츠'
+        ],
+        examplePrompts: [
+            { title: '도시', prompt: 'solarpunk city, buildings covered in lush gardens, solar panels, wind turbines, clear blue sky, utopian' },
+            { title: '주거', prompt: 'solarpunk eco-home, living roof with vegetables, solar panels, natural materials, surrounded by nature' },
+            { title: '교통', prompt: 'solarpunk public transit, solar-powered train, green corridors, flowers along tracks, bright sunny day' },
+        ],
+        images: [
+            { src: '/images/guide/style/solarpunk-1.jpg', caption: 'solarpunk example 1', prompt: 'solarpunk woman tending a rooftop garden in a green utopian city, solar panel buildings covered in lush vegetation, clean energy windmills, optimistic bright sunshine, sustainable architecture, harmonious nature-technology fusion, hopeful future' }
+        ]
+    },
+
+    'retro-vintage': {
+        title: '레트로 빈티지(Retro Vintage)',
+        koreanTitle: '레트로 빈티지',
+        prompt: 'retro vintage style, 1950s aesthetic, muted colors, aged texture, nostalgic',
+        features: '바랜 색감, 필름 그레인, 레트로 타이포그래피, 향수적 분위기',
+        mood: '향수적, 따뜻한, 클래식',
+        description: '1950~70년대의 디자인 미학을 재현하는 스타일입니다. 바랜 색상, 필름 그레인, 레트로 타이포그래피 등으로 향수와 따뜻함을 전달합니다.',
+        usage: [
+            '브랜드 디자인',
+            '카페/식당 메뉴',
+            '포스터/전단',
+            '패키지 디자인'
+        ],
+        examplePrompts: [
+            { title: '포스터', prompt: 'retro vintage travel poster, 1950s style, muted pastel colors, grain texture, classic typography, nostalgic' },
+            { title: '광고', prompt: 'retro vintage advertisement, 1960s diner, milkshake and burger, warm tones, aged paper texture' },
+            { title: '차량', prompt: 'retro vintage car illustration, classic 1957 Chevrolet, chrome details, pastel background, 50s aesthetic' },
+        ],
+        images: [
+            { src: '/images/guide/style/retro-vintage-1.jpg', caption: 'retro vintage example 1', prompt: 'retro vintage 1950s diner scene, waitress in classic uniform serving milkshakes, chrome barstools, checkered floor, warm nostalgic color grading, Kodachrome film aesthetic, classic Americana, neon open sign, jukebox in corner' }
+        ]
+    },
+
+    'synthwave': {
+        title: '신스웨이브(Synthwave)',
+        koreanTitle: '신스웨이브',
+        prompt: 'synthwave style, retro 80s, neon purple and pink, grid landscape, sunset',
+        features: '80년대 레트로 미래, 네온 퍼플/핑크, 그리드 지형, 크롬 텍스트',
+        mood: '레트로퓨처, 네온, 노스탤직',
+        description: '1980년대의 레트로 미래 미학을 현대적으로 재해석한 스타일입니다. 네온 퍼플과 핑크, 와이어프레임 그리드, 석양 그라디언트가 아이코닉한 요소입니다.',
+        usage: [
+            '앨범 커버',
+            '게임 비주얼',
+            '유튜브 썸네일',
+            '배경화면'
+        ],
+        examplePrompts: [
+            { title: '레트로 풍경', prompt: 'synthwave landscape, neon grid floor, retro sun setting behind mountains, purple and pink sky, 80s aesthetic' },
+            { title: '자동차', prompt: 'synthwave style DeLorean driving on neon grid road, palm trees, retro 80s sunset, chrome reflections' },
+            { title: '도시', prompt: 'synthwave city skyline, neon lights, retro futuristic, chrome buildings, purple pink gradient sky, 1980s' },
+        ],
+        images: [
+            { src: '/images/guide/style/synthwave-1.jpg', caption: 'synthwave example 1', prompt: 'synthwave retrowave scene of a DeLorean driving on neon grid highway toward sunset, chrome reflections, pink and purple gradient sky, palm tree silhouettes, 1980s aesthetic, VHS retro-futurism, outrun style, electronic music atmosphere' }
+        ]
+    },
+
+    'minimalism': {
+        title: '미니멀리즘(Minimalism)',
+        koreanTitle: '미니멀리즘',
+        prompt: 'minimalism art, simple composition, negative space, limited palette, clean',
+        features: '최소한의 요소, 넓은 여백, 제한된 색상 팔레트, 기하학적 형태',
+        mood: '고요한, 세련된, 명상적',
+        description: '불필요한 요소를 극한까지 제거하고 본질만 남기는 예술 스타일입니다. 넓은 여백과 단순한 형태, 제한된 색상으로 강력한 시각적 임팩트를 만들어냅니다.',
+        usage: [
+            '브랜딩/로고',
+            '인테리어 아트',
+            '앱 UI 디자인',
+            '포토 에디팅'
+        ],
+        examplePrompts: [
+            { title: '풍경', prompt: 'minimalism landscape, single tree on horizon, vast empty sky, muted earth tones, negative space, serene' },
+            { title: '오브제', prompt: 'minimalism still life, single red apple on white surface, clean composition, soft shadow, simple beauty' },
+            { title: '건축', prompt: 'minimalism architecture, concrete and glass, clean geometric lines, negative space, natural light, Tadao Ando' },
+        ],
+        images: [
+            { src: '/images/guide/style/minimalism-1.jpg', caption: 'Simple forms', prompt: 'minimalism art of a single tree on vast empty horizon, muted earth tones, extensive negative space, serene contemplative mood, simple composition, clean aesthetic, quiet beauty' }
+        ]
+    },
+
+    'maximalism': {
+        title: '맥시멀리즘(Maximalism)',
+        koreanTitle: '맥시멀리즘',
+        prompt: 'maximalism art, ornate details, rich patterns, layered textures, vibrant colors',
+        features: '과잉 장식, 패턴 위에 패턴, 풍부한 텍스처와 색상, 화려한 레이어링',
+        mood: '화려한, 과잉, 풍부한',
+        description: '미니멀리즘과 정반대로, 더 많은 요소를 더 화려하게 채우는 스타일입니다. 패턴과 텍스처, 색상이 겹겹이 쌓여 압도적인 시각적 풍성함을 만들어냅니다.',
+        usage: [
+            '패션 디자인',
+            '인테리어 장식',
+            '앨범 아트',
+            '축제/이벤트 비주얼'
+        ],
+        examplePrompts: [
+            { title: '인테리어', prompt: 'maximalism interior design, layered patterns, rich velvet, gold accents, plants everywhere, eclectic mix, vibrant' },
+            { title: '패션', prompt: 'maximalism fashion illustration, layered patterns and prints, bold jewelry, mixed textures, rich colors, opulent' },
+            { title: '정물', prompt: 'maximalism still life, overflowing flowers, fruits, fabrics, ornate vases, rich textures, Dutch Golden Age excess' },
+        ],
+        images: [
+            { src: '/images/guide/style/maximalism-1.jpg', caption: 'maximalism example 1', prompt: 'maximalism ornate Victorian parlor overflowing with eclectic treasures, layered Persian rugs, botanical wallpaper, crystal chandeliers, exotic artifacts, velvet furniture, every surface decorated, rich saturated colors, opulent visual feast' }
+        ]
+    },
+
+    // ===== 캐릭터/피규어/토이 계열 ⭐ =====
+    'pixar-style': {
+        title: '픽사 스타일(Pixar Style)',
+        koreanTitle: '픽사 스타일',
+        prompt: 'Pixar style 3D character, expressive eyes, smooth render, colorful, cute',
+        features: '큰 눈의 표현력, 부드러운 3D 렌더링, 과장된 비율, 따뜻한 조명',
+        mood: '따뜻한, 감동적, 귀여운',
+        description: '픽사 애니메이션의 독특한 3D 캐릭터 스타일입니다. 큰 눈으로 풍부한 감정을 전달하며, 부드러운 표면 질감과 따뜻한 조명이 특징입니다.',
+        usage: [
+            '캐릭터 디자인',
+            '어린이 콘텐츠',
+            'SNS 프로필',
+            '광고 캐릭터'
+        ],
+        examplePrompts: [
+            { title: '캐릭터', prompt: 'Pixar style 3D character, cute little chef with big eyes, holding a spoon, kitchen background, warm lighting' },
+            { title: '동물', prompt: 'Pixar style 3D puppy, big expressive eyes, fluffy fur, sitting in garden, soft sunlight, adorable' },
+            { title: '장면', prompt: 'Pixar style 3D scene, toy workshop, colorful toys on shelves, warm cozy lighting, magical atmosphere' },
+        ],
+        images: [
+            { src: '/images/guide/style/pixar-style-1.jpg', caption: 'pixar style example 1', prompt: 'Pixar style adorable robot character with big expressive eyes discovering a butterfly, subsurface scattering skin, detailed fabric textures, warm cinematic lighting, heartwarming moment, 3D animation quality, emotional storytelling, render' }
+        ]
+    },
+
+    'disney-style': {
+        title: '디즈니 스타일(Disney Style)',
+        koreanTitle: '디즈니 스타일',
+        prompt: 'Disney animation style, princess aesthetic, magical, enchanted, vibrant colors',
+        features: '우아한 캐릭터 비율, 마법적 요소, 뮤지컬 같은 화려함',
+        mood: '마법적, 로맨틱, 동화적',
+        description: '디즈니 애니메이션의 클래식한 아트 스타일입니다. 우아한 캐릭터 디자인, 마법적 이펙트, 풍부한 색감으로 동화 같은 세계를 구현합니다.',
+        usage: [
+            '캐릭터 디자인',
+            '동화 일러스트',
+            '파티 초대장',
+            '키즈 콘텐츠'
+        ],
+        examplePrompts: [
+            { title: '공주', prompt: 'Disney animation style princess, flowing magical dress, enchanted castle background, sparkles, vibrant colors' },
+            { title: '동물', prompt: 'Disney style anthropomorphic fox, charming expression, forest setting, magical lighting, warm colors' },
+            { title: '마법 장면', prompt: 'Disney style magical transformation scene, swirling sparkles, fairy godmother, dramatic lighting, enchanted' },
+        ],
+        images: [
+            { src: '/images/guide/style/disney-style-1.jpg', caption: 'disney style example 1', prompt: 'Disney animation style brave princess with flowing magical hair standing on a cliff overlooking an enchanted kingdom, sparkle effects, warm sunset colors, musical moment, classic Disney magic, animated feature film quality' }
+        ]
+    },
+
+    'ghibli-style': {
+        title: '지브리 스타일(Ghibli Style)',
+        koreanTitle: '지브리 스타일',
+        prompt: 'Studio Ghibli style, hand-painted, lush nature, whimsical, Miyazaki inspired',
+        features: '수작업 느낌의 배경, 풍성한 자연 묘사, 동화적 세계관, 따뜻한 색감',
+        mood: '평화로운, 동화적, 자연친화적',
+        description: '스튜디오 지브리(미야자키 하야오)의 독특한 애니메이션 스타일입니다. 섬세하게 그려진 자연 배경, 따뜻한 색감, 동화적 세계관이 특징입니다.',
+        usage: [
+            '풍경 일러스트',
+            '배경화면',
+            '동화적 캐릭터',
+            'SNS 콘텐츠'
+        ],
+        examplePrompts: [
+            { title: '풍경', prompt: 'Studio Ghibli style countryside landscape, lush green hills, fluffy clouds, wildflowers, warm sunlight, hand-painted' },
+            { title: '캐릭터', prompt: 'Ghibli style young girl with hat, standing in flower field, wind blowing, warm colors, Miyazaki inspired' },
+            { title: '도시', prompt: 'Studio Ghibli style European town, cobblestone streets, cozy bakery, laundry hanging, peaceful atmosphere' },
+        ],
+        images: [
+            { src: '/images/guide/style/ghibli-style-1.jpg', caption: 'ghibli style example 1', prompt: 'Studio Ghibli style young girl sitting on a grassy hillside watching clouds, peaceful countryside with wildflowers, gentle warm breeze, Hayao Miyazaki inspired, hand-painted watercolor background, nostalgic summer day, serene contemplation' }
+        ]
+    },
+
+    'chibi-style': {
+        title: '치비 스타일(Chibi Style)',
+        koreanTitle: '치비 스타일',
+        prompt: 'chibi style, super deformed, big head small body, cute, kawaii',
+        features: '머리:몸 비율 1:1~1:2, 극도로 단순화된 손발, 큰 눈',
+        mood: '귀여운, 장난스러운, 아기자기한',
+        description: '일본의 SD(Super Deformed) 스타일로, 머리를 크게 몸을 작게 그리는 캐릭터 스타일입니다. 극도로 귀여운 비율과 단순화된 디테일이 특징입니다.',
+        usage: [
+            '스티커/이모지',
+            '굿즈 디자인',
+            '팬 아트',
+            'SNS 아이콘'
+        ],
+        examplePrompts: [
+            { title: '전사', prompt: 'chibi style knight character, big head small body, cute armor, holding tiny sword, sparkly eyes, kawaii' },
+            { title: '마법사', prompt: 'chibi style witch, oversized hat, big sparkly eyes, tiny body, magical stars, pastel colors, adorable' },
+            { title: '그룹', prompt: 'chibi style group of friends, super deformed proportions, matching outfits, cute poses, colorful background' },
+        ],
+        images: [
+            { src: '/images/guide/style/chibi-style-1.jpg', caption: 'chibi style example 1', prompt: 'chibi style cute warrior character with oversized head and tiny body, adorable determined expression, miniature sword and shield, sparkle effects, pastel background, super deformed anime proportions, kawaii battle pose, sticker design' }
+        ]
+    },
+
+    'kawaii-style': {
+        title: '카와이 스타일(Kawaii Style)',
+        koreanTitle: '카와이 스타일',
+        prompt: 'kawaii style, pastel colors, cute faces on objects, rounded shapes, adorable',
+        features: '파스텔 색상, 모든 것에 얼굴 표정, 둥글둥글한 형태, 하트/별 장식',
+        mood: '사랑스러운, 달콤한, 행복한',
+        description: '일본의 "귀여움" 문화를 반영한 스타일로, 모든 사물에 귀여운 얼굴을 그려넣고 파스텔 톤으로 채색하는 것이 특징입니다. 산리오 캐릭터가 대표적입니다.',
+        usage: [
+            '캐릭터 상품',
+            '스티커 디자인',
+            '카페/베이커리 브랜딩',
+            'SNS 콘텐츠'
+        ],
+        examplePrompts: [
+            { title: '음식', prompt: 'kawaii style cute food characters, smiling donut and cupcake, pastel pink background, sparkles, adorable faces' },
+            { title: '동물', prompt: 'kawaii style round cat, big sparkly eyes, tiny paws, pastel rainbow background, hearts and stars, Sanrio style' },
+            { title: '오브제', prompt: 'kawaii style cute stationery characters, smiling pencil and notebook, pastel colors, bubble letters, adorable' },
+        ],
+        images: [
+            { src: '/images/guide/style/kawaii-style-1.jpg', caption: 'kawaii style example 1', prompt: 'kawaii style adorable cat character wearing a tiny chef hat baking cupcakes, sparkly eyes, pastel pink kitchen, heart-shaped decorations, Japanese cute aesthetic, round soft shapes, happy expression, sweet candy colors, plushie quality' }
+        ]
+    },
+
+    'funko-pop': {
+        title: '펀코팝(Funko Pop)',
+        koreanTitle: '펀코팝',
+        prompt: 'Funko Pop vinyl figure style, oversized head, black dot eyes, small body, collectible toy',
+        features: '거대한 정사각 머리, 검은 점 눈, 작은 몸체, 비닐 피규어 질감',
+        mood: '수집적, 팝적, 장난스러운',
+        description: '펀코팝 비닐 피규어의 독특한 디자인 스타일입니다. 정사각형의 큰 머리, 검은 점으로 된 눈, 작은 몸체로 다양한 캐릭터를 일관된 스타일로 표현합니다.',
+        usage: [
+            '피규어/굿즈 디자인',
+            '팬 아트',
+            'SNS 프로필',
+            '선물/기념품'
+        ],
+        examplePrompts: [
+            { title: '캐릭터', prompt: 'Funko Pop vinyl figure style, samurai warrior, oversized square head, black dot eyes, small body, box packaging' },
+            { title: '유명인', prompt: 'Funko Pop style figure of a rock musician, guitar, big head, dot eyes, vinyl toy aesthetic, collectible box' },
+            { title: '판타지', prompt: 'Funko Pop style dragon figure, cute oversized head, tiny wings, vinyl material, collectible display box' },
+        ],
+        images: [
+            { src: '/images/guide/style/funko-pop-1.jpg', caption: 'funko pop example 1', prompt: 'Funko Pop vinyl figure of a detective in trench coat, oversized square head, tiny body, glossy black eyes, stylized proportions, collectible toy design, product photography on white background, boxed figure aesthetic, vinyl texture' }
+        ]
+    },
+
+    'blind-box': {
+        title: '블라인드 박스(Blind Box)',
+        koreanTitle: '블라인드 박스 / 팝마트',
+        prompt: 'blind box toy, Pop Mart style, designer toy, vinyl figure, cute character',
+        features: '디자이너 토이 감성, 매끈한 비닐 질감, 몽글몽글한 형태, 수집 요소',
+        mood: '트렌디, 수집적, 귀여운',
+        description: 'Pop Mart 등의 디자이너 토이 블라인드 박스 스타일입니다. 매끈한 비닐 질감의 귀여운 캐릭터들이 특징이며, 최근 AI 이미지 생성에서 가장 인기 있는 스타일 중 하나입니다.',
+        usage: [
+            '캐릭터 디자인',
+            '굿즈/피규어',
+            'SNS 콘텐츠',
+            '브랜드 콜라보'
+        ],
+        examplePrompts: [
+            { title: '동물', prompt: 'blind box toy, Pop Mart style cute bunny character, vinyl figure, pastel colors, sweet expression, designer toy' },
+            { title: '직업', prompt: 'blind box style astronaut character, round helmet, chibi proportions, vinyl material, Pop Mart aesthetic, cute' },
+            { title: '시리즈', prompt: 'blind box collection, four seasons themed characters, consistent style, pastel vinyl figures, Pop Mart inspired' },
+        ],
+        images: [
+            { src: '/images/guide/style/blind-box-1.jpg', caption: 'blind box example 1', prompt: 'blind box collectible designer toy of a dreamy astronaut character sitting on a crescent moon, soft matte finish, pastel space colors, Pop Mart style, contemporary art toy design, collectible vinyl figure, cute minimal expression' }
+        ]
+    },
+
+    'gashapon': {
+        title: '가샤폰(Gashapon)',
+        koreanTitle: '가샤폰 / 캡슐토이',
+        prompt: 'gashapon capsule toy, miniature figure, detailed small scale, Japanese toy',
+        features: '작은 스케일의 정교한 디테일, 캡슐에서 나온 미니어처, 일본 토이 감성',
+        mood: '정교한, 수집적, 아기자기한',
+        description: '일본 캡슐토이(가챠) 스타일의 미니어처 피규어입니다. 작은 크기에도 정교한 디테일이 특징이며, 동물, 음식, 캐릭터 등 다양한 주제로 제작됩니다.',
+        usage: [
+            '미니어처 피규어',
+            '수집용 토이',
+            'SNS 사진',
+            '캐릭터 상품'
+        ],
+        examplePrompts: [
+            { title: '고양이', prompt: 'gashapon capsule toy, miniature sleeping cat figure, detailed fur texture, small scale, Japanese toy aesthetic' },
+            { title: '음식', prompt: 'gashapon miniature food, tiny detailed sushi set, realistic textures, Japanese capsule toy, on coin for scale' },
+            { title: '동물', prompt: 'gashapon toy collection, zoo animals in funny poses, miniature detailed figures, capsule machine background' },
+        ],
+        images: [
+            { src: '/images/guide/style/gashapon-1.jpg', caption: 'gashapon example 1', prompt: 'gashapon capsule toy miniature of a sushi chef cat character, small detailed figurine, Japanese vending machine toy quality, cute animal character, translucent capsule display, collectible charm, detailed paint application, tiny accessories' }
+        ]
+    },
+
+    'enamel-pin': {
+        title: '에나멜 핀(Enamel Pin)',
+        koreanTitle: '에나멜 핀',
+        prompt: 'enamel pin design, gold metal outline, flat fill colors, hard enamel, badge',
+        features: '금속 테두리(금/은), 평면 채색, 반짝이는 에나멜 질감, 뱃지 형태',
+        mood: '심플, 아기자기한, 수집적',
+        description: '에나멜 핀(배지) 스타일의 디자인입니다. 금속 테두리로 구획된 영역에 평면적으로 색을 채우는 것이 특징이며, 레트로하면서도 트렌디한 감성입니다.',
+        usage: [
+            '핀/뱃지 디자인',
+            '브랜드 굿즈',
+            '스티커 디자인',
+            '아이콘 디자인'
+        ],
+        examplePrompts: [
+            { title: '우주', prompt: 'enamel pin design, astronaut cat floating in space, gold metal outlines, flat fill colors, hard enamel finish' },
+            { title: '자연', prompt: 'enamel pin design, mountain landscape with sunrise, gold border, limited color palette, badge style' },
+            { title: '음식', prompt: 'enamel pin design, cute ramen bowl, gold metal outline, flat colors, kawaii face, hard enamel badge' },
+        ],
+        images: [
+            { src: '/images/guide/style/enamel-pin-1.jpg', caption: 'enamel pin example 1', prompt: 'enamel pin design of a magical cat sitting on a stack of books under starry sky, gold metal outline, vibrant fill colors, lapel pin aesthetic, flat graphic style, hard enamel smooth surface, cute collectible accessory, pin mockup' }
+        ]
+    },
+
+    'knitted-doll': {
+        title: '니트 인형(Knitted Doll)',
+        koreanTitle: '니트 인형 / 크로셰',
+        prompt: 'knitted doll, crochet amigurumi, yarn texture, handmade craft, soft toy',
+        features: '뜨개질/크로셰 질감, 실의 꼬임이 보이는 텍스처, 수공예 느낌',
+        mood: '따뜻한, 수공예적, 포근한',
+        description: '뜨개질(크로셰/아미구루미)로 만든 인형 스타일입니다. 실의 질감과 꼬임이 선명하게 보이며, 손으로 만든 듯한 따뜻한 느낌이 특징입니다.',
+        usage: [
+            '캐릭터 굿즈',
+            'SNS 콘텐츠',
+            '핸드메이드 패턴',
+            '어린이 콘텐츠'
+        ],
+        examplePrompts: [
+            { title: '동물', prompt: 'crochet amigurumi bear, yarn texture visible, handmade knitted doll, soft pastel colors, studio photography' },
+            { title: '캐릭터', prompt: 'knitted doll character, cute astronaut, crochet texture, yarn material, miniature spacesuit, handcraft aesthetic' },
+            { title: '세트', prompt: 'amigurumi farm animals collection, knitted cow sheep pig chicken, yarn texture, cozy handmade feel' },
+        ],
+        images: [
+            { src: '/images/guide/style/knitted-doll-1.jpg', caption: 'knitted doll example 1', prompt: 'knitted amigurumi doll of a cozy fox wearing a scarf, handmade crochet texture, yarn material visible, button eyes, stuffed plush toy, warm autumn colors, handcraft aesthetic, soft cuddly character, macro photography, cotton yarn detail' }
+        ]
+    },
+
+    'lego-style': {
+        title: '레고 스타일(LEGO Style)',
+        koreanTitle: '레고 스타일',
+        prompt: 'LEGO style, brick-built scene, minifigure characters, plastic texture, colorful bricks',
+        features: '블록/브릭 조립 구조, 미니피규어 캐릭터, 플라스틱 질감, 원색 컬러',
+        mood: '장난스러운, 창의적, 향수적',
+        description: '레고 브릭으로 구성된 장면과 캐릭터를 표현하는 스타일입니다. 블록으로 조립된 형태와 플라스틱 질감, 미니피규어의 독특한 비율이 특징입니다.',
+        usage: [
+            '키즈 콘텐츠',
+            'SNS 콘텐츠',
+            '광고/프로모션',
+            '교육 자료'
+        ],
+        examplePrompts: [
+            { title: '도시', prompt: 'LEGO style city scene, brick-built buildings, minifigure citizens, colorful bricks, plastic texture, toy photography' },
+            { title: '캐릭터', prompt: 'LEGO minifigure style wizard, plastic brick texture, cape and staff, yellow skin, classic LEGO aesthetic' },
+            { title: '풍경', prompt: 'LEGO style medieval castle, brick-built walls and towers, minifigure knights, colorful bricks, detailed set' },
+        ],
+        images: [
+            { src: '/images/guide/style/lego-style-1.jpg', caption: 'lego style example 1', prompt: 'LEGO minifigure scene of a pirate captain on a brick-built ship deck, yellow skin, claw hand, detailed LEGO brick construction, toy photography, plastic texture, colorful bricks, official LEGO set aesthetic, playful adventure scene' }
+        ]
+    },
+
+    'toy-photography': {
+        title: '토이 포토그래피(Toy Photography)',
+        koreanTitle: '토이 포토그래피',
+        prompt: 'toy photography, miniature figure in real environment, tilt-shift, macro lens',
+        features: '실제 환경에 미니어처 피규어 배치, 매크로 렌즈 촬영, 틸트시프트 효과',
+        mood: '판타지적, 유희적, 몰입적',
+        description: '미니어처 피규어나 장난감을 실제 환경에 배치하고 촬영하는 사진 스타일입니다. 매크로 렌즈와 조명 연출로 장난감이 마치 실제 크기인 것처럼 보이게 합니다.',
+        usage: [
+            '인스타그램 콘텐츠',
+            '광고/프로모션',
+            '아트 프로젝트',
+            '스토리텔링'
+        ],
+        examplePrompts: [
+            { title: '모험', prompt: 'toy photography, action figure exploring mossy forest floor, macro lens, shallow depth of field, dramatic lighting' },
+            { title: '우주', prompt: 'toy photography, tiny astronaut figure on sandy terrain, stars in background, tilt-shift, cinematic mood' },
+            { title: '일상', prompt: 'toy photography, miniature figure reading book on real coffee cup rim, bokeh background, warm lighting' },
+        ],
+        images: [
+            { src: '/images/guide/style/toy-photography-1.jpg', caption: 'toy photography example 1', prompt: 'toy photography of action figures in miniature cityscape, forced perspective making toys look life-sized, dramatic studio lighting, tilt-shift bokeh, creative diorama, detailed miniature world, cinematic toy scene, macro lens quality' }
+        ]
+    },
+
+    'crystal-ball': {
+        title: '크리스탈 볼(Crystal Ball)',
+        koreanTitle: '크리스탈 볼 / 스노우글로브',
+        prompt: 'inside a crystal ball, snow globe, miniature world, glass sphere, magical',
+        features: '유리 구체 안의 미니어처 세계, 눈/반짝이 파티클, 굴절 효과',
+        mood: '마법적, 동화적, 환상적',
+        description: '스노우글로브나 크리스탈 볼 안에 담긴 미니어처 세계를 표현하는 스타일입니다. 유리 구체의 굴절 효과와 내부의 작은 세계가 만들어내는 환상적 분위기가 특징입니다.',
+        usage: [
+            'SNS 콘텐츠',
+            '시즌 프로모션',
+            '기념품 디자인',
+            '판타지 아트'
+        ],
+        examplePrompts: [
+            { title: '겨울 마을', prompt: 'inside a crystal snow globe, miniature winter village, falling snow particles, warm cabin lights, magical atmosphere' },
+            { title: '벚꽃', prompt: 'crystal ball containing cherry blossom garden, pink petals floating, miniature Japanese temple, glass refraction' },
+            { title: '우주', prompt: 'glass sphere containing galaxy and planets, cosmic dust particles, nebula colors, miniature universe, magical' },
+        ],
+        images: [
+            { src: '/images/guide/style/crystal-ball-1.jpg', caption: 'crystal ball example 1', prompt: 'crystal ball glass sphere containing a miniature winter village with glowing lights, snow globe effect, magical refraction and distortion, bokeh lights background, enchanting miniature world, glass optical effects, holiday magic, detailed' }
+        ]
+    },
+
+    // ===== 사진/영화 스타일 =====
+    'photorealism': {
+        title: '포토리얼리즘(Photorealism)',
+        koreanTitle: '포토리얼리즘',
+        prompt: 'photorealistic, ultra realistic, 8K, DSLR quality, natural lighting',
+        features: '사진과 구분 불가능한 수준의 사실성, 자연스러운 조명과 질감',
+        mood: '사실적, 자연스러운, 고품질',
+        description: '사진과 구분할 수 없을 정도로 사실적인 이미지를 생성하는 스타일입니다. 인물, 제품, 풍경 등 모든 주제에서 최대한 자연스러운 결과물을 목표로 합니다.',
+        usage: [
+            '제품 사진',
+            '인물 포트레이트',
+            '건축 시각화',
+            '광고 비주얼'
+        ],
+        examplePrompts: [
+            { title: '인물', prompt: 'photorealistic portrait, young woman in natural light, freckles and skin texture visible, DSLR quality, 85mm lens' },
+            { title: '제품', prompt: 'photorealistic product shot, luxury watch on marble surface, studio lighting, 8K detail, commercial photography' },
+            { title: '풍경', prompt: 'photorealistic landscape, Norwegian fjord at golden hour, ultra realistic water reflections, 8K resolution' },
+        ],
+        images: [
+            { src: '/images/guide/style/photorealism-1.jpg', caption: 'photorealism example 1', prompt: 'photorealistic portrait of a weathered fisherman with deep wrinkles and kind eyes, salt-and-pepper beard, morning harbor light, every skin pore visible, 8K ultra-detailed, medium format camera quality, National Geographic portrait' }
+        ]
+    },
+
+    'cinematic': {
+        title: '시네마틱(Cinematic)',
+        koreanTitle: '시네마틱',
+        prompt: 'cinematic shot, movie still, anamorphic lens, dramatic lighting, color grading',
+        features: '영화적 화면 비율, 드라마틱 라이팅, 시네마 컬러 그레이딩, 보케',
+        mood: '영화적, 드라마틱, 감성적',
+        description: '영화의 한 장면처럼 보이는 이미지를 생성하는 스타일입니다. 와이드 화면 비율, 시네마 컬러 그레이딩, 렌즈 플레어 등의 영화적 요소를 활용합니다.',
+        usage: [
+            '영화 스틸컷 레퍼런스',
+            '뮤직비디오 컨셉',
+            '포토 에디팅',
+            '스토리보드'
+        ],
+        examplePrompts: [
+            { title: '드라마', prompt: 'cinematic shot, lone figure walking in rain-soaked city street, neon reflections, anamorphic lens flare, moody color grading' },
+            { title: 'SF', prompt: 'cinematic movie still, astronaut discovering alien artifact, volumetric light, IMAX quality, Villeneuve style' },
+            { title: '로맨스', prompt: 'cinematic scene, couple at sunset beach, golden hour, lens flare, shallow depth of field, warm color grading' },
+        ],
+        images: [
+            { src: '/images/guide/style/cinematic-1.jpg', caption: 'cinematic example 1', prompt: 'cinematic wide frame of a lone cowboy riding through Monument Valley at golden hour, anamorphic lens flare, 2.39:1 aspect ratio, warm desaturated color grade, dust particles in light, Roger Deakins cinematography style, epic Western' }
+        ]
+    },
+
+    'film-noir': {
+        title: '필름 누아르(Film Noir)',
+        koreanTitle: '필름 누아르',
+        prompt: 'film noir style, black and white, high contrast shadows, venetian blind lighting, detective',
+        features: '고대비 흑백, 베네치안 블라인드 조명, 극적인 그림자, 하드보일드 무드',
+        mood: '미스터리, 어두운, 긴장감',
+        description: '1940~50년대 할리우드의 범죄/추리 영화 스타일입니다. 극적인 흑백 대비, 베네치안 블라인드를 통한 빛줄기, 어두운 분위기가 특징입니다.',
+        usage: [
+            '추리/범죄 컨셉',
+            '포스터 디자인',
+            '포토 에디팅',
+            '스토리텔링'
+        ],
+        examplePrompts: [
+            { title: '탐정', prompt: 'film noir detective in dark office, venetian blind shadows on face, cigarette smoke, black and white, high contrast' },
+            { title: '거리', prompt: 'film noir rainy city street, lone figure under streetlight, puddle reflections, dramatic shadows, 1940s aesthetic' },
+            { title: '팜므파탈', prompt: 'film noir femme fatale, dramatic side lighting, cigarette holder, mysterious gaze, black and white, vintage' },
+        ],
+        images: [
+            { src: '/images/guide/style/film-noir-1.jpg', caption: 'film noir example 1', prompt: 'film noir detective standing under a streetlamp in fog-filled alley, venetian blind shadows across face, femme fatale silhouette in doorway, high contrast black and white, 1940s mystery atmosphere, cigarette smoke, hard-boiled drama' }
+        ]
+    },
+
+    'documentary': {
+        title: '다큐멘터리(Documentary)',
+        koreanTitle: '다큐멘터리',
+        prompt: 'documentary photography style, candid moment, natural light, authentic, photojournalism',
+        features: '자연스러운 순간 포착, 연출되지 않은 진정성, 저널리즘적 시선',
+        mood: '진실한, 자연스러운, 서사적',
+        description: '다큐멘터리 사진/영상의 자연스럽고 진정성 있는 스타일입니다. 연출되지 않은 순간의 포착과 사실적인 표현을 추구합니다.',
+        usage: [
+            '포토저널리즘',
+            '브랜드 스토리텔링',
+            '사회적 메시지',
+            '여행 콘텐츠'
+        ],
+        examplePrompts: [
+            { title: '거리', prompt: 'documentary style street photography, candid moment in busy market, natural light, authentic, photojournalism' },
+            { title: '인물', prompt: 'documentary portrait, elderly craftsman at work, weathered hands, natural window light, authentic emotion' },
+            { title: '풍경', prompt: 'documentary style landscape, remote fishing village at dawn, misty atmosphere, natural colors, National Geographic' },
+        ],
+        images: [
+            { src: '/images/guide/style/documentary-1.jpg', caption: 'documentary example 1', prompt: 'documentary style candid portrait of an elderly artisan crafting pottery by hand, natural available light, authentic moment captured, photojournalism quality, worn hands shaping clay, cultural preservation, raw unposed truth, editorial' }
+        ]
+    },
+
+    // ===== 특수 효과 스타일 =====
+    'glitch-art': {
+        title: '글리치 아트(Glitch Art)',
+        koreanTitle: '글리치 아트',
+        prompt: 'glitch art, digital distortion, RGB shift, corrupted data, cybernetic',
+        features: 'RGB 색상 분리, 픽셀 왜곡, 데이터 손상 효과, 디지털 노이즈',
+        mood: '디지털, 불안정한, 실험적',
+        description: '디지털 데이터의 오류와 왜곡을 의도적으로 활용하는 예술 스타일입니다. RGB 색상 분리, 픽셀 깨짐, 스캔라인 등의 효과로 디지털 시대의 불안정성을 표현합니다.',
+        usage: [
+            '앨범 커버',
+            '뮤직비디오',
+            'SNS 콘텐츠',
+            'VJ 비주얼'
+        ],
+        examplePrompts: [
+            { title: '초상', prompt: 'glitch art portrait, RGB color shift, digital distortion, corrupted pixels, cyberpunk aesthetic, databending' },
+            { title: '풍경', prompt: 'glitch art landscape, digital corruption, scanlines, pixel sorting, broken data aesthetic, vibrant' },
+            { title: '타이포', prompt: 'glitch art typography, distorted text, RGB split, VHS tracking error, digital noise, retro tech aesthetic' },
+        ],
+        images: [
+            { src: '/images/guide/style/glitch-art-1.jpg', caption: 'glitch art example 1', prompt: 'glitch art portrait of a woman with digital corruption effects, RGB color channel splitting, data moshing artifacts, pixel sorting distortion, cybernetic aesthetic, broken digital signal, vaporwave color palette, corrupted beauty' }
+        ]
+    },
+
+    'double-exposure': {
+        title: '이중 노출(Double Exposure)',
+        koreanTitle: '이중 노출',
+        prompt: 'double exposure effect, two images merged, silhouette filled with landscape, artistic blend',
+        features: '두 이미지의 예술적 합성, 실루엣 안에 다른 장면, 투명한 레이어링',
+        mood: '몽환적, 예술적, 서정적',
+        description: '두 장의 이미지를 겹쳐 하나의 합성 이미지를 만드는 사진 기법입니다. 인물의 실루엣 안에 풍경이나 패턴을 채워넣는 것이 대표적입니다.',
+        usage: [
+            '아트 포토',
+            '영화 포스터',
+            '앨범 커버',
+            '브랜드 비주얼'
+        ],
+        examplePrompts: [
+            { title: '인물+자연', prompt: 'double exposure, woman silhouette filled with autumn forest, leaves and branches, artistic blend, ethereal' },
+            { title: '인물+도시', prompt: 'double exposure effect, man profile merged with city skyline at night, light trails, moody atmosphere' },
+            { title: '동물+자연', prompt: 'double exposure, wolf silhouette filled with northern forest and aurora borealis, mystical, artistic' },
+        ],
+        images: [
+            { src: '/images/guide/style/double-exposure-1.jpg', caption: 'double exposure example 1', prompt: 'double exposure portrait of a woman’s profile merged with a forest landscape, trees growing within her silhouette, ethereal blend of human and nature, artistic photography technique, dreamlike overlay, poetic visual metaphor' }
+        ]
+    },
+
+    'pixel-art': {
+        title: '픽셀 아트(Pixel Art)',
+        koreanTitle: '픽셀 아트',
+        prompt: 'pixel art, 16-bit style, retro game aesthetic, limited color palette',
+        features: '정사각형 픽셀 단위 구성, 제한된 색상, 레트로 게임 감성',
+        mood: '레트로, 게임적, 노스탤직',
+        description: '픽셀 단위로 그리는 디지털 아트 스타일입니다. 8비트/16비트 시대의 게임 그래픽에서 영감받은 레트로 감성이 특징이며, 인디 게임과 NFT에서 인기입니다.',
+        usage: [
+            '인디 게임 아트',
+            'NFT 아트',
+            'SNS 프로필',
+            '레트로 콘텐츠'
+        ],
+        examplePrompts: [
+            { title: '캐릭터', prompt: 'pixel art character, 16-bit RPG hero, sword and shield, limited palette, retro game sprite, detailed' },
+            { title: '풍경', prompt: 'pixel art sunset landscape, 16-bit style, palm trees, ocean, warm colors, retro game background' },
+            { title: '도시', prompt: 'pixel art cyberpunk city, neon signs, rainy night, 16-bit aesthetic, detailed pixel work, animated feel' },
+        ],
+        images: [
+            { src: '/images/guide/style/pixel-art-1.jpg', caption: 'pixel art example 1', prompt: 'pixel art scene of a hero character standing at castle entrance, 16-bit retro game aesthetic, limited color palette, nostalgic SNES era quality, detailed sprite work, fantasy RPG scene, torchlit stone walls, adventure game atmosphere' }
+        ]
+    },
+
+    'papercraft': {
+        title: '페이퍼크래프트(Papercraft)',
+        koreanTitle: '페이퍼크래프트',
+        prompt: 'papercraft style, cut paper layers, paper texture, depth layers, handmade',
+        features: '종이 레이어로 구성된 깊이감, 종이 질감과 그림자, 수공예 느낌',
+        mood: '수공예적, 따뜻한, 입체적',
+        description: '종이를 오려 겹겹이 쌓아 만든 듯한 아트 스타일입니다. 종이의 질감과 레이어 사이의 그림자가 만들어내는 입체감이 특징입니다.',
+        usage: [
+            '어린이 콘텐츠',
+            '광고 비주얼',
+            '인테리어 아트',
+            '패키지 디자인'
+        ],
+        examplePrompts: [
+            { title: '풍경', prompt: 'papercraft style landscape, layered cut paper mountains, paper texture visible, depth shadows, handmade craft' },
+            { title: '도시', prompt: 'papercraft cityscape, buildings made of colored paper layers, pop-up book style, detailed cutting, shadows' },
+            { title: '바다', prompt: 'papercraft underwater scene, layered paper waves, cut-out fish and coral, blue gradient layers, handmade feel' },
+        ],
+        images: [
+            { src: '/images/guide/style/papercraft-1.jpg', caption: 'papercraft example 1', prompt: 'papercraft layered paper cut art of a underwater ocean scene, multiple depth layers, intricate cut paper fish and coral, shadow box effect, handmade craft aesthetic, colorful construction paper, dimensional paper sculpture, detailed edges' }
+        ]
+    },
+
+    'stained-glass': {
+        title: '스테인드 글라스(Stained Glass)',
+        koreanTitle: '스테인드 글라스',
+        prompt: 'stained glass window style, leaded glass, translucent colors, light shining through',
+        features: '납 테두리로 구획된 색유리, 빛이 투과되는 반투명 색상, 성당 창문 느낌',
+        mood: '신성한, 화려한, 고전적',
+        description: '성당이나 교회의 스테인드 글라스 창문 스타일입니다. 납(lead)으로 구획된 색유리 패널과 빛이 통과하면서 만들어내는 화려한 색채가 특징입니다.',
+        usage: [
+            '종교 예술',
+            '장식 디자인',
+            '인테리어 아트',
+            '포스터/아트 프린트'
+        ],
+        examplePrompts: [
+            { title: '장미', prompt: 'stained glass window style, rose bloom, leaded glass segments, translucent red and green, light shining through' },
+            { title: '풍경', prompt: 'stained glass style sunset landscape, colorful glass segments, black lead lines, cathedral window, luminous' },
+            { title: '공작새', prompt: 'stained glass peacock, intricate feather details in colored glass, gothic arch frame, backlit, vibrant colors' },
+        ],
+        images: [
+            { src: '/images/guide/style/stained-glass-1.jpg', caption: 'stained glass example 1', prompt: 'stained glass window depicting a majestic peacock with spread tail feathers, vibrant jewel-toned glass pieces, lead came outlines, cathedral light streaming through, Gothic arch frame, rich blues greens and golds, radiant backlighting' }
         ]
     },
 
     'watercolor': {
         title: '수채화(Watercolor)',
         koreanTitle: '수채화',
-        prompt: 'watercolor',
-        description: '물감의 번짐과 투명한 레이어가 특징인 부드럽고 유동적인 회화 스타일입니다.',
+        prompt: 'watercolor painting, wet-on-wet technique, soft edges, transparent layers',
+        features: '물의 번짐 효과, 투명한 색상 레이어, 부드러운 경계, 유동적 표현',
+        mood: '감성적, 부드러운, 자연스러운',
+        description: '물감의 번짐과 투명한 레이어가 특징인 부드럽고 유동적인 회화 스타일입니다. 물의 양에 따라 다양한 효과를 만들어내며, 감성적이고 서정적인 분위기를 연출합니다.',
         usage: [
             '감성적인 일러스트',
             '풍경화',
             '동화책 삽화',
             '패션 일러스트'
         ],
+        examplePrompts: [
+            { title: '풍경', prompt: 'watercolor painting, misty mountain landscape, wet-on-wet technique, soft bleeding edges, atmospheric, serene' },
+            { title: '꽃', prompt: 'watercolor painting of wildflowers, loose brushstrokes, transparent pigments, white paper showing through, delicate' },
+            { title: '인물', prompt: 'watercolor portrait, soft flowing colors, wet-on-wet blending, minimal lines, artistic paint drips, elegant' },
+        ],
         images: [
-            { src: 'https://cdn.midjourney.com/8ac3b686-5e51-4350-8feb-54e666f21f52/0_0.png', caption: 'Watercolor style 1' },
-            { src: 'https://cdn.midjourney.com/2be6fbcb-4932-4902-9783-e4613b1f65f7/0_2.png', caption: 'Watercolor style 2' }
+            { src: '/images/guide/style/watercolor-1.jpg', caption: 'Watercolor style 1', prompt: 'watercolor painting of a misty mountain landscape, wet-on-wet technique creating soft bleeding edges, transparent pigment layers, atmospheric depth, delicate tonal gradations, serene' }
         ]
     },
 
@@ -1155,8 +2199,7 @@ export const cameraData = {
             '고전 미술'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/52db56d1-d6ef-432e-8c93-f81e5c5b4d1a/0_1.png', caption: 'Oil painting style 1' },
-            { src: 'https://cdn.midjourney.com/95fd8a75-a4ac-4713-a26f-fc8e4f717dea/0_3.png', caption: 'Oil painting style 2' }
+            { src: '/images/guide/medium/oil-painting-1.jpg', caption: 'Oil painting style 1', prompt: 'oil painting portrait of a young woman in a pearl earring, Vermeer inspired, visible impasto brushstrokes, rich warm glazing layers, canvas texture, classical chiaroscuro lighting, museum masterpiece quality, 8K' }
         ]
     },
 
@@ -1172,8 +2215,7 @@ export const cameraData = {
             '일러스트레이션'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/e5791bf6-6494-4166-bb0c-6cc421e05284/0_1.png', caption: 'Acrylic painting style 1' },
-            { src: 'https://cdn.midjourney.com/f708965d-5c00-4279-aedd-9df3542195f2/0_0.png', caption: 'Acrylic painting style 2' }
+            { src: '/images/guide/medium/acrylic-painting-1.jpg', caption: 'Acrylic painting style 1', prompt: 'acrylic painting of a street musician playing saxophone under city lights, bold vivid brushstrokes, thick textured layers, contemporary urban scene, energetic composition, saturated neon reflections on wet pavement' }
         ]
     },
 
@@ -1189,8 +2231,7 @@ export const cameraData = {
             '콘셉트 스케치'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/16c9ca32-fe0c-4504-aec8-5fc1340522e8/0_2.png', caption: 'Pencil drawing style 1' },
-            { src: 'https://cdn.midjourney.com/16c9ca32-fe0c-4504-aec8-5fc1340522e8/0_1.png', caption: 'Pencil drawing style 2' }
+            { src: '/images/guide/medium/pencil-drawing-1.jpg', caption: 'Pencil drawing style 1', prompt: 'detailed pencil drawing of an old man’s hands holding a pocket watch, precise graphite shading, hyperrealistic wrinkles and veins, fine crosshatching technique, emotional still life, classical drawing skill, 8K' }
         ]
     },
 
@@ -1206,8 +2247,7 @@ export const cameraData = {
             '드라마틱한 명암'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/0ee9ebfd-e0a0-4d23-bd29-7ea16f1d38f7/0_2.png', caption: 'Charcoal portrait' },
-            { src: 'https://cdn.midjourney.com/4e3234e1-a0ea-4215-8f01-d23a16ce03bd/0_1.png', caption: 'Expressive marks' }
+            { src: '/images/guide/medium/charcoal-1.jpg', caption: 'Charcoal portrait', prompt: 'charcoal drawing of a flamenco dancer mid-spin, dramatic flowing dress movement, expressive smudged strokes, raw emotional energy, deep blacks and bold highlights, figure drawing mastery, passionate performance captured' }
         ]
     },
 
@@ -1224,8 +2264,7 @@ export const cameraData = {
             '일상 기록'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/c4d88a1c-83cf-4e4f-87e3-6b1ef8d77b6a/0_2.png', caption: 'Digital capture' },
-            { src: 'https://cdn.midjourney.com/0ece9d6f-ac8d-4568-a6b0-3020d6ea9da1/0_2.png', caption: 'Modern photography' }
+            { src: '/images/guide/medium/digital-photography-1.jpg', caption: 'Digital capture', prompt: 'high-end digital photography of a model in haute couture fashion, crisp 8K resolution, studio ring light, commercial beauty shot, flawless skin detail, modern mirrorless camera quality, magazine cover grade' }
         ]
     },
 
@@ -1241,8 +2280,7 @@ export const cameraData = {
             '다큐멘터리'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/d7c40f92-a23e-4027-86f1-c380ab65b6c6/0_2.png', caption: 'Film grain' },
-            { src: 'https://cdn.midjourney.com/3e92b39a-bb6c-4cbd-9098-f0d5898cb3bf/0_1.png', caption: 'Analog feel' }
+            { src: '/images/guide/medium/film-photography-1.jpg', caption: 'Film grain', prompt: '35mm film photography of a couple walking through autumn park, natural Kodak Portra 400 warm tones, gentle film grain, slightly soft focus, nostalgic romantic atmosphere, analog color rendition, genuine vintage feel' }
         ]
     },
 
@@ -1258,8 +2296,7 @@ export const cameraData = {
             '감성 포토'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/921d12af-5786-4098-88e9-78e94f101587/0_0.png', caption: 'Instant photo' },
-            { src: 'https://cdn.midjourney.com/6fc4a8aa-c6f3-436d-973e-5539a27a95af/0_3.png', caption: 'White border' }
+            { src: '/images/guide/medium/polaroid-1.jpg', caption: 'Instant photo', prompt: 'Polaroid instant photo of friends laughing at a summer beach party, white border frame, slightly sun-bleached vintage colors, casual snapshot aesthetic, square format, carefree retro nostalgia, spontaneous joy captured' }
         ]
     },
 
@@ -1275,8 +2312,7 @@ export const cameraData = {
             '도시 야경'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/22bd560a-8fb1-43e8-9eec-641db953e70e/0_3.png', caption: 'Light trails' },
-            { src: 'https://cdn.midjourney.com/7a451c1c-45b3-4fd4-a635-c91914774097/0_0.png', caption: 'Star trails' }
+            { src: '/images/guide/medium/long-exposure-1.jpg', caption: 'Light trails', prompt: 'long exposure photograph of a waterfall cascading over mossy rocks, silky smooth water flow, tripod-sharp surrounding stones, misty ethereal atmosphere, nature photography, 30 second exposure, dreamy motion effect' }
         ]
     },
 
@@ -1293,8 +2329,7 @@ export const cameraData = {
             '콘셉추얼 아트'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/c1d12a67-4db2-4a95-a722-82abf22bbb94/0_0.png', caption: 'Mixed elements' },
-            { src: 'https://cdn.midjourney.com/5bc4cc7b-b578-4ab8-8b3e-3f333d3d61c8/0_1.png', caption: 'Paper collage' }
+            { src: '/images/guide/medium/collage-1.jpg', caption: 'Mixed elements', prompt: 'mixed media paper collage portrait of a woman, torn vintage magazine clippings layered with hand-painted watercolor elements, textured composition, retro ephemera, artistic assemblage, creative visual storytelling' }
         ]
     },
 
@@ -1310,8 +2345,7 @@ export const cameraData = {
             '디지털 아트'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/cdc74a9a-0d7d-44d8-87b8-39cec11b2b6b/0_1.png', caption: 'Digital composite' },
-            { src: 'https://cdn.midjourney.com/43d9e2e1-84ba-471f-b8cf-0b432459b4fb/0_2.png', caption: 'Photo manipulation' }
+            { src: '/images/guide/medium/digital-collage-1.jpg', caption: 'Digital composite', prompt: 'digital collage surreal artwork of a woman’s portrait merged with tropical flowers and butterflies, seamlessly blended photographic elements, dreamlike digital manipulation, vibrant contemporary art, striking composition' }
         ]
     },
 
@@ -1327,8 +2361,7 @@ export const cameraData = {
             '멀티미디어 작품'
         ],
         images: [
-            { src: 'https://cdn.midjourney.com/2142e7e4-96e0-4097-9a79-13f3917517ee/0_3.png', caption: 'Combined media' },
-            { src: 'https://cdn.midjourney.com/a125b558-1439-4418-af59-bd93ea06554b/0_1.png', caption: 'Experimental art' }
+            { src: '/images/guide/medium/mixed-technique-1.jpg', caption: 'Combined media', prompt: 'mixed media artwork combining ink drawing of a city skyline with watercolor washes and gold leaf accents, layered textures, experimental fusion technique, contemporary art expression, innovative material combination' }
         ]
     },
 
@@ -1346,8 +2379,7 @@ export const cameraData = {
             '대화하는 두 인물 사이를 이동'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&h=400&fit=crop', caption: 'Horizontal movement' },
-            { src: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop', caption: 'Pan shot' }
+            { src: '/images/guide/video/pan-1.jpg', caption: 'Horizontal movement', prompt: 'cinematic horizontal camera pan revealing vast desert landscape, smooth lateral movement from left to right, panoramic vista unfolding, professional cinematography, film still quality, 8K' }
         ],
         videos: [
             { src: 'https://cdn.midjourney.com/video/4bbde702-836e-4fc5-b8ee-da134738be50/0.mp4', caption: 'Camera pan example 1' },
@@ -1367,10 +2399,7 @@ export const cameraData = {
             '시선의 이동을 유도'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?w=600&h=400&fit=crop', caption: 'Vertical movement' },
-            { src: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&h=400&fit=crop', caption: 'Tilt up' },
-            { src: 'https://images.unsplash.com/photo-1496568816309-51d7c20e3b21?w=600&h=400&fit=crop', caption: 'Building reveal' },
-            { src: 'https://images.unsplash.com/photo-1493863641943-9b68992a8d07?w=600&h=400&fit=crop', caption: 'Tilt down' }
+            { src: '/images/guide/video/tilt-1.jpg', caption: 'Vertical movement', prompt: 'camera tilt up shot revealing towering skyscraper from base to top, slow vertical movement, architectural grandeur, urban cinematography, dramatic upward reveal, professional' }
         ],
         videos: [
             { src: 'https://cdn.midjourney.com/video/8cd7fc99-d201-4091-9768-11b7155615f3/0.mp4', caption: 'Camera tilt example 1' },
@@ -1390,10 +2419,7 @@ export const cameraData = {
             '공간감을 표현할 때'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop', caption: 'Forward dolly' },
-            { src: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&h=400&fit=crop', caption: 'Backward dolly' },
-            { src: 'https://images.unsplash.com/photo-1493863641943-9b68992a8d07?w=600&h=400&fit=crop', caption: 'Smooth movement' },
-            { src: 'https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=600&h=400&fit=crop', caption: 'Track dolly' }
+            { src: '/images/guide/video/dolly-1.jpg', caption: 'Forward dolly', prompt: 'dolly shot moving forward through dimly lit corridor toward bright doorway, smooth forward camera movement, building tension, cinematic approach, dramatic reveal, atmospheric, suspenseful' }
         ],
         videos: [
             { src: 'https://cdn.midjourney.com/video/32f518ca-b8d7-43bf-9bad-affa753b4eff/0.mp4', caption: 'Dolly shot example 1' },
@@ -1413,10 +2439,7 @@ export const cameraData = {
             '역동적인 액션 씬'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=600&h=400&fit=crop', caption: 'Following subject' },
-            { src: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop', caption: 'Lateral tracking' },
-            { src: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&h=400&fit=crop', caption: 'Action follow' },
-            { src: 'https://images.unsplash.com/photo-1493863641943-9b68992a8d07?w=600&h=400&fit=crop', caption: 'Smooth tracking' }
+            { src: '/images/guide/video/tracking-1.jpg', caption: 'Following subject', prompt: 'tracking shot following athlete running through city streets, lateral camera movement keeping pace, dynamic action, urban backdrop, sports cinematography, energetic, professional, kinetic' }
         ],
         videos: [
             { src: 'https://cdn.midjourney.com/video/f32eaa9d-664e-41ad-9efb-b79f42e1b6b4/0.mp4', caption: 'Tracking shot example 1' },
@@ -1436,8 +2459,7 @@ export const cameraData = {
             '극적인 reveal 장면'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop', caption: 'Aerial movement' },
-            { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop', caption: 'Epic reveal' }
+            { src: '/images/guide/video/crane-1.jpg', caption: 'Aerial movement', prompt: 'crane shot ascending from street level to reveal sprawling cityscape, dramatic upward camera movement, expanding vista, aerial perspective reveal, cinematic grandeur, 8K' }
         ],
         videos: [
             { src: 'https://cdn.midjourney.com/video/a31ce983-b68f-4d08-86b4-612adab33ec4/0.mp4', caption: 'Crane shot example 1' },
@@ -1457,10 +2479,7 @@ export const cameraData = {
             '불안정한 감정 상태'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop', caption: 'Documentary style' },
-            { src: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&h=400&fit=crop', caption: 'Natural shake' },
-            { src: 'https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=600&h=400&fit=crop', caption: 'Raw feeling' },
-            { src: 'https://images.unsplash.com/photo-1493863641943-9b68992a8d07?w=600&h=400&fit=crop', caption: 'Intimate view' }
+            { src: '/images/guide/video/handheld-1.jpg', caption: 'Documentary style', prompt: 'handheld camera documentary style shot of protest march, natural camera shake, immersive raw footage, authentic movement, photojournalism cinematography, immediate and visceral, real' }
         ],
         videos: [
             { src: 'https://cdn.midjourney.com/video/06c262d7-2224-434d-ae1e-ca0f8c65eba6/0.mp4', caption: 'Handheld camera example 1' },
@@ -1481,10 +2500,7 @@ export const cameraData = {
             '액션의 연속성'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop', caption: 'Instant transition' },
-            { src: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&h=400&fit=crop', caption: 'Scene change' },
-            { src: 'https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=600&h=400&fit=crop', caption: 'Quick cut' },
-            { src: 'https://images.unsplash.com/photo-1493863641943-9b68992a8d07?w=600&h=400&fit=crop', caption: 'Direct switch' }
+            { src: '/images/guide/video/cut-1.jpg', caption: 'Instant transition', prompt: 'film still before hard cut transition, scene A of character in bright sunlit room, instant scene change upcoming, sharp edit point, cinematic pacing, dramatic contrast, crisp' }
         ],
         videos: [
             { src: 'https://cdn.midjourney.com/video/83fc363e-51dc-41ff-b026-8c6e7da0275b/0.mp4', caption: 'Hard cut example 1' },
@@ -1504,10 +2520,7 @@ export const cameraData = {
             '감정적 여운'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1516571748831-5d81767b788d?w=600&h=400&fit=crop', caption: 'Fade to black' },
-            { src: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop', caption: 'Fade in' },
-            { src: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&h=400&fit=crop', caption: 'Gradual transition' },
-            { src: 'https://images.unsplash.com/photo-1493863641943-9b68992a8d07?w=600&h=400&fit=crop', caption: 'Soft ending' }
+            { src: '/images/guide/video/fade-1.jpg', caption: 'Fade to black', prompt: 'film still of scene fading to black, gradual darkness encroaching from edges, cinematic ending transition, emotional conclusion, soft visual dissolution, melancholic mood, atmospheric' }
         ],
         videos: [
             { src: 'https://cdn.midjourney.com/video/c5b6d43e-513c-47b0-9b6f-695e2a5ebe41/0.mp4', caption: 'Fade in/out example 1' },
@@ -1527,10 +2540,7 @@ export const cameraData = {
             '몽환적 분위기'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop', caption: 'Cross dissolve' },
-            { src: 'https://images.unsplash.com/photo-1516571748831-5d81767b788d?w=600&h=400&fit=crop', caption: 'Smooth blend' },
-            { src: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&h=400&fit=crop', caption: 'Overlapping images' },
-            { src: 'https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=600&h=400&fit=crop', caption: 'Soft transition' }
+            { src: '/images/guide/video/dissolve-1.jpg', caption: 'Cross dissolve', prompt: 'cross dissolve film still showing two scenes blended together, overlapping transitional moment, dreamlike quality, time passage visualization, poetic cinematography, ghostly double image' }
         ],
         videos: [
             { src: 'https://www.dropbox.com/scl/fi/g1rr6b4wmchcvype8uzqv/.mp4?rlkey=yyg9msfagzhqu0dk5rp6q3knr&st=2mrkv037&raw=1', caption: 'Dissolve transition effect' }
@@ -1549,10 +2559,7 @@ export const cameraData = {
             'Star Wars 스타일'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop', caption: 'Directional wipe' },
-            { src: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&h=400&fit=crop', caption: 'Screen wipe' },
-            { src: 'https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=600&h=400&fit=crop', caption: 'Slide transition' },
-            { src: 'https://images.unsplash.com/photo-1493863641943-9b68992a8d07?w=600&h=400&fit=crop', caption: 'Creative wipe' }
+            { src: '/images/guide/video/wipe-1.jpg', caption: 'Directional wipe', prompt: 'wipe transition film still showing directional reveal, one scene sliding away to reveal another, clean geometric edge, retro editing style, dynamic scene change, graphic, bold' }
         ],
         videos: [
             { src: 'https://www.dropbox.com/scl/fi/2pprt6g78qvmx74cdxwh6/.mp4?rlkey=kz9y0duem3yse1v7cki9vjj3q&st=bk9pfjjp&raw=1', caption: 'Wipe transition effect' }
@@ -1571,10 +2578,7 @@ export const cameraData = {
             '은유적 표현'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop', caption: 'Visual match' },
-            { src: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&h=400&fit=crop', caption: 'Shape matching' },
-            { src: 'https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=600&h=400&fit=crop', caption: 'Action match' },
-            { src: 'https://images.unsplash.com/photo-1493863641943-9b68992a8d07?w=600&h=400&fit=crop', caption: 'Creative link' }
+            { src: '/images/guide/video/match-cut-1.jpg', caption: 'Visual match', prompt: 'match cut visual pairing of spinning basketball transitioning to spinning globe, shape and motion match, creative editing, visual storytelling, seamless conceptual transition, clever' }
         ]
     },
 
@@ -1591,10 +2595,7 @@ export const cameraData = {
             '스포츠 하이라이트'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop', caption: 'Dramatic effect' },
-            { src: 'https://images.unsplash.com/photo-1474224017046-182ece80b263?w=600&h=400&fit=crop', caption: 'Action detail' },
-            { src: 'https://images.unsplash.com/photo-1484589065579-248aad0d8b13?w=600&h=400&fit=crop', caption: 'Time stretch' },
-            { src: 'https://images.unsplash.com/photo-1509909756405-be0199881695?w=600&h=400&fit=crop', caption: 'Epic moment' }
+            { src: '/images/guide/video/slow-motion-1.jpg', caption: 'Dramatic effect', prompt: 'slow motion dramatic shot of water droplet impact creating perfect crown splash, time stretched to reveal invisible detail, high speed camera, stunning fluid dynamics, mesmerizing' }
         ],
         videos: [
             { src: 'https://cdn.midjourney.com/video/1230e36a-fc0e-46f0-9f92-14d7cafb9767/0.mp4', caption: 'Slow motion example 1' },
@@ -1614,10 +2615,7 @@ export const cameraData = {
             '건설 과정'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1514897575457-c4db467cf78e?w=600&h=400&fit=crop', caption: 'Time compression' },
-            { src: 'https://images.unsplash.com/photo-1493514789931-586cb221d7a7?w=600&h=400&fit=crop', caption: 'City timelapse' },
-            { src: 'https://images.unsplash.com/photo-1505506874110-6a7a69069a08?w=600&h=400&fit=crop', caption: 'Cloud movement' },
-            { src: 'https://images.unsplash.com/photo-1519608425089-7f3bfa6f6bb8?w=600&h=400&fit=crop', caption: 'Star trails' }
+            { src: '/images/guide/video/time-lapse-1.jpg', caption: 'Time compression', prompt: 'time-lapse film still of day to night city transition, compressed hours showing changing light, urban transformation, accelerated time photography, city lights emerging, dynamic' }
         ],
         videos: [
             { src: 'https://cdn.midjourney.com/video/83dd9038-03eb-4191-acc4-7e408af64086/0.mp4', caption: 'Time-lapse example 1' },
@@ -1637,10 +2635,7 @@ export const cameraData = {
             '캐릭터 소개'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop', caption: 'Frozen moment' },
-            { src: 'https://images.unsplash.com/photo-1474224017046-182ece80b263?w=600&h=400&fit=crop', caption: 'Action pause' },
-            { src: 'https://images.unsplash.com/photo-1509909756405-be0199881695?w=600&h=400&fit=crop', caption: 'Still frame' },
-            { src: 'https://images.unsplash.com/photo-1484589065579-248aad0d8b13?w=600&h=400&fit=crop', caption: 'Time stop' }
+            { src: '/images/guide/video/freeze-frame-1.jpg', caption: 'Frozen moment', prompt: 'freeze frame frozen moment of athlete mid-air during high jump, peak action captured, time completely stopped, sports photography, dramatic suspension, athletic grace, powerful, 8K' }
         ],
         videos: [
             { src: 'https://cdn.midjourney.com/video/ec06fa05-a333-4821-96a7-09fe3ff59666/0.mp4', caption: 'Freeze frame example 1' },
@@ -1660,10 +2655,7 @@ export const cameraData = {
             '역동적 에너지'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop', caption: 'Speed effect' },
-            { src: 'https://images.unsplash.com/photo-1474224017046-182ece80b263?w=600&h=400&fit=crop', caption: 'Movement blur' },
-            { src: 'https://images.unsplash.com/photo-1484589065579-248aad0d8b13?w=600&h=400&fit=crop', caption: 'Dynamic motion' },
-            { src: 'https://images.unsplash.com/photo-1509909756405-be0199881695?w=600&h=400&fit=crop', caption: 'Action blur' }
+            { src: '/images/guide/video/motion-blur-1.jpg', caption: 'Speed effect', prompt: 'motion blur speed effect of racing car on track, streaked background showing velocity, panning photography technique, automotive action, extreme speed visualization, dynamic energy, sharp car' }
         ],
         videos: [
             { src: 'https://cdn.midjourney.com/video/d9a5afb5-a846-4a58-8fb7-e2e217f34063/0.mp4', caption: 'Motion blur example 1' },
@@ -1693,7 +2685,7 @@ export const cameraData = {
             '창작자를 위한 실무 교육 프로그램'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop', caption: '강사 프로필' }
+            { src: '/images/guide/toolb/instructor-profile-1.jpg', caption: '강사 프로필', prompt: 'AI 교육 전문가 프로필 사진, 전문적인 포트레이트, professional instructor portrait, clean studio background, confident expression' }
         ]
     },
 
@@ -1710,31 +2702,33 @@ export const cameraData = {
         ],
         videos: [
             {
-                url: 'https://www.dropbox.com/scl/fi/6okpom058uatv5zkb06hb/.mp4?rlkey=zcomcwkp5qjr5d0x6xnytce28&st=klgl7ygv&raw=1',
-                thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop',
+                url: '/images/guide/video/fade-v1.mp4',
+                thumbnail: '/images/guide/video/fade-1.jpg',
                 title: 'AIFI JU0 님의 영상',
                 description: '중세시대 혼돈의 시기를 이겨내는 전쟁신 인트로 영상'
             },
             {
-                url: 'https://www.dropbox.com/scl/fi/toi1rrhkdviwe55y85ofu/A8EFD160-FA11-4A34-A409-E1792DBCC723_video.MP4?rlkey=agk6cyqkderoh0mvb5k9ha3wa&st=493c855y&raw=1',
-                thumbnail: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop',
+                url: '/images/guide/video/fade-v2.mp4',
+                thumbnail: '/images/guide/video/fade-2.jpg',
                 title: '나 혼자만 레벨업 3D랜더링',
                 description: '최강의 웹툰 "나 혼자만 레벨업"의 3D랜더링한 작품'
             },
             {
-                url: 'https://www.dropbox.com/scl/fi/gfvw1jkg84kwoegz4l39w/E27D0315-B046-4036-B1CD-D43829E8BA47_video.MP4?rlkey=mcz0df3ivly21gucv1rfa1192&st=mhh9ow8i&raw=1',
-                thumbnail: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop',
+                url: '/images/guide/toolb/intro-videos-v3.mp4',
+                thumbnail: '/images/guide/toolb/intro-videos-3.jpg',
                 title: '튜토리얼 인트로',
                 description: '초보자를 위한 AI TOOLBEE 튜토리얼 시작 영상입니다.'
             },
             {
-                url: 'https://www.dropbox.com/scl/fi/7udhyo2b5v0p4u0uu91lh/_schema_httpjsonschemaorgdraft07-1.mp4?rlkey=lqhpz4al7u9t377kvx78ehn34&st=zizgjtd4&raw=1',
-                thumbnail: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
+                url: '/images/guide/video/dissolve-v4.mp4',
+                thumbnail: '/images/guide/video/dissolve-4.jpg',
                 title: '프로젝트 쇼케이스',
                 description: 'AI TOOLBEE를 활용한 다양한 프로젝트 결과물을 소개하는 영상입니다.'
             }
         ],
-        images: []
+        images: [
+            { src: '/images/guide/toolb/intro-videos-1.jpg', caption: 'intro videos example 1', prompt: 'AI TOOLBEE feature demonstration 1, tool interface showcase, modern UI design, professional quality, informative visual' }
+        ]
     },
 
     // ============= AIFI 툴 =============
@@ -1750,8 +2744,7 @@ export const cameraData = {
             '프로토타입 디자인'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop', caption: 'AI 이미지 생성' },
-            { src: 'https://images.unsplash.com/photo-1686191128892-34a1dc6cd904?w=600&h=400&fit=crop', caption: '창작 도구' }
+            { src: '/images/guide/toolb/aifi-image-generator-1.jpg', caption: 'AI 이미지 생성', prompt: 'AI 이미지 생성 도구 인터페이스, 텍스트 프롬프트를 이미지로 변환, AI technology interface, modern UI design, creative tool' }
         ]
     },
 
@@ -1767,8 +2760,7 @@ export const cameraData = {
             '재현 가능한 프롬프트 생성'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop', caption: '이미지 분석' },
-            { src: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&h=400&fit=crop', caption: '프롬프트 추출' }
+            { src: '/images/guide/toolb/aifi-prompt-extractor-1.jpg', caption: '이미지 분석', prompt: '이미지 분석 AI 도구, 업로드된 이미지에서 프롬프트 추출, reverse engineering interface, technology tool, analytical' }
         ]
     },
 
@@ -1784,8 +2776,7 @@ export const cameraData = {
             '아이디어 발전'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1558346489-ace63f442871?w=600&h=400&fit=crop', caption: '이미지 변형' },
-            { src: 'https://images.unsplash.com/photo-1609592043530-1d8c5df5f3f9?w=600&h=400&fit=crop', caption: '창작적 편집' }
+            { src: '/images/guide/toolb/aifi-image-variator-1.jpg', caption: '이미지 변형', prompt: '이미지 변형 AI 도구, 원본 이미지 기반 다양한 변형 생성, creative variation interface, artistic tool, innovative' }
         ]
     },
 
@@ -1801,8 +2792,7 @@ export const cameraData = {
             '영상 스타일 정의'
         ],
         images: [
-            { src: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop', caption: '영상 제작' },
-            { src: 'https://images.unsplash.com/photo-1626544901077-f6dac3ee9aa6?w=600&h=400&fit=crop', caption: 'AI 영상 생성' }
+            { src: '/images/guide/toolb/aifi-video-prompt-1.jpg', caption: '영상 제작', prompt: '영상 프롬프트 생성 AI 도구, 텍스트 기반 영상 제작 인터페이스, video creation tool, modern technology UI, cinematic' }
         ]
     },
 
@@ -1824,61 +2814,61 @@ export const cameraData = {
                 name: 'bun',
                 koreanName: '번 헤어',
                 description: 'messy bun hairstyle',
-                image: 'https://cdn.midjourney.com/345a49a0-e15b-44f2-abc6-fc130c76015d/0_3.png'
+                image: '/images/guide/video/slow-motion-1.jpg'
             },
             {
                 name: 'double bun',
                 koreanName: '더블 번',
                 description: 'space buns hairstyle',
-                image: 'https://cdn.midjourney.com/a75c68ef-a730-40f1-b69c-35815a3293da/0_1.png'
+                image: '/images/guide/video/slow-motion-2.jpg'
             },
             {
                 name: 'wavy',
                 koreanName: '웨이브',
                 description: 'wavy hair',
-                image: 'https://cdn.midjourney.com/73c5cf81-a0cc-4a88-9ed4-3e0c2fa37a01/0_2.png'
+                image: '/images/guide/video/slow-motion-3.jpg'
             },
             {
                 name: 'crown braid',
                 koreanName: '크라운 브레이드',
                 description: 'crown braid hairstyle',
-                image: 'https://cdn.midjourney.com/e99b9769-7cc9-4924-9c59-3895bceb342d/0_1.png'
+                image: '/images/guide/video/slow-motion-4.jpg'
             },
             {
                 name: 'double braid',
                 koreanName: '더블 브레이드',
                 description: 'twin braids hairstyle',
-                image: 'https://cdn.midjourney.com/0d5d280e-b7a6-49c2-85dd-a726e13bdd46/0_1.png'
+                image: '/images/guide/practice/hairstyles-5.jpg'
             },
             {
                 name: 'short bob',
                 koreanName: '숏 보브',
                 description: 'short bob haircut',
-                image: 'https://cdn.midjourney.com/367e90e7-3d07-45ed-b0ec-8aed5da19dbc/0_3.png'
+                image: '/images/guide/video/time-lapse-6.jpg'
             },
             {
                 name: 'short with bangs',
                 koreanName: '숏 뱅 헤어',
                 description: 'short hair with bangs',
-                image: 'https://cdn.midjourney.com/88f20f30-adb5-42c6-a2df-af340f5cf36c/0_0.png'
+                image: '/images/guide/video/time-lapse-7.jpg'
             },
             {
                 name: 'ponytail',
                 koreanName: '포니테일',
                 description: 'sleek ponytail hairstyle',
-                image: 'https://cdn.midjourney.com/45c47806-87f5-4bbd-b676-dc0a324380ec/0_0.png'
+                image: '/images/guide/video/time-lapse-8.jpg'
             },
             {
                 name: 'straight',
                 koreanName: '스트레이트',
                 description: 'straight shoulder-length hair',
-                image: 'https://cdn.midjourney.com/9ca3532d-a75f-44d7-9cc0-2016187ee79a/0_3.png'
+                image: '/images/guide/video/time-lapse-9.jpg'
             },
             {
                 name: 'finger curls',
                 koreanName: '핑거 컬',
                 description: 'tight finger curls hairstyle',
-                image: 'https://cdn.midjourney.com/364f299c-41ec-4e83-b28b-8930fd6d8c25/0_2.png'
+                image: '/images/guide/practice/hairstyles-10.jpg'
             }
         ],
         manHairstyles: [
@@ -1886,64 +2876,66 @@ export const cameraData = {
                 name: 'undercut',
                 koreanName: '언더컷',
                 description: 'undercut haircut',
-                image: 'https://cdn.midjourney.com/dfef2aae-0c79-4b4f-8f3d-9c255416dbc6/0_0.png'
+                image: '/images/guide/video/freeze-frame-11.jpg'
             },
             {
                 name: 'fade haircut',
                 koreanName: '페이드 컷',
                 description: 'fade haircut',
-                image: 'https://cdn.midjourney.com/0b69e682-8996-4d55-81b6-642980ae0b39/0_3.png'
+                image: '/images/guide/video/freeze-frame-12.jpg'
             },
             {
                 name: 'buzz cut',
                 koreanName: '버즈컷',
                 description: 'buzz cut',
-                image: 'https://cdn.midjourney.com/14401a7d-a7ea-488c-bb00-988449f49688/0_2.png'
+                image: '/images/guide/video/freeze-frame-13.jpg'
             },
             {
                 name: 'pompadour',
                 koreanName: '포마드',
                 description: 'pompadour hairstyle',
-                image: 'https://cdn.midjourney.com/ec8c4da2-4ea8-435c-8532-df4f36d008b6/0_1.png'
+                image: '/images/guide/video/freeze-frame-14.jpg'
             },
             {
                 name: 'quiff',
                 koreanName: '퀴프',
                 description: 'quiff hairstyle',
-                image: 'https://cdn.midjourney.com/bf4f82b4-c637-40e0-8f57-6cefcfc283b8/0_3.png'
+                image: '/images/guide/practice/hairstyles-15.jpg'
             },
             {
                 name: 'side part',
                 koreanName: '사이드 파트',
                 description: 'side part hairstyle',
-                image: 'https://cdn.midjourney.com/5d4da5ba-b20a-47c3-a14a-89009ba59c70/0_2.png'
+                image: '/images/guide/video/motion-blur-16.jpg'
             },
             {
                 name: 'man bun',
                 koreanName: '맨번',
                 description: 'man bun hairstyle',
-                image: 'https://cdn.midjourney.com/240d7963-d4d2-4c40-8eec-ddca6f7bb7e3/0_1.png'
+                image: '/images/guide/video/motion-blur-17.jpg'
             },
             {
                 name: 'crew cut',
                 koreanName: '크루컷',
                 description: 'crew cut',
-                image: 'https://cdn.midjourney.com/c6227112-8a39-4cb5-8150-229bbaa5b39d/0_3.png'
+                image: '/images/guide/video/motion-blur-18.jpg'
             },
             {
                 name: 'slicked back',
                 koreanName: '슬릭백',
                 description: 'slicked back hairstyle',
-                image: 'https://cdn.midjourney.com/c5bf2f7e-3efb-45f7-9b42-0e528a5ebe58/0_2.png'
+                image: '/images/guide/video/motion-blur-19.jpg'
             },
             {
                 name: 'textured crop',
                 koreanName: '텍스처드 크롭',
                 description: 'textured crop hairstyle',
-                image: 'https://cdn.midjourney.com/99ef0e6a-f544-497d-88ea-3d2b8d4a02dd/0_3.png'
+                image: '/images/guide/video/motion-blur-20.jpg'
             }
         ],
-        images: []
+        images: [
+            { src: '/images/guide/practice/hairstyles-1.jpg', caption: 'hairstyles example 1', prompt: 'hairstyles practice exercise example 1, creative project demonstration, step-by-step visual guide, educational content, clear composition' }
+        ]
     },
 
     // ============= FRAMEWORK STAGES =============
@@ -2019,7 +3011,7 @@ export const cameraData = {
         title: '침팬지 영상만들기',
         koreanTitle: 'Chimpanzee Video Creation',
         description: 'ASMR 스타일의 침팬지 짜장면 먹방 영상을 만드는 실습과제입니다. 왼쪽 동영상을 참고하여 오른쪽 프롬프트를 활용해 영상을 생성해보세요.',
-        videoUrl: 'https://www.dropbox.com/scl/fi/1gt32p4lcuyqlt1o1o0wj/.mp4?rlkey=tb6pmhxchm40ld4pfrmg6bvqe&st=ypw3koep&raw=1',
+        videoUrl: '/images/guide/practice/chimpanzee-video-v1.mp4',
         prompt: `{
   "core_module": {
     "character": {
@@ -2027,7 +3019,10 @@ export const cameraData = {
         "id": "Chimpanzee_ASMR_BJ",
         "signature_details": "An adult chimpanzee with expressive, thoughtful eyes. He has the calm and serious persona of a professional ASMRtist.",
         "voice_consistency": "An extremely close, breathy ASMR whisper, as if his lips are almost touching the microphone."
-      }
+      },
+        images: [
+            { src: '/images/guide/practice/chimpanzee-video-1.jpg', caption: 'chimpanzee video example 1', prompt: 'chimpanzee video practice exercise example 1, creative project demonstration, step-by-step visual guide, educational content, clear composition' }
+        ],
     },
     "location_baseline": {
       "setting": "A cozy, dimly lit room set up like a personal recording studio for ASMR.",
@@ -2088,7 +3083,10 @@ export const cameraData = {
         "id": "Hamster_Mukbang_Star",
         "signature_details": "A fluffy golden hamster with bright, curious eyes and chubby cheeks. Has an enthusiastic and cheerful personality.",
         "voice_consistency": "High-pitched, excited squeaking sounds with occasional satisfied 'nom nom' sounds."
-      }
+      },
+        images: [
+            { src: '/images/guide/practice/hamster-video-1.jpg', caption: 'hamster video example 1', prompt: 'hamster video practice exercise example 1, creative project demonstration, step-by-step visual guide, educational content, clear composition' }
+        ],
     },
     "location_baseline": {
       "setting": "A miniature dining setup with a tiny table and chair, perfectly sized for a hamster.",
@@ -2146,7 +3144,10 @@ export const cameraData = {
         "id": "Elegant_Crocodile_Diner",
         "signature_details": "A large, sophisticated crocodile wearing a gentleman's bow tie. Has refined table manners despite being a predator.",
         "voice_consistency": "Deep, rumbling sounds with occasional satisfied grunts and slurping."
-      }
+      },
+        images: [
+            { src: '/images/guide/practice/crocodile-video-1.jpg', caption: 'crocodile video example 1', prompt: 'crocodile video practice exercise example 1, creative project demonstration, step-by-step visual guide, educational content, clear composition' }
+        ],
     },
     "location_baseline": {
       "setting": "An elegant dining room with fine dining atmosphere, white tablecloth and proper utensils.",
@@ -2573,7 +3574,10 @@ roar that echoes through the hangar.",
   "timeline": [
     {
       "time": "0-3 seconds",
-      "event": "A finger touches the elf. This is the trigger. The flat ink of the elf and monsters immediately begins to swell and rise, unfolding from the page into fully photorealistic 3D characters. This is a physical awakening and is the main visual event of the first 3 seconds."
+      "event": "A finger touches the elf. This is the trigger. The flat ink of the elf and monsters immediately begins to swell and rise, unfolding from the page into fully photorealistic 3D characters. This is a physical awakening and is the main visual event of the first 3 seconds.",
+        images: [
+            { src: '/images/guide/practice/veo-prompts-1.jpg', caption: 'veo prompts example 1', prompt: 'veo prompts practice exercise example 1, creative project demonstration, step-by-step visual guide, educational content, clear composition' }
+        ],
     },
     {
       "time": "3-4 seconds",
@@ -2622,26 +3626,26 @@ roar that echoes through the hangar.",
                 videos: [
                     {
                         title: '1팀 김지후 작품',
-                        url: 'https://www.dropbox.com/scl/fi/6q32zb402x7vpb4en35ni/_.mp4?rlkey=6y1l9rcj1365egvu19i9onex3&st=mir00csr&raw=1',
-                        thumbnail: 'https://via.placeholder.com/320x180/1a1a1a/666666?text=Team+1+Video+1',
+                        url: '/images/guide/practice/veo-prompts-v1.mp4',
+                        thumbnail: '/images/guide/practice/veo-prompts-1.jpg',
                         description: '팀 1의 첫 번째 작품'
                     },
                     {
                         title: '1팀 우정식 작품',
-                        url: 'https://www.dropbox.com/scl/fi/23bctte2kwx88x6xxm8kd/.mp4?rlkey=omgbmcb0z5xzvg0lali0qq892&st=h7kpo03i&raw=1',
-                        thumbnail: 'https://via.placeholder.com/320x180/1a1a1a/666666?text=Team+1+Video+2',
+                        url: '/images/guide/practice/veo-prompts-v2.mp4',
+                        thumbnail: '/images/guide/practice/veo-prompts-2.jpg',
                         description: '팀 1의 두 번째 작품'
                     },
                     {
                         title: '영상 홍보영 제목 3',
-                        url: 'https://www.dropbox.com/scl/fi/1iunkgts3ohd3mntq5u2y/_-_.mp4?rlkey=0y2mw4nqoqb7sxredsdhguriw&st=igb3861w&raw=1',
-                        thumbnail: 'https://via.placeholder.com/320x180/1a1a1a/666666?text=Video+3',
+                        url: '/images/guide/practice/veo-prompts-v3.mp4',
+                        thumbnail: '/images/guide/practice/veo-prompts-3.jpg',
                         description: '팀 1의 세 번째 작품'
                     },
                     {
                         title: '영상 조민재 4',
-                        url: 'https://www.dropbox.com/scl/fi/4avgdps8ondn7upxji08x/1-_.mp4?rlkey=434xdmw8zg8bsa3x953etkbr7&st=yc60dn7g&raw=1',
-                        thumbnail: 'https://via.placeholder.com/320x180/1a1a1a/666666?text=Video+4',
+                        url: '/images/guide/practice/veo-prompts-v4.mp4',
+                        thumbnail: '/images/guide/practice/veo-prompts-4.jpg',
                         description: '팀 1의 네 번째 작품'
                     }
                 ]
@@ -2651,20 +3655,20 @@ roar that echoes through the hangar.",
                 videos: [
                     {
                         title: '영상 김성환 1',
-                        url: 'https://www.dropbox.com/scl/fi/eskbhy9rxztjog77ggh0j/.mp4?rlkey=j5hxeu4sk8qp2zxo1a2uhdt6x&st=hhgni73v&raw=1',
-                        thumbnail: 'https://via.placeholder.com/320x180/1a1a1a/666666?text=Video+1',
+                        url: '/images/guide/practice/veo-prompts-v5.mp4',
+                        thumbnail: '/images/guide/practice/veo-prompts-5.jpg',
                         description: '팀 2의 첫 번째 작품'
                     },
                     {
                         title: '영상 이윤서 2',
-                        url: 'https://www.dropbox.com/scl/fi/kkgg1xqdmbdqd5kn4insn/_.mp4?rlkey=3oa8t3hlpig7u7dfa50d2yv93&st=fr4f1b2b&raw=1',
-                        thumbnail: 'https://via.placeholder.com/320x180/1a1a1a/666666?text=Video+2',
+                        url: '/images/guide/practice/veo-prompts-v6.mp4',
+                        thumbnail: '/images/guide/practice/veo-prompts-6.jpg',
                         description: '팀 2의 두 번째 작품'
                     },
                     {
                         title: '영상 윤주철 3',
-                        url: 'https://www.dropbox.com/scl/fi/5quo5o1py594yyqqulhf7/.mp4?rlkey=jtxni7pygnhrfmuvoup0znivo&st=md7gq064&raw=1',
-                        thumbnail: 'https://via.placeholder.com/320x180/1a1a1a/666666?text=Video+3',
+                        url: '/images/guide/practice/veo-prompts-v7.mp4',
+                        thumbnail: '/images/guide/practice/veo-prompts-7.jpg',
                         description: '팀 2의 세 번째 작품'
                     },
                 ]
@@ -2675,30 +3679,33 @@ roar that echoes through the hangar.",
                     {
                         title: '영상 제목 1',
                         url: '',
-                        thumbnail: 'https://via.placeholder.com/320x180/1a1a1a/666666?text=Video+1',
+                        thumbnail: '/images/guide/practice/veo-prompts-8.jpg',
                         description: '팀 3의 첫 번째 작품'
                     },
                     {
                         title: '영상 제목 2',
                         url: '',
-                        thumbnail: 'https://via.placeholder.com/320x180/1a1a1a/666666?text=Video+2',
+                        thumbnail: '/images/guide/practice/veo-prompts-9.jpg',
                         description: '팀 3의 두 번째 작품'
                     },
                     {
                         title: '영상 제목 3',
                         url: '',
-                        thumbnail: 'https://via.placeholder.com/320x180/1a1a1a/666666?text=Video+3',
+                        thumbnail: '/images/guide/practice/veo-prompts-10.jpg',
                         description: '팀 3의 세 번째 작품'
                     },
                     {
                         title: '영상 제목 4',
                         url: '',
-                        thumbnail: 'https://via.placeholder.com/320x180/1a1a1a/666666?text=Video+4',
+                        thumbnail: '/images/guide/practice/veo-prompts-11.jpg',
                         description: '팀 3의 네 번째 작품'
                     }
                 ]
             }
-        }
+        },
+        images: [
+            { src: '/images/guide/practice/team-assignments-1.jpg', caption: 'team assignments example 1', prompt: 'team assignments practice exercise example 1, creative project demonstration, step-by-step visual guide, educational content, clear composition' }
+        ],
     },
 
     // ============= 튜토리얼 =============
@@ -2752,7 +3759,7 @@ roar that echoes through the hangar.",
             title: '🏆 퀘스트 1 완료!',
             message: '축하합니다! 3개의 부품을 모두 모아 드디어 첫 번째 [캐릭터] 블록 조립을 완료했습니다!',
             result: 'a young Korean girl with short black hair, wearing a yellow raincoat',
-            image: 'https://cdn.midjourney.com/d6fc99b2-73ca-4cc6-81b5-d75fb52276d0/0_2.png',
+            image: '/images/guide/practice/veo-prompts-1.jpg',
             status: '<strong style="color: #ff6b6b;">\'캐릭터(Character)\'</strong> → 행동(Action) → 소품(Props) → 배경(Setting) → 스타일(Style) → 조명&시간(Lighting&Time) → 카메라(Camera)',
             nextStep: '어떤가요? 그냥 \'소녀\'라고 했을 때보다 훨씬 더 구체적이고 흥미로운 주인공이 만들어졌죠?\n\n자, 이제 이 멋진 주인공이 \'무엇을 하고 있는지\' 정해줄 차례입니다.\n다음 챕터, \'블록 2: 행동(Action)\' 퀘스트에서 계속됩니다!'
         },
@@ -2870,7 +3877,7 @@ roar that echoes through the hangar.",
             message: '자, 이제 두 번째 [행동] 블록을 장착해 볼까요?',
             choice: '저는 1챕터의 제 캐릭터 노란 우비를 입은 소녀에게 어울리는 <strong style="color: #ff6b6b;">Walking 걷고있는\</strong>을 선택할게요. 비옷을 입었으니 어딘가를 걷고 있는 게 자연스럽겠죠?',
             result: 'a young Korean girl with short black hair, wearing a yellow raincoat, walking',
-            image: 'https://cdn.midjourney.com/5ebc3864-ef04-4244-b93c-3097749450ca/0_1.png',
+            image: '/images/guide/practice/team-assignments-1.jpg',
             status: '캐릭터(Character) → <strong style="color: #ff6b6b;">행동(Action)\'</strong> → 소품(Props) → 배경(Setting) → 스타일(Style) → 조명&시간(Lighting&Time) → 카메라(Camera)',
             nextStep: '캐릭터가 정해졌고, 무엇을 하는지도 정해졌습니다. 그런데... 혹시 캐릭터가 손에 뭔가를 들고 있지는 않나요? (예를 들어, 노란 우비 소녀가 \'빨간 우산\'을 들고 있다면?)\n\n다음 챕터, \'블록 3: 소품(Props)\' 퀘스트에서 이어서 진행하겠습니다! 계속할까요?'
         },
@@ -2931,7 +3938,7 @@ roar that echoes through the hangar.",
             message: '자, 이제 세 번째 [소품] 블록을 장착할 시간입니다.',
             choice: '저는 1, 2챕터의 제 캐릭터(노란 우비를 입고 걷는 소녀)에게 어울리게, <strong style="color: #ff6b6b;">"holding a transparent umbrella"</strong> (투명한 우산을 들고 있는)를 추가할게요. 노란 비옷과 투명한 우산, 정말 잘 어울릴 것 같지 않나요?"',
             result: 'a young Korean girl with short black hair, wearing a yellow raincoat, walking, holding a transparent umbrella',
-            image: 'https://cdn.midjourney.com/b5f5dda1-91af-4626-a9ec-b09ac1ac0cd9/0_1.png',
+            image: '/images/guide/tutorial/tutorial-block1-1.jpg',
             status: '캐릭터(Character) → 행동(Action) → <strong style="color: #ff6b6b;">소품(Props)\'</strong>  → 배경(Setting) → 스타일(Style) → 조명&시간(Lighting&Time) → 카메라(Camera)',
             nextStep: '이제 멋진 주인공이 완성되었습니다! 캐릭터, 행동, 소품까지 모두 정해졌네요.\n\n그렇다면... 이 주인공은 \'어디에\' 서 있는 걸까요? 숲속? 도시? 아니면 텅 빈 방?\n\n다음 챕터, \'블록 4: 배경(Setting)\' 퀘스트에서 이 모든 것을 결정합니다! 계속 진행할까요?'
         },
@@ -2990,7 +3997,7 @@ roar that echoes through the hangar.",
             message: '이제 네 번째 [배경] 블록을 장착할 차례입니다.',
             choice: '"제 캐릭터는 \'노란 우비\'를 입고 \'투명 우산\'을 들고 있으니, <strong style="color: #ff6b6b;">in a rainy city street at night</strong>(밤에 비 오는 도시 거리에서)를 선택할게요. 비 오는 밤거리와 노란 우비, 색감 대비가 멋질 것 같아요!"',
             result: 'a young Korean girl with short black hair, wearing a yellow raincoat, walking, holding a transparent umbrella, in a rainy city street at night',
-            image: 'https://cdn.midjourney.com/f75c5550-d39b-441f-8c1e-de6d5b9516de/0_3.png',
+            image: '/images/guide/tutorial/tutorial-block1-1.jpg',
             status: '캐릭터(Character) → 행동(Action) → 소품(Props) → <strong style="color: #ff6b6b;">배경(Setting)\'</strong> → 스타일(Style) → 조명&시간(Lighting&Time) → 카메라(Camera)',
             nextStep: '자, 4개의 블록이 모두 조립되었습니다! 완성된 프롬프트를 볼까요?\n\n이제 거의 다 왔습니다! 주인공이 어디서 무엇을 하는지 모두 정해졌네요.\n\n그런데 이 멋진 장면을 **\'어떤 화풍\'**으로 그릴까요? 실사처럼? 애니메이션처럼? 아니면 유화처럼?\n\n다음 챕터, \'블록 5: 스타일(Style)\' 퀘스트에서 이미지의 \'느낌\'을 결정합니다! 계속 진행할까요?'
         },
@@ -3066,7 +4073,7 @@ roar that echoes through the hangar.",
             message: '이제 다섯 번째 [스타일] 블록을 장착해 봅시다.',
             choice: '저는 \'비 오는 밤거리\'와 \'소녀\'의 감성을 잘 살릴 수 있도록, 꿀팁에서 배운 \'조합\'을 사용해 볼게요!"\n\n <strong style="color: #ff6b6b;">\'anime style\'</strong> (애니 스타일) + <strong style="color: #ff6b6b;">\'lo-fi aesthetic\'</strong> (로파이 감성)\n\n"비 오는 날의 차분하고 편안한 애니메이션 느낌, 정말 기대되지 않나요?"',
             result: 'a young Korean girl with short black hair, wearing a yellow raincoat, walking, holding a transparent umbrella, in a rainy city street at night, anime style, lo-fi aesthetic',
-            image: 'https://cdn.midjourney.com/2a723ff8-e50d-481e-831f-2752716dc168/0_3.png',
+            image: '/images/guide/tutorial/tutorial-block2-1.jpg',
             status: '캐릭터(Character) → 행동(Action) → 소품(Props) → 배경(Setting) → <strong style="color: #ff6b6b;">\'스타일(Style)\'</strong> → 조명&시간(Lighting&Time) → 카메라(Camera)',
             nextStep: '5개의 블록이 모두 조립되었습니다! 완성된 프롬프트를 확인해 보세요.\n\n와! 이제 정말 멋진 장면이 머릿속에 그려집니다.\n\n그런데... \'비 오는 밤거리\'의 \'빛\'을 조금 더 극적으로 만들고 싶지 않으신가요? 예를 들어, \'네온사인\' 불빛이 비에 젖은 바닥에 반사되는 것처럼요!\n\n다음 챕터, \'블록 6: 조명 & 시간(Lighting & Time)\' 퀘스트에서 이 \'빛\'을 디자인해 보겠습니다! 계속할까요?'
         },
@@ -3129,7 +4136,7 @@ roar that echoes through the hangar.",
             message: '이제 여섯 번째 [조명 & 시간] 블록을 장착해 봅시다.',
             choice: '\'네온사인\' 대신, \'로파이(lo-fi)\' 감성에 어울리는 따뜻한 불빛을 선택할게요."\n\n"비 오는 밤거리에 <strong style="color: #ff6b6b;">\'glowing streetlights\'</strong> (빛나는 가로등) 불빛과 <strong style="color: #ff6b6b;">\'warm light from shop windows\'</strong> (가게 창문에서 새어 나오는 따뜻한 불빛)**이 젖은 바닥에 반사되는 모습을 상상했어요!',
             result: 'a young Korean girl with short black hair, wearing a yellow raincoat, walking, holding a transparent umbrella, in a rainy city street at night, anime style, lo-fi aesthetic, glowing streetlights and warm light from shop windows',
-            image: 'https://cdn.midjourney.com/83add2b7-38a2-40a5-8685-fa7840b0909b/0_3.png',
+            image: '/images/guide/tutorial/tutorial-block3-1.jpg',
             status: '캐릭터(Character) → 행동(Action) → 소품(Props) → 배경(Setting) → 스타일(Style) → <strong style="color: #ff6b6b;">\'조명&시간(Lighting&Time)\'</strong> → 카메라(Camera)',
             nextStep: '6개의 블록이 모두 조립되었습니다! 프롬프트가 훨씬 더 풍부해졌네요!\n\n드디어 마지막 퀘스트입니다! 우리는 이제 \'어떤 장면\'을 그릴지 완벽하게 기획했습니다.\n\n이제 이 장면을 \'어떤 카메라로\', \'어떤 각도에서\' 찍을지만 결정하면 됩니다!\n\n마지막 퀘스트, \'블록 7: 카메라(Camera)\' 퀘스트에서 이 모든 것을 마무리합니다! 계속 진행할까요?'
         },
@@ -3964,40 +4971,40 @@ roar that echoes through the hangar.",
     },
 
     // ============= 자료실 (LIBRARY) =============
-    'blog-post-1': {
-        title: '블로그 포스트 1',
-        koreanTitle: 'Blog Post 1',
-        type: 'blog',
-        thumbnail: '',
-        date: '2026-03-06',
+    'curriculum-beginner': {
+        title: '초급과정 커리큘럼',
+        koreanTitle: 'Beginner Curriculum',
+        type: 'download',
+        date: '2026-03-19',
         author: 'AI TOOLBEE',
-        tags: [],
-        summary: '블로그 내용이 곧 업데이트 됩니다.',
-        content: '<p>블로그 내용이 곧 업데이트 됩니다.</p>',
+        summary: 'AI 이미지/영상 생성 초급과정 강의 커리큘럼 PDF',
+        fileUrl: '/files/초급과정.pdf',
+        fileSize: '909 KB',
+        fileType: 'PDF',
         images: [],
     },
-    'blog-post-2': {
-        title: '블로그 포스트 2',
-        koreanTitle: 'Blog Post 2',
-        type: 'blog',
-        thumbnail: '',
-        date: '2026-03-06',
+    'curriculum-intermediate': {
+        title: '중급과정 커리큘럼',
+        koreanTitle: 'Intermediate Curriculum',
+        type: 'download',
+        date: '2026-03-19',
         author: 'AI TOOLBEE',
-        tags: [],
-        summary: '블로그 내용이 곧 업데이트 됩니다.',
-        content: '<p>블로그 내용이 곧 업데이트 됩니다.</p>',
+        summary: 'AI 이미지/영상 생성 중급과정 강의 커리큘럼 PDF',
+        fileUrl: '/files/중급과정.pdf',
+        fileSize: '1.8 MB',
+        fileType: 'PDF',
         images: [],
     },
-    'blog-post-3': {
-        title: '블로그 포스트 3',
-        koreanTitle: 'Blog Post 3',
-        type: 'blog',
-        thumbnail: '',
-        date: '2026-03-06',
+    'curriculum-advanced': {
+        title: '고급과정 커리큘럼',
+        koreanTitle: 'Advanced Curriculum',
+        type: 'download',
+        date: '2026-03-19',
         author: 'AI TOOLBEE',
-        tags: [],
-        summary: '블로그 내용이 곧 업데이트 됩니다.',
-        content: '<p>블로그 내용이 곧 업데이트 됩니다.</p>',
+        summary: 'AI 이미지/영상 생성 고급과정 강의 커리큘럼 PDF',
+        fileUrl: '/files/고급과정.pdf',
+        fileSize: '1.8 MB',
+        fileType: 'PDF',
         images: [],
     },
 
@@ -4012,7 +5019,9 @@ roar that echoes through the hangar.",
         tags: [],
         summary: '프롬프트 레시피가 곧 업데이트 됩니다.',
         content: '<p>프롬프트 레시피가 곧 업데이트 됩니다.</p>',
-        images: [],
+        images: [
+            { src: '/images/guide/restaurant/prompt-recipe-1-1.jpg', caption: 'prompt recipe 1 example 1', prompt: 'prompt recipe visual example 1, AI generated artwork demonstration, creative prompt result, high quality output, detailed' }
+        ],
     },
     'prompt-recipe-2': {
         title: '프롬프트 레시피 2',
@@ -4024,7 +5033,9 @@ roar that echoes through the hangar.",
         tags: [],
         summary: '프롬프트 레시피가 곧 업데이트 됩니다.',
         content: '<p>프롬프트 레시피가 곧 업데이트 됩니다.</p>',
-        images: [],
+        images: [
+            { src: '/images/guide/restaurant/prompt-recipe-2-1.jpg', caption: 'prompt recipe 2 example 1', prompt: 'prompt recipe visual example 1, AI generated artwork demonstration, creative prompt result, high quality output, detailed' }
+        ],
     },
     'prompt-recipe-3': {
         title: '프롬프트 레시피 3',
@@ -4036,7 +5047,9 @@ roar that echoes through the hangar.",
         tags: [],
         summary: '프롬프트 레시피가 곧 업데이트 됩니다.',
         content: '<p>프롬프트 레시피가 곧 업데이트 됩니다.</p>',
-        images: [],
+        images: [
+            { src: '/images/guide/restaurant/prompt-recipe-3-1.jpg', caption: 'prompt recipe 3 example 1', prompt: 'prompt recipe visual example 1, AI generated artwork demonstration, creative prompt result, high quality output, detailed' }
+        ],
     },
 
 };

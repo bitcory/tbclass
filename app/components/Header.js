@@ -13,7 +13,7 @@ function ClerkAuthButtons({ isScrolled }) {
   const isAdminUser = isSignedIn && isAdmin(user);
 
   return (
-    <div className="hidden md:flex items-center gap-3">
+    <div className="hidden lg:flex items-center gap-3">
       {!isSignedIn ? (
         <>
           <SignInButton mode="modal">
@@ -144,11 +144,11 @@ export default function Header({ alwaysScrolled = false }) {
           </Link>
 
           {/* Center nav */}
-          <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+          <nav className="hidden lg:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
             <div className="relative toolb-dropdown-container">
               <button
                 onClick={() => { setToolbDropdownOpen(!toolbDropdownOpen); setGuideDropdownOpen(false); setVideoDropdownOpen(false); }}
-                className={`flex items-center gap-1 text-base transition-colors font-semibold ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}
+                className={`flex items-center gap-1 text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}
               >
                 TOOLB
                 <ChevronDown className={`w-4 h-4 transition-transform ${toolbDropdownOpen ? 'rotate-180' : ''}`} />
@@ -174,7 +174,7 @@ export default function Header({ alwaysScrolled = false }) {
             <div className="relative guide-dropdown-container">
               <button
                 onClick={() => { setGuideDropdownOpen(!guideDropdownOpen); setToolbDropdownOpen(false); setVideoDropdownOpen(false); }}
-                className={`flex items-center gap-1 text-base transition-colors font-semibold ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}
+                className={`flex items-center gap-1 text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}
               >
                 이미지가이드
                 <ChevronDown className={`w-4 h-4 transition-transform ${guideDropdownOpen ? 'rotate-180' : ''}`} />
@@ -200,7 +200,7 @@ export default function Header({ alwaysScrolled = false }) {
             <div className="relative video-dropdown-container">
               <button
                 onClick={() => { setVideoDropdownOpen(!videoDropdownOpen); setGuideDropdownOpen(false); setToolbDropdownOpen(false); }}
-                className={`flex items-center gap-1 text-base transition-colors font-semibold ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}
+                className={`flex items-center gap-1 text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}
               >
                 영상가이드
                 <ChevronDown className={`w-4 h-4 transition-transform ${videoDropdownOpen ? 'rotate-180' : ''}`} />
@@ -223,23 +223,23 @@ export default function Header({ alwaysScrolled = false }) {
               )}
             </div>
 
-            <Link href="/guide?tab=expert" className={`text-base transition-colors font-semibold ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
+            <Link href="/guide?tab=expert" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
               전문가과정
             </Link>
 
-            <Link href="/practice" className={`text-base transition-colors font-semibold ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
+            <Link href="/practice" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
               실습과제
             </Link>
 
-            <Link href="/library" className={`text-base transition-colors font-semibold ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
+            <Link href="/library" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
               자료실
             </Link>
 
-            <Link href="/prompt-restaurant" className={`text-base transition-colors font-semibold ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
+            <Link href="/prompt-restaurant" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
               프롬프트맛집
             </Link>
 
-            <Link href="/#pricing" className={`text-base transition-colors font-semibold ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
+            <Link href="/#pricing" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
               요금제
             </Link>
           </nav>
@@ -249,7 +249,7 @@ export default function Header({ alwaysScrolled = false }) {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden w-6 h-6 flex flex-col justify-center gap-1.5"
+            className="lg:hidden w-6 h-6 flex flex-col justify-center gap-1.5"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="메뉴"
           >
@@ -261,7 +261,7 @@ export default function Header({ alwaysScrolled = false }) {
       </div>
 
       {/* Mobile menu */}
-      <div className={`md:hidden absolute left-0 right-0 top-[80px] transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
+      <div className={`lg:hidden absolute left-0 right-0 top-[80px] transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <nav className="bg-white mx-4 rounded-2xl shadow-xl px-6 py-4 space-y-2 border border-gray-100">
           <Link href="/guide" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             이미지가이드
