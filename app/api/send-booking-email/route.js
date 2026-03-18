@@ -1,8 +1,14 @@
 import nodemailer from 'nodemailer';
+import { addBooking } from '../../../lib/redis';
 
 export async function POST(request) {
   try {
-    const { plan, date, time, contact, coupon, finalPrice } = await request.json();
+    const { plan, date, time, dateKey, contact, coupon, finalPrice } = await request.json();
+
+    // Save booking to Redis
+    if (dateKey && time) {
+      await addBooking(dateKey, time);
+    }
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',

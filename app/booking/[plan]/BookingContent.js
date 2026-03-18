@@ -73,6 +73,7 @@ export default function BookingContent({ plan: planSlug }) {
         body: JSON.stringify({
           plan: { name: plan.name, price: plan.price },
           date: formatDateStr(selectedDate),
+          dateKey: `${selectedDate.getFullYear()}-${String(selectedDate.getMonth() + 1).padStart(2, '0')}-${String(selectedDate.getDate()).padStart(2, '0')}`,
           time: selectedTime,
           contact: contactInfo,
           coupon: couponInfo?.appliedCoupon || null,
@@ -129,7 +130,7 @@ export default function BookingContent({ plan: planSlug }) {
           )}
 
           {currentStep === 2 && (
-            <TimeSlotPicker selectedTime={selectedTime} onSelectTime={handleTimeSelect} />
+            <TimeSlotPicker selectedDate={selectedDate} selectedTime={selectedTime} onSelectTime={handleTimeSelect} />
           )}
 
           {currentStep === 3 && (
