@@ -18,17 +18,17 @@ export const categories = [
       'tutorial-block5', 'tutorial-block6', 'tutorial-block7',
     ],
   },
-  {
-    id: 'expert',
-    name: '전문가 과정',
-    icon: 'GraduationCap',
-    protected: true,
-    items: [
-      'expert-ch1', 'expert-ch2', 'expert-ch3', 'expert-ch4', 'expert-ch5',
-      'expert-ch6', 'expert-ch7', 'expert-ch8', 'expert-ch9', 'expert-ch10',
-      'expert-ch11', 'expert-ch12', 'expert-ch13',
-    ],
-  },
+  // {
+  //   id: 'expert',
+  //   name: '전문가 과정',
+  //   icon: 'GraduationCap',
+  //   protected: true,
+  //   items: [
+  //     'expert-ch1', 'expert-ch2', 'expert-ch3', 'expert-ch4', 'expert-ch5',
+  //     'expert-ch6', 'expert-ch7', 'expert-ch8', 'expert-ch9', 'expert-ch10',
+  //     'expert-ch11', 'expert-ch12', 'expert-ch13',
+  //   ],
+  // },
   {
     id: 'style',
     name: '스타일(STYLE)',
@@ -130,15 +130,15 @@ export const categories = [
       return this.subcategories.flatMap(sub => sub.items);
     },
   },
-  {
-    id: 'practice',
-    name: '실습과제',
-    icon: 'ClipboardList',
-    items: [
-      'banana-magic', 'hairstyles', 'chimpanzee-video', 'hamster-video',
-      'crocodile-video', 'veo-prompts', 'team-assignments',
-    ],
-  },
+  // {
+  //   id: 'practice',
+  //   name: '실습과제',
+  //   icon: 'ClipboardList',
+  //   items: [
+  //     'banana-magic', 'hairstyles', 'chimpanzee-video', 'hamster-video',
+  //     'crocodile-video', 'veo-prompts', 'team-assignments',
+  //   ],
+  // },
   {
     id: 'library',
     name: '자료실',
@@ -147,14 +147,14 @@ export const categories = [
       'curriculum-beginner', 'curriculum-intermediate', 'curriculum-advanced',
     ],
   },
-  {
-    id: 'prompt-restaurant',
-    name: '프롬프트맛집',
-    icon: 'ChefHat',
-    items: [
-      'prompt-recipe-1', 'prompt-recipe-2', 'prompt-recipe-3',
-    ],
-  },
+  // {
+  //   id: 'prompt-restaurant',
+  //   name: '프롬프트맛집',
+  //   icon: 'ChefHat',
+  //   items: [
+  //     'prompt-recipe-1', 'prompt-recipe-2', 'prompt-recipe-3',
+  //   ],
+  // },
 ];
 
 // Helper: get data for a specific key
