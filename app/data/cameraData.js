@@ -12,7 +12,7 @@ export const cameraData = {
                 '아이크루 대표, (주)알앤픽 대표이사, (주)제이콥소프트 영업대표',
             ],
             email: 'aitoolbee79@gmail.com',
-            image: '/images/instructor.png'
+            image: '/images/guide/toolb/instructor-profile.jpg'
         },
         description: 'AI 기술과 창의적 콘텐츠 제작 분야의 전문가로, 다년간의 경험을 바탕으로 AI툴비를 만들게 되었습니다.',
         usage: [

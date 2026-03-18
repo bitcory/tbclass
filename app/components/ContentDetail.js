@@ -248,7 +248,7 @@ function InstructorContent({ item }) {
         <div className="bg-gradient-to-br from-orange-50 to-red-50 border border-orange-100 rounded-2xl p-8">
           <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
             {info.image && (
-              <div className="w-40 h-40 rounded-2xl overflow-hidden flex-shrink-0 border-4 border-white shadow-lg">
+              <div className="w-56 h-56 rounded-2xl overflow-hidden flex-shrink-0 border-4 border-white shadow-lg">
                 <img src={info.image} alt={info.name} className="w-full h-full object-cover" />
               </div>
             )}
