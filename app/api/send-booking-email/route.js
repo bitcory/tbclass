@@ -142,7 +142,7 @@ export async function POST(request) {
           <!-- CTA Button -->
           <tr>
             <td style="padding: 0 40px 32px; text-align: center;">
-              <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'https://toolbee.kr'}/files/AI%EB%A1%9C%20%EB%A7%8C%EB%93%9C%EB%8A%94%20%EB%82%98%EB%A7%8C%EC%9D%98%EC%98%81%EC%83%81.pdf"
+              <a href="https://tbc.aitoolb.com/files/AI%EB%A1%9C%20%EB%A7%8C%EB%93%9C%EB%8A%94%20%EB%82%98%EB%A7%8C%EC%9D%98%EC%98%81%EC%83%81.pdf"
                  style="display: inline-block; padding: 14px 40px; background: linear-gradient(135deg, #f97316, #ef4444); color: #ffffff; text-decoration: none; border-radius: 12px; font-size: 15px; font-weight: 700;">
                 AI TOOLBEE 가이드 보기
               </a>
