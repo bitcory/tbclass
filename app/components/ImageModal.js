@@ -76,7 +76,7 @@ export default function ImageModal({ images, currentIndex, onClose, onPrev, onNe
             <div
               key={idx}
               className={`w-2 h-2 rounded-full transition-colors ${
-                idx === currentIndex ? 'bg-orange-500' : 'bg-white/30'
+                idx === currentIndex ? 'bg-emerald-500' : 'bg-white/30'
               }`}
             />
           ))}

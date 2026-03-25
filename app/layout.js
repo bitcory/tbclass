@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import CherryBlossom from "./components/CherryBlossom";
+import AmbientBackground from "./components/AmbientBackground";
 import ClerkWrapper from "./components/ClerkWrapper";
 
 const paperlogy = localFont({
@@ -37,8 +37,8 @@ export default function RootLayout({ children }) {
   return (
     <ClerkWrapper>
       <html lang="ko">
-        <body className={`${paperlogy.variable} font-sans antialiased`}>
-          <CherryBlossom />
+        <body className={`${paperlogy.variable} font-sans antialiased bg-[#050505] text-zinc-100`}>
+          <AmbientBackground />
           <div className="relative z-10">
             {children}
           </div>

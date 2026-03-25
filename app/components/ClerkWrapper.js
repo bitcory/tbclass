@@ -3,6 +3,7 @@
 import { createContext, useContext } from 'react';
 import { ClerkProvider } from '@clerk/nextjs';
 import { koKR } from '@clerk/localizations';
+import { dark } from '@clerk/themes';
 
 const ClerkConfigContext = createContext(false);
 
@@ -29,8 +30,16 @@ export default function ClerkWrapper({ children }) {
       <ClerkProvider
         localization={koKR}
         appearance={{
+          baseTheme: dark,
+          variables: {
+            colorPrimary: '#10b981',
+            colorBackground: '#0a0a0a',
+            colorInputBackground: '#171717',
+            colorText: '#f4f4f5',
+          },
           elements: {
-            footer: "hidden"
+            footer: "hidden",
+            card: "bg-zinc-900 border border-white/[0.06]",
           }
         }}
       >

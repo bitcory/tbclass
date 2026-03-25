@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ChevronDown, Lock, Palette, Brush, Camera, Sun, Film, UserCircle, Star, Video, LayoutDashboard, Settings, Shield } from 'lucide-react';
+import { ChevronDown, Lock, Palette, Brush, Camera, Sun, Film, UserCircle, Star, Video, LayoutDashboard, Settings, Shield, LayoutGrid } from 'lucide-react';
 import Link from 'next/link';
 import { useClerkConfigured } from './ClerkWrapper';
 import { useUser, useAuth, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
@@ -17,14 +17,13 @@ function ClerkAuthButtons({ isScrolled }) {
       {!isSignedIn ? (
         <>
           <SignInButton mode="modal">
-            <button className={`px-6 py-2.5 rounded-full font-medium transition-all ${isScrolled ? 'text-black hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}>
+            <button className="px-6 py-2.5 rounded-full font-medium transition-all text-zinc-300 hover:text-white hover:bg-white/[0.06]">
               로그인
             </button>
           </SignInButton>
           <SignUpButton mode="modal">
-            <button className={`px-6 py-2.5 rounded-full font-medium transition-all overflow-hidden relative group ${isScrolled ? 'bg-black text-white hover:shadow-lg' : 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:shadow-lg hover:scale-105'}`}>
+            <button className="px-6 py-2.5 rounded-full font-medium transition-all bg-emerald-500 text-zinc-950 hover:bg-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
               <span className="relative z-10">회원가입</span>
-              {!isScrolled && <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity" />}
             </button>
           </SignUpButton>
         </>
@@ -54,12 +53,12 @@ function ClerkMobileAuth({ onMenuClose }) {
       {!isSignedIn ? (
         <>
           <SignInButton mode="modal">
-            <button className="block w-full text-left py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={onMenuClose}>
+            <button className="block w-full text-left py-2 text-zinc-300 hover:text-emerald-400 transition-colors font-medium" onClick={onMenuClose}>
               로그인
             </button>
           </SignInButton>
           <SignUpButton mode="modal">
-            <button className="w-full py-2.5 px-6 rounded-full font-medium transition-all bg-gradient-to-r from-orange-500 to-red-500 text-white hover:shadow-lg" onClick={onMenuClose}>
+            <button className="w-full py-2.5 px-6 rounded-full font-medium transition-all bg-emerald-500 text-zinc-950 hover:bg-emerald-400" onClick={onMenuClose}>
               회원가입
             </button>
           </SignUpButton>
@@ -76,7 +75,7 @@ function ClerkMobileAuth({ onMenuClose }) {
               <UserButton.Link label="프로필 설정" labelIcon={<Settings size={16} />} href="/profile" />
             </UserButton.MenuItems>
           </UserButton>
-          <span className="text-gray-800 font-medium">{user?.fullName || user?.firstName || '내 계정'}</span>
+          <span className="text-zinc-300 font-medium">{user?.fullName || user?.firstName || '내 계정'}</span>
         </div>
       )}
     </>
@@ -123,6 +122,7 @@ export default function Header({ alwaysScrolled = false }) {
     { title: '매체(MEDIUM)', description: '다양한 매체 표현', Icon: Brush, href: '/guide?tab=medium' },
     { title: '카메라(CAMERA)', description: '카메라 기법', Icon: Camera, href: '/guide?tab=camera' },
     { title: '조명(LIGHTING)', description: '조명 기법', Icon: Sun, href: '/guide?tab=lighting' },
+    { title: '특수기법(COMPOSITION)', description: '구도 및 특수기법', Icon: LayoutGrid, href: '/composition' },
   ];
 
   const videoItems = [
@@ -139,11 +139,11 @@ export default function Header({ alwaysScrolled = false }) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 mt-[30px] px-4 sm:px-6 lg:px-8">
-      <div className={`max-w-[95%] mx-auto transition-all duration-300 rounded-full ${isScrolled ? 'bg-white text-black shadow-md border border-gray-200' : 'bg-transparent text-white'}`}>
+      <div className={`max-w-[95%] mx-auto transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-full ${isScrolled ? 'bg-white/[0.05] backdrop-blur-xl text-zinc-100 shadow-lg ring-1 ring-white/[0.06]' : 'bg-transparent text-white'}`}>
         <div className="flex items-center justify-between h-16 px-6">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
-            <span className="text-xl font-bold">TBPLUS</span>
+            <span className="text-xl font-bold text-white">TBPLUS</span>
           </Link>
 
           {/* Center nav */}
@@ -151,21 +151,21 @@ export default function Header({ alwaysScrolled = false }) {
             <div className="relative toolb-dropdown-container">
               <button
                 onClick={() => { setToolbDropdownOpen(!toolbDropdownOpen); setGuideDropdownOpen(false); setVideoDropdownOpen(false); }}
-                className={`flex items-center gap-1 text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}
+                className="flex items-center gap-1 text-sm xl:text-base transition-colors font-semibold whitespace-nowrap text-zinc-300 hover:text-white"
               >
                 TOOLB
                 <ChevronDown className={`w-4 h-4 transition-transform ${toolbDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
               {toolbDropdownOpen && (
-                <div className="fixed top-[46px] bg-white rounded-3xl shadow-2xl p-4 animate-dropdownIn z-50 w-[540px]" style={{ left: '50%', marginLeft: '-270px' }}>
+                <div className="fixed top-[46px] bg-zinc-900/95 backdrop-blur-xl rounded-3xl shadow-2xl p-4 animate-dropdownIn z-50 w-[540px] ring-1 ring-white/[0.08]" style={{ left: '50%', marginLeft: '-270px' }}>
                   <div className="grid grid-cols-3 gap-4">
                     {toolbItems.map((item, index) => (
                       <Link key={index} href={item.href} className="group/item cursor-pointer" onClick={() => setToolbDropdownOpen(false)}>
-                        <div className="bg-gray-50 rounded-2xl p-5 hover:bg-gray-100 transition-colors border border-gray-200 h-full flex flex-col items-center text-center">
-                          <item.Icon className="w-8 h-8 text-orange-500 mb-3" />
-                          <h3 className="text-sm font-bold text-gray-900 mb-1 whitespace-nowrap">{item.title}</h3>
-                          <p className="text-xs text-gray-600 leading-relaxed">{item.description}</p>
+                        <div className="bg-white/[0.03] rounded-2xl p-5 hover:bg-white/[0.06] transition-all duration-300 ring-1 ring-white/[0.06] h-full flex flex-col items-center text-center">
+                          <item.Icon className="w-8 h-8 text-emerald-400 mb-3" />
+                          <h3 className="text-sm font-bold text-zinc-100 mb-1 whitespace-nowrap">{item.title}</h3>
+                          <p className="text-xs text-zinc-500 leading-relaxed">{item.description}</p>
                         </div>
                       </Link>
                     ))}
@@ -177,21 +177,21 @@ export default function Header({ alwaysScrolled = false }) {
             <div className="relative guide-dropdown-container">
               <button
                 onClick={() => { setGuideDropdownOpen(!guideDropdownOpen); setToolbDropdownOpen(false); setVideoDropdownOpen(false); }}
-                className={`flex items-center gap-1 text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}
+                className="flex items-center gap-1 text-sm xl:text-base transition-colors font-semibold whitespace-nowrap text-zinc-300 hover:text-white"
               >
                 이미지가이드
                 <ChevronDown className={`w-4 h-4 transition-transform ${guideDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
               {guideDropdownOpen && (
-                <div className="fixed top-[46px] bg-white rounded-3xl shadow-2xl p-4 animate-dropdownIn z-50 w-[720px]" style={{ left: '50%', marginLeft: '-360px' }}>
-                  <div className="grid grid-cols-4 gap-4">
+                <div className="fixed top-[46px] bg-zinc-900/95 backdrop-blur-xl rounded-3xl shadow-2xl p-4 animate-dropdownIn z-50 w-[900px] ring-1 ring-white/[0.08]" style={{ left: '50%', marginLeft: '-450px' }}>
+                  <div className="grid grid-cols-5 gap-4">
                     {guideItems.map((item, index) => (
                       <Link key={index} href={item.href} className="group/item cursor-pointer" onClick={() => setGuideDropdownOpen(false)}>
-                        <div className="bg-gray-50 rounded-2xl p-5 hover:bg-gray-100 transition-colors border border-gray-200 h-full flex flex-col items-center text-center">
-                          <item.Icon className="w-8 h-8 text-orange-500 mb-3" />
-                          <h3 className="text-sm font-bold text-gray-900 mb-1 whitespace-nowrap">{item.title}</h3>
-                          <p className="text-xs text-gray-600 leading-relaxed">{item.description}</p>
+                        <div className="bg-white/[0.03] rounded-2xl p-5 hover:bg-white/[0.06] transition-all duration-300 ring-1 ring-white/[0.06] h-full flex flex-col items-center text-center">
+                          <item.Icon className="w-8 h-8 text-emerald-400 mb-3" />
+                          <h3 className="text-sm font-bold text-zinc-100 mb-1 whitespace-nowrap">{item.title}</h3>
+                          <p className="text-xs text-zinc-500 leading-relaxed">{item.description}</p>
                         </div>
                       </Link>
                     ))}
@@ -203,21 +203,21 @@ export default function Header({ alwaysScrolled = false }) {
             <div className="relative video-dropdown-container">
               <button
                 onClick={() => { setVideoDropdownOpen(!videoDropdownOpen); setGuideDropdownOpen(false); setToolbDropdownOpen(false); }}
-                className={`flex items-center gap-1 text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}
+                className="flex items-center gap-1 text-sm xl:text-base transition-colors font-semibold whitespace-nowrap text-zinc-300 hover:text-white"
               >
                 영상가이드
                 <ChevronDown className={`w-4 h-4 transition-transform ${videoDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
               {videoDropdownOpen && (
-                <div className="fixed top-[46px] bg-white rounded-3xl shadow-2xl p-4 animate-dropdownIn z-50 w-[540px]" style={{ left: '50%', marginLeft: '-270px' }}>
+                <div className="fixed top-[46px] bg-zinc-900/95 backdrop-blur-xl rounded-3xl shadow-2xl p-4 animate-dropdownIn z-50 w-[540px] ring-1 ring-white/[0.08]" style={{ left: '50%', marginLeft: '-270px' }}>
                   <div className="grid grid-cols-3 gap-4">
                     {videoItems.map((item, index) => (
                       <Link key={index} href={item.href} className="group/item cursor-pointer" onClick={() => setVideoDropdownOpen(false)}>
-                        <div className="bg-gray-50 rounded-2xl p-5 hover:bg-gray-100 transition-colors border border-gray-200 h-full flex flex-col items-center text-center">
-                          <item.Icon className="w-8 h-8 text-orange-500 mb-3" />
-                          <h3 className="text-sm font-bold text-gray-900 mb-1 whitespace-nowrap">{item.title}</h3>
-                          <p className="text-xs text-gray-600 leading-relaxed">{item.description}</p>
+                        <div className="bg-white/[0.03] rounded-2xl p-5 hover:bg-white/[0.06] transition-all duration-300 ring-1 ring-white/[0.06] h-full flex flex-col items-center text-center">
+                          <item.Icon className="w-8 h-8 text-emerald-400 mb-3" />
+                          <h3 className="text-sm font-bold text-zinc-100 mb-1 whitespace-nowrap">{item.title}</h3>
+                          <p className="text-xs text-zinc-500 leading-relaxed">{item.description}</p>
                         </div>
                       </Link>
                     ))}
@@ -226,23 +226,11 @@ export default function Header({ alwaysScrolled = false }) {
               )}
             </div>
 
-            {/* <Link href="/guide?tab=expert" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
-              전문가과정
-            </Link> */}
-
-            {/* <Link href="/practice" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
-              실습과제
-            </Link> */}
-
-            <Link href="/library" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
+            <Link href="/library" className="text-sm xl:text-base transition-colors font-semibold whitespace-nowrap text-zinc-300 hover:text-white">
               자료실
             </Link>
 
-            {/* <Link href="/prompt-restaurant" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
-              프롬프트맛집
-            </Link> */}
-
-            <Link href="/#pricing" className={`text-sm xl:text-base transition-colors font-semibold whitespace-nowrap ${isScrolled ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-200'}`}>
+            <Link href="/#pricing" className="text-sm xl:text-base transition-colors font-semibold whitespace-nowrap text-zinc-300 hover:text-white">
               요금제
             </Link>
           </nav>
@@ -252,7 +240,7 @@ export default function Header({ alwaysScrolled = false }) {
             {clerkConfigured && <ClerkAuthButtons isScrolled={isScrolled} />}
             <button
               onClick={() => setShowAdminModal(true)}
-              className={`p-2 rounded-full transition-colors ${isScrolled ? 'hover:bg-gray-100 text-gray-400' : 'hover:bg-white/10 text-white/40'}`}
+              className="p-2 rounded-full transition-colors hover:bg-white/[0.06] text-zinc-500"
               title="관리자"
             >
               <Settings className="w-5 h-5" />
@@ -265,47 +253,41 @@ export default function Header({ alwaysScrolled = false }) {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="메뉴"
           >
-            <span className={`block h-0.5 w-6 transition-all ${isScrolled ? 'bg-black' : 'bg-white'} ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`block h-0.5 w-6 transition-all ${isScrolled ? 'bg-black' : 'bg-white'} ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block h-0.5 w-6 transition-all ${isScrolled ? 'bg-black' : 'bg-white'} ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            <span className={`block h-0.5 w-6 transition-all bg-white ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+            <span className={`block h-0.5 w-6 transition-all bg-white ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block h-0.5 w-6 transition-all bg-white ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
           </button>
         </div>
       </div>
 
       {/* Mobile menu */}
       <div className={`lg:hidden absolute left-0 right-0 top-[80px] transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
-        <nav className="bg-white mx-4 rounded-2xl shadow-xl px-6 py-4 space-y-2 border border-gray-100">
-          <Link href="/guide" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+        <nav className="bg-zinc-900/95 backdrop-blur-xl mx-4 rounded-2xl shadow-xl px-6 py-4 space-y-2 ring-1 ring-white/[0.06]">
+          <Link href="/guide" className="block py-2 text-zinc-300 hover:text-emerald-400 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             이미지가이드
           </Link>
-          <Link href="/video-guide" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="/video-guide" className="block py-2 text-zinc-300 hover:text-emerald-400 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             영상가이드
           </Link>
-          {/* <Link href="/guide?tab=expert" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
-            전문가과정
-          </Link> */}
-          {/* <Link href="/practice" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
-            실습과제
-          </Link> */}
-          <Link href="/library" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="/composition" className="block py-2 text-zinc-300 hover:text-emerald-400 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+            특수기법
+          </Link>
+          <Link href="/library" className="block py-2 text-zinc-300 hover:text-emerald-400 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             자료실
           </Link>
-          {/* <Link href="/prompt-restaurant" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
-            프롬프트맛집
-          </Link> */}
           <div className="py-2 space-y-1">
-            <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">TOOLB</p>
-            <Link href="/guide/instructor-intro" className="block py-1.5 pl-3 text-gray-800 hover:text-orange-500 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            <p className="text-xs text-zinc-600 uppercase tracking-wider font-medium">TOOLB</p>
+            <Link href="/guide/instructor-intro" className="block py-1.5 pl-3 text-zinc-300 hover:text-emerald-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               강사소개
             </Link>
-            <Link href="/guide/instructor-reviews" className="block py-1.5 pl-3 text-gray-800 hover:text-orange-500 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link href="/guide/instructor-reviews" className="block py-1.5 pl-3 text-zinc-300 hover:text-emerald-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               강의 후기
             </Link>
-            <Link href="/guide/intro-videos" className="block py-1.5 pl-3 text-gray-800 hover:text-orange-500 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link href="/guide/intro-videos" className="block py-1.5 pl-3 text-zinc-300 hover:text-emerald-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
               동영상 갤러리
             </Link>
           </div>
-          <Link href="/#pricing" className="block py-2 text-gray-800 hover:text-orange-500 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="/#pricing" className="block py-2 text-zinc-300 hover:text-emerald-400 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             요금제
           </Link>
           {clerkConfigured && <ClerkMobileAuth onMenuClose={() => setIsMobileMenuOpen(false)} />}
@@ -314,11 +296,11 @@ export default function Header({ alwaysScrolled = false }) {
 
       {/* Admin password modal */}
       {showAdminModal && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/50 backdrop-blur-sm" onClick={() => { setShowAdminModal(false); setAdminPassword(''); setAdminError(false); }}>
-          <div className="bg-white rounded-2xl p-6 w-80 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => { setShowAdminModal(false); setAdminPassword(''); setAdminError(false); }}>
+          <div className="bg-zinc-900 rounded-2xl p-6 w-80 shadow-2xl ring-1 ring-white/[0.08]" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center gap-2 mb-4">
-              <Shield className="w-5 h-5 text-orange-500" />
-              <h3 className="font-bold text-gray-900">관리자 인증</h3>
+              <Shield className="w-5 h-5 text-emerald-400" />
+              <h3 className="font-bold text-zinc-100">관리자 인증</h3>
             </div>
             <input
               type="password"
@@ -336,10 +318,10 @@ export default function Header({ alwaysScrolled = false }) {
                 }
               }}
               placeholder="비밀번호를 입력하세요"
-              className="w-full px-4 py-3 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:border-orange-500 mb-2"
+              className="w-full px-4 py-3 bg-white/[0.04] border border-white/[0.08] rounded-xl text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-emerald-500/50 mb-2"
               autoFocus
             />
-            {adminError && <p className="text-red-500 text-xs mb-2">비밀번호가 올바르지 않습니다.</p>}
+            {adminError && <p className="text-red-400 text-xs mb-2">비밀번호가 올바르지 않습니다.</p>}
             <button
               onClick={() => {
                 if (adminPassword === '1124') {
@@ -350,7 +332,7 @@ export default function Header({ alwaysScrolled = false }) {
                   setAdminError(true);
                 }
               }}
-              className="w-full py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold hover:opacity-90 transition-opacity"
+              className="w-full py-3 rounded-xl bg-emerald-500 text-zinc-950 font-bold hover:bg-emerald-400 transition-colors"
             >
               확인
             </button>
@@ -361,11 +343,11 @@ export default function Header({ alwaysScrolled = false }) {
       {/* Login alert */}
       {showLoginAlert && (
         <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[100] animate-fadeIn">
-          <div className="bg-orange-500 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3">
+          <div className="bg-emerald-500 text-zinc-950 px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3">
             <Lock className="w-6 h-6" />
             <div>
               <p className="font-bold">로그인이 필요합니다</p>
-              <p className="text-sm opacity-90">서비스를 이용하려면 로그인해주세요</p>
+              <p className="text-sm opacity-80">서비스를 이용하려면 로그인해주세요</p>
             </div>
           </div>
         </div>

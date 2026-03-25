@@ -45,17 +45,17 @@ const services = [
 
 export default function ServiceDetail() {
   return (
-    <section id="service" className="py-20 px-4 bg-white">
+    <section id="service" className="py-20 px-4 bg-[#050505]">
       <div className="max-w-7xl mx-auto space-y-32">
         {services.map((service, index) => {
           const Icon = service.icon;
           return (
             <div
               key={index}
-              className={`flex flex-col ${service.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20`}
+              className={`flex flex-col ${service.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20 reveal`}
             >
               <div className="flex-1 w-full">
-                <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 to-gray-200">
+                <div className="relative aspect-video rounded-3xl overflow-hidden bg-white/[0.03] ring-1 ring-white/[0.06]">
                   {service.image ? (
                     <Image
                       src={service.image}
@@ -65,7 +65,7 @@ export default function ServiceDetail() {
                       unoptimized
                     />
                   ) : (
-                    <div className="absolute inset-0 flex items-center justify-center text-gray-400">
+                    <div className="absolute inset-0 flex items-center justify-center text-zinc-600">
                       <Icon className="w-24 h-24" />
                     </div>
                   )}
@@ -74,23 +74,23 @@ export default function ServiceDetail() {
 
               <div className="flex-1 space-y-6">
                 <div className="flex items-center gap-3">
-                  <div className="p-3 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl">
-                    <Icon className="w-6 h-6 text-white" />
+                  <div className="p-3 bg-emerald-500/10 rounded-xl">
+                    <Icon className="w-6 h-6 text-emerald-400" />
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-900">{service.title}</h3>
+                  <h3 className="text-3xl font-bold text-zinc-100">{service.title}</h3>
                 </div>
 
-                <h4 className="text-2xl font-semibold text-gray-800 leading-relaxed whitespace-pre-line">
+                <h4 className="text-2xl font-semibold text-zinc-300 leading-relaxed whitespace-pre-line">
                   {service.subtitle}
                 </h4>
 
-                <p className="text-lg text-gray-600 leading-relaxed whitespace-pre-line">
+                <p className="text-lg text-zinc-500 leading-relaxed whitespace-pre-line">
                   {service.description}
                 </p>
 
                 <Link
                   href={service.href}
-                  className="group mt-4 inline-block px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-bold hover:from-orange-600 hover:to-red-600 transition-all hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="group mt-4 inline-block px-8 py-4 bg-emerald-500 text-zinc-950 rounded-full font-bold hover:bg-emerald-400 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
                 >
                   <span className="flex items-center gap-2">
                     자세히 보기

@@ -13,15 +13,15 @@ export default function GuideDetailContent({ slug }) {
 
   if (!item) {
     return (
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-[#050505]">
         <Header alwaysScrolled={true} />
         <main className="pt-32 pb-20 px-4 sm:px-6 lg:px-10">
           <div className="max-w-5xl mx-auto text-center py-20">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">콘텐츠를 찾을 수 없습니다</h1>
-            <p className="text-gray-600 mb-8">요청하신 가이드 콘텐츠가 존재하지 않습니다.</p>
+            <h1 className="text-4xl font-bold text-zinc-100 mb-4">콘텐츠를 찾을 수 없습니다</h1>
+            <p className="text-zinc-500 mb-8">요청하신 가이드 콘텐츠가 존재하지 않습니다.</p>
             <a
               href="/guide"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-bold hover:scale-105 transition-all"
+              className="inline-block px-8 py-4 bg-emerald-500 text-zinc-950 rounded-full font-bold hover:bg-emerald-400 transition-all hover:scale-105"
             >
               가이드 목록으로 돌아가기
             </a>
@@ -33,7 +33,7 @@ export default function GuideDetailContent({ slug }) {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#050505]">
       <Header alwaysScrolled={true} />
 
       {category?.id === 'expert' ? (

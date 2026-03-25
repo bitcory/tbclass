@@ -46,7 +46,7 @@ export default function GuideContent() {
 
             return (
               <div key={sub.name}>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-orange-500 pl-4">
+                <h3 className="text-2xl font-bold text-zinc-100 mb-6 border-l-4 border-emerald-500 pl-4">
                   {sub.name}
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -83,7 +83,7 @@ export default function GuideContent() {
       )}
 
       {items.length === 0 && (
-        <div className="text-center py-20 text-gray-500">
+        <div className="text-center py-20 text-zinc-500">
           <p className="text-xl">이 카테고리에는 아직 콘텐츠가 없습니다.</p>
         </div>
       )}
@@ -95,22 +95,22 @@ export default function GuideContent() {
       <div className="max-w-[95%] mx-auto">
         {/* Page title */}
         <div className="text-center mb-6">
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-4 text-emerald-400">
             {activeCategory?.name || '가이드'}
           </h1>
-          <p className="text-gray-600 text-lg">
+          <p className="text-zinc-500 text-lg">
             AI 이미지/영상 생성에 필요한 기법들을 카테고리별로 살펴보세요
           </p>
         </div>
 
         {/* Banner */}
         <div className="mb-8">
-          <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl px-8 md:px-12 py-8 text-white shadow-xl">
+          <div className="bg-white/[0.03] ring-1 ring-emerald-500/20 rounded-3xl px-8 md:px-12 py-8 shadow-[0_0_30px_rgba(16,185,129,0.05)]">
             <div className="max-w-3xl">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-zinc-100">
                 {activeCategory?.name || '전체 가이드'}
               </h2>
-              <p className="text-lg opacity-90">
+              <p className="text-lg text-zinc-400">
                 {getCategoryDescription(activeTab)}
               </p>
             </div>
@@ -125,10 +125,10 @@ export default function GuideContent() {
               <button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-all ${
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeTab === cat.id
-                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-emerald-500 text-zinc-950 shadow-[0_0_20px_rgba(16,185,129,0.3)]'
+                    : 'bg-white/[0.04] text-zinc-400 ring-1 ring-white/[0.06] hover:bg-white/[0.06]'
                 }`}
               >
                 {Icon && <Icon className="w-4 h-4" />}
@@ -145,7 +145,7 @@ export default function GuideContent() {
   );
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#050505]">
       <Header alwaysScrolled={true} />
 
       {isExpert ? (
