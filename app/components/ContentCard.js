@@ -18,10 +18,10 @@ const categoryIconMap = {
 };
 
 export default function ContentCard({ slug, title, koreanTitle, prompt, images, videos, category }) {
-  const isVideo = category === '영상(VIDEO)';
-  const thumbnail = isVideo
-    ? (videos && videos.length > 0 ? videos[0].src : null)
-    : (images && images.length > 0 ? images[0].src : null);
+  const thumbnail = (images && images.length > 0)
+    ? images[0].src
+    : (videos && videos.length > 0 ? videos[0].src : null);
+  const isVideoThumbnail = !(images && images.length > 0) && (videos && videos.length > 0);
   const IconComp = categoryIconMap[category] || FileText;
 
   return (
@@ -31,7 +31,7 @@ export default function ContentCard({ slug, title, koreanTitle, prompt, images, 
     >
       {/* Image area */}
       <div className="relative h-48 bg-white/[0.02] flex items-center justify-center overflow-hidden">
-        {isVideo && thumbnail ? (
+        {isVideoThumbnail && thumbnail ? (
           <video
             src={thumbnail}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

@@ -24,27 +24,27 @@ function VideoGuideContent() {
     : allItems;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#050505]">
       <Header alwaysScrolled={true} />
 
       <main className="pt-32 pb-20 px-4 sm:px-6 lg:px-10">
         <div className="max-w-[95%] mx-auto">
           <div className="text-center mb-6">
-            <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl font-bold mb-4 text-emerald-400">
               영상가이드
             </h1>
-            <p className="text-gray-600 text-lg">
+            <p className="text-zinc-500 text-lg">
               카메라 무브먼트, 전환 효과, 모션 등 영상 제작 기법을 마스터하세요
             </p>
           </div>
 
           <div className="mb-8">
-            <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl px-8 md:px-12 py-8 text-white shadow-xl">
+            <div className="bg-white/[0.03] ring-1 ring-emerald-500/20 rounded-3xl px-8 md:px-12 py-8 shadow-[0_0_30px_rgba(16,185,129,0.05)]">
               <div className="max-w-3xl flex items-center gap-4">
-                <Film className="w-10 h-10 flex-shrink-0" />
+                <Film className="w-10 h-10 flex-shrink-0 text-emerald-400" />
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-bold mb-2">{activeSub || '영상가이드'}</h2>
-                  <p className="text-lg opacity-90">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-2 text-zinc-100">{activeSub || '영상가이드'}</h2>
+                  <p className="text-lg text-zinc-400">
                     {getSubDescription(activeSub)}
                   </p>
                 </div>
@@ -58,10 +58,10 @@ function VideoGuideContent() {
               <button
                 key={sub.name}
                 onClick={() => setActiveSub(sub.name)}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-all ${
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeSub === sub.name
-                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-emerald-500 text-zinc-950 shadow-[0_0_20px_rgba(16,185,129,0.3)]'
+                    : 'bg-white/[0.04] text-zinc-400 ring-1 ring-white/[0.06] hover:bg-white/[0.06]'
                 }`}
               >
                 <Film className="w-4 h-4" />
@@ -87,7 +87,7 @@ function VideoGuideContent() {
           </div>
 
           {filteredItems.length === 0 && (
-            <div className="text-center py-20 text-gray-500">
+            <div className="text-center py-20 text-zinc-500">
               <p className="text-xl">아직 콘텐츠가 없습니다.</p>
             </div>
           )}
@@ -102,8 +102,8 @@ function VideoGuideContent() {
 export default function VideoGuidePage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500"></div>
+      <div className="min-h-screen bg-[#050505] flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500"></div>
       </div>
     }>
       <VideoGuideContent />

@@ -536,9 +536,9 @@ function SubStyleCopyButton({ text, className = '' }) {
 }
 
 // ===== DEFAULT RENDERER (camera, lighting, style, medium, etc.) =====
-function DefaultContent({ item, setImageModalIndex, setVideoModal, isVideoCategory, copiedPrompt, handleCopyPrompt }) {
+function DefaultContent({ item, setImageModalIndex, setVideoModal, copiedPrompt, handleCopyPrompt }) {
   const usageTips = item.usage ? item.usage.filter(tip => tip && tip.trim() !== '') : [];
-  const hasImages = !isVideoCategory && item.images && item.images.length > 0;
+  const hasImages = item.images && item.images.length > 0;
 
   return (
     <div className="space-y-8">
@@ -782,7 +782,7 @@ export default function ContentDetail({ item, category, prevItem, nextItem }) {
       ) : isBlog ? (
         <BlogContent item={item} setImageModalIndex={setImageModalIndex} />
       ) : (
-        <DefaultContent item={item} setImageModalIndex={setImageModalIndex} setVideoModal={setVideoModal} isVideoCategory={category?.id === 'video'} copiedPrompt={copiedPrompt} handleCopyPrompt={handleCopyPrompt} />
+        <DefaultContent item={item} setImageModalIndex={setImageModalIndex} setVideoModal={setVideoModal} copiedPrompt={copiedPrompt} handleCopyPrompt={handleCopyPrompt} />
       )}
 
       {/* Image for tutorial/expert if they have one */}
