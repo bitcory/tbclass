@@ -190,7 +190,11 @@ export default function Header({ alwaysScrolled = false }) {
                       <Link key={index} href={item.href} className="group/item cursor-pointer" onClick={() => setGuideDropdownOpen(false)}>
                         <div className="bg-white/[0.03] rounded-2xl p-5 hover:bg-white/[0.06] transition-all duration-300 ring-1 ring-white/[0.06] h-full flex flex-col items-center text-center">
                           <item.Icon className="w-8 h-8 text-emerald-400 mb-3" />
-                          <h3 className="text-sm font-bold text-zinc-100 mb-1 whitespace-nowrap">{item.title}</h3>
+                          <h3 className="text-sm font-bold text-zinc-100 mb-1">
+                            {item.title.includes('(')
+                              ? <>{item.title.split('(')[0]}<br /><span className="text-xs font-medium text-zinc-400">({item.title.split('(')[1]}</span></>
+                              : item.title}
+                          </h3>
                           <p className="text-xs text-zinc-500 leading-relaxed">{item.description}</p>
                         </div>
                       </Link>
