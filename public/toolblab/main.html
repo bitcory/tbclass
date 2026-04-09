@@ -611,8 +611,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 64%;
-      max-width: 200px;
+      width: 42%;
+      max-width: 140px;
+      max-height: 60%;
       height: auto;
       object-fit: contain;
       filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
@@ -834,8 +835,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 64%;
-      max-width: 200px;
+      width: 42%;
+      max-width: 140px;
+      max-height: 60%;
       height: auto;
       object-fit: contain;
       filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
@@ -914,41 +916,95 @@
     }
 
     /* ════════════════════════════
-       MOBILE / NARROW
+       RESPONSIVE — TABLET / MOBILE
     ════════════════════════════ */
-    @media (max-width: 900px) {
+
+    /* Tablet — keep 3-col grid but tighter spacing */
+    @media (max-width: 1100px) {
       body {
-        padding: 10px;
+        padding: 12px;
       }
 
       .bento {
-        gap: 10px;
-      }
-
-      .card-typeface .font-sample {
-        font-size: clamp(28px, 6vw, 46px);
-      }
-
-      .card-product .product-sample {
-        font-size: clamp(28px, 6vw, 46px);
-      }
-
-      .card-phone .phone-sample {
-        font-size: clamp(28px, 6vw, 46px);
+        gap: 12px;
       }
     }
 
-    @media (max-width: 600px) {
+    /* Mobile — switch to single-column scrollable list */
+    @media (max-width: 768px) {
 
       html,
       body {
-        overflow: auto;
+        height: auto;
+        min-height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      body {
+        padding: 12px;
       }
 
       .bento {
         height: auto;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(5, minmax(140px, auto));
+        min-height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-rows: minmax(190px, auto);
+        gap: 12px;
+      }
+
+      .bento>* {
+        min-height: 200px;
+      }
+
+      /* Big "단계" numbers — slightly larger on mobile single column */
+      .pricing-price,
+      .card-typeface .font-sample,
+      .card-building .building-name,
+      .card-product .product-sample,
+      .card-phone .phone-sample {
+        font-size: clamp(38px, 9vw, 56px);
+      }
+
+      /* Subtitle texts — slightly larger for full-width cards */
+      .pricing-title,
+      .card-typeface .font-name,
+      .card-building .building-title,
+      .card-product .product-name,
+      .card-phone .phone-name {
+        font-size: clamp(20px, 5vw, 28px);
+      }
+
+      /* Move 4단계 / 5단계 images to right side, smaller, so they don't overlap text */
+      .card-product .product-image,
+      .card-phone .phone-image {
+        top: 50%;
+        left: auto;
+        right: 18px;
+        transform: translateY(-50%);
+        width: 32%;
+        max-width: 130px;
+      }
+
+      .card-logo {
+        min-height: 200px;
+      }
+
+      .brand-name {
+        font-size: clamp(20px, 5vw, 30px);
+      }
+
+      .slogan-text {
+        font-size: clamp(20px, 5vw, 30px);
+      }
+
+      .watermark-name {
+        font-size: clamp(24px, 6vw, 36px);
+      }
+
+      .watermark-logo {
+        width: clamp(24px, 5vw, 32px);
       }
     }
   </style>

@@ -358,16 +358,16 @@ export default function Header({ alwaysScrolled = false }) {
       {/* Lecture (영상강의) modal */}
       {lectureDropdownOpen && (
         <div
-          className="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fadeIn"
+          className="fixed inset-0 z-[200] flex md:items-center md:justify-center bg-black/80 backdrop-blur-sm animate-fadeIn"
           onClick={() => setLectureDropdownOpen(false)}
         >
           <div
-            className="relative w-[96vw] h-[94vh] bg-zinc-950 rounded-3xl shadow-2xl overflow-hidden ring-1 ring-white/[0.08]"
+            className="relative w-full h-full md:w-[min(1140px,95vw)] md:h-[min(760px,90vh)] bg-zinc-950 md:rounded-3xl shadow-2xl overflow-hidden md:ring-1 md:ring-white/[0.08]"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setLectureDropdownOpen(false)}
-              className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-zinc-900/80 hover:bg-zinc-800 text-white flex items-center justify-center text-2xl leading-none transition-colors ring-1 ring-white/[0.1]"
+              className="absolute top-3 right-3 md:top-4 md:right-4 z-10 w-11 h-11 md:w-10 md:h-10 rounded-full bg-zinc-900/90 hover:bg-zinc-800 text-white flex items-center justify-center text-2xl leading-none transition-colors ring-1 ring-white/[0.15]"
               aria-label="닫기"
             >
               ×
