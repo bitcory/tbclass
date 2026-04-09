@@ -128,8 +128,8 @@ export default function Header({ alwaysScrolled = false }) {
 
   const videoItems = [
     { title: '카메라 무브먼트', description: '팬, 틸트, 달리, 트래킹', Icon: Film, href: '/video-guide?sub=카메라 무브먼트' },
-    { title: '전환 효과', description: '컷, 페이드, 디졸브, 와이프', Icon: Film, href: '/video-guide?sub=전환 효과' },
-    { title: '모션 효과', description: '슬로모션, 타임랩스, 프리즈', Icon: Film, href: '/video-guide?sub=모션 효과' },
+    { title: '전환 효과', description: '컷, 페이드, 디졸브, 와입', Icon: Film, href: '/video-guide?sub=전환 효과' },
+    { title: '모션 효과', description: '슬로모션, 타임랩스 등', Icon: Film, href: '/video-guide?sub=모션 효과' },
   ];
 
   const toolbItems = [
