@@ -39,18 +39,12 @@ export default function BookingComplete({ plan, selectedDate, selectedTime }) {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex justify-center">
           <Link
             href="/"
             className="px-8 py-3.5 rounded-xl bg-gray-800 text-white font-semibold hover:bg-gray-700 transition-colors"
           >
             홈으로 돌아가기
-          </Link>
-          <Link
-            href="/guide"
-            className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold hover:opacity-90 transition-opacity shadow-lg shadow-orange-900/30"
-          >
-            가이드 보기
           </Link>
         </div>
       </div>
