@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1단계 마스터 이미지 만들기 — TOOLB LAB</title>
+  <style>
+    @font-face { font-family: 'Paperlogy'; src: url('fonts/Paperlogy-1Thin.ttf') format('truetype'); font-weight: 100; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Paperlogy'; src: url('fonts/Paperlogy-2ExtraLight.ttf') format('truetype'); font-weight: 200; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Paperlogy'; src: url('fonts/Paperlogy-3Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Paperlogy'; src: url('fonts/Paperlogy-4Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Paperlogy'; src: url('fonts/Paperlogy-5Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Paperlogy'; src: url('fonts/Paperlogy-6SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Paperlogy'; src: url('fonts/Paperlogy-7Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Paperlogy'; src: url('fonts/Paperlogy-8ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Paperlogy'; src: url('fonts/Paperlogy-9Black.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
+  </style>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --h: 48px;
+      --sb: 252px;
+      --border: #d1d5db;
+      --border2: #e5e7eb;
+      --bg: #f3f4f6;
+      --card: #fff;
+      --text: #0f172a;
+      --muted: #6b7280;
+      --faint: #9ca3af;
+      --green: #059669;
+      --green-bg: #ecfdf5;
+      --green-border: #6ee7b7;
+    }
+    html, body { height: 100%; overflow: hidden; }
+    body { font-family: 'Paperlogy', sans-serif; background: var(--bg); color: var(--text); font-size: 13px; }
+
+    /* ── HEADER ── */
+    .hdr {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--h);
+      background: #fff;
+      border-bottom: 2px solid var(--border);
+      display: flex; align-items: center;
+      padding: 0 16px; gap: 0; z-index: 200;
+    }
+    .hdr-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; flex-shrink: 0; }
+    .lb { width: 22px; height: 26px; position: relative; flex-shrink: 0; }
+    .lb .b1 { position: absolute; left: 12px; top: 1px; width: 10px; height: 8px; background: linear-gradient(238deg,#5F29FF -98%,#B399FF 90%); border: 1px solid rgba(0,0,0,.15); border-radius: 0 2px 0 1px; }
+    .lb .b2 { position: absolute; left: 12px; top: 12px; width: 10px; height: 11px; background: linear-gradient(134deg,#00DDFF 4%,#00A5FF 105%); border: 1px solid rgba(0,0,0,.12); border-radius: 1px 0 2px; }
+    .lb .b3 { position: absolute; left: 0; top: 1px; width: 9px; height: 22px; background: linear-gradient(90deg,#E6B000 -76%,#FFDB66 115%); border: 1px solid rgba(0,0,0,.12); border-radius: 2px 0 0 2px; }
+    .hdr-name { font-family: 'Paperlogy', sans-serif; font-size: 14px; font-weight: 800; color: var(--text); letter-spacing: .04em; text-transform: uppercase; }
+    .hdr-sep { color: var(--faint); font-size: 13px; }
+    .hdr-bc { font-size: 12px; color: var(--muted); font-weight: 500; }
+    .hdr-bc .cur { color: var(--text); font-weight: 700; }
+    .hdr-r { margin-left: auto; display: flex; align-items: center; gap: 6px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 5px 11px; border-radius: 3px;
+      font-size: 11px; font-weight: 700; cursor: pointer;
+      border: 2px solid var(--border); background: #fff;
+      color: var(--muted); text-decoration: none;
+      transition: background .15s, color .15s, border-color .15s, box-shadow .15s, transform .1s;
+      white-space: nowrap; font-family: 'Paperlogy', sans-serif;
+      user-select: none;
+    }
+    .btn:hover {
+      background: var(--bg); color: var(--text);
+      border-color: #94a3b8;
+      box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    }
+    .btn:active { transform: scale(.97); box-shadow: none; }
+
+    .btn-green { background: var(--green); color: #fff; border-color: var(--green); }
+    .btn-green:hover {
+      background: #047857; border-color: #047857; color: #fff;
+      box-shadow: 0 2px 8px rgba(5,150,105,.35);
+    }
+    .btn-green:active { background: #065f46; border-color: #065f46; }
+
+    .btn-blue { background: #1d4ed8; color: #fff; border-color: #1d4ed8; }
+    .btn-blue:hover {
+      background: #1e40af; border-color: #1e40af; color: #fff;
+      box-shadow: 0 2px 8px rgba(29,78,216,.35);
+    }
+    .btn-blue:active { background: #1e3a8a; border-color: #1e3a8a; }
+
+    .btn-outline { border-color: var(--green); color: var(--green); background: #fff; }
+    .btn-outline:hover {
+      background: var(--green-bg); color: #047857;
+      border-color: #059669;
+      box-shadow: 0 1px 4px rgba(5,150,105,.15);
+    }
+    .btn-outline:active { background: #d1fae5; }
+    .badge-step {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 10px; font-weight: 800; padding: 4px 10px;
+      border-radius: 2px; background: var(--green); color: #fff;
+      letter-spacing: .04em; text-transform: uppercase;
+    }
+
+    /* ── LAYOUT ── */
+    .app { display: flex; padding-top: var(--h); height: 100vh; }
+
+    /* ── SIDEBAR ── */
+    .sb {
+      width: var(--sb); flex-shrink: 0;
+      border-right: 2px solid var(--border);
+      background: #fff;
+      overflow-y: auto; display: flex; flex-direction: column;
+    }
+    .sb::-webkit-scrollbar { width: 3px; }
+    .sb::-webkit-scrollbar-thumb { background: var(--border); }
+    .sb-sec { padding: 12px 14px; border-bottom: 1px solid var(--border2); }
+    .sb-label {
+      font-size: 9px; font-weight: 800; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 10px;
+      display: flex; align-items: center; gap: 5px;
+    }
+
+    /* template meta */
+    .meta-grid { display: flex; flex-direction: column; gap: 5px; }
+    .meta-row { display: flex; gap: 8px; align-items: flex-start; }
+    .meta-k { font-size: 11px; color: var(--faint); font-weight: 500; min-width: 44px; padding-top: 1px; }
+    .meta-v { font-size: 11px; color: var(--text); font-weight: 700; flex: 1; }
+
+    /* palette */
+    .palette-row { display: flex; gap: 5px; flex-wrap: wrap; }
+    .palette-chip {
+      font-size: 10px; font-weight: 600; padding: 2px 8px;
+      border-radius: 2px; border: 1.5px solid var(--border);
+      background: var(--bg); color: var(--muted);
+    }
+
+    /* nav */
+    .nav-list { display: flex; flex-direction: column; gap: 1px; }
+    .nav-item {
+      display: flex; align-items: center; gap: 8px;
+      padding: 7px 10px; border-radius: 2px;
+      font-size: 12px; font-weight: 600; color: var(--muted);
+      cursor: pointer; border-left: 3px solid transparent;
+      transition: background .15s, color .15s, border-color .15s;
+      user-select: none;
+    }
+    .nav-item:hover { background: #f9fafb; color: var(--text); }
+    .nav-item:active { background: var(--bg); }
+    .nav-item.active { background: var(--green-bg); border-left-color: var(--green); color: #065f46; font-weight: 700; }
+    .nav-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    .nav-count {
+      margin-left: auto; font-size: 10px; font-weight: 700;
+      color: var(--faint); background: var(--bg);
+      border: 1px solid var(--border); border-radius: 2px; padding: 0 5px;
+    }
+
+    /* section colors */
+    .c0 .nav-dot { background: #10b981; }
+    .c1 .nav-dot { background: #3b82f6; }
+    .c2 .nav-dot { background: #f59e0b; }
+    .c3 .nav-dot { background: #8b5cf6; }
+    .c4 .nav-dot { background: #ef4444; }
+
+    /* ── MAIN ── */
+    .main { flex: 1; min-width: 0; display: flex; flex-direction: column; overflow: hidden; }
+
+    /* prompt panel */
+    .prompt-panel {
+      flex-shrink: 0;
+      padding: 10px 14px;
+      border-bottom: 2px solid var(--border);
+      background: #fff;
+      display: flex; gap: 10px;
+    }
+    .prompt-box { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+    .prompt-hdr { display: flex; align-items: center; justify-content: space-between; }
+    .prompt-label {
+      font-size: 9px; font-weight: 800; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--muted);
+      display: flex; align-items: center; gap: 5px;
+    }
+    .prompt-dot { width: 6px; height: 6px; border-radius: 50%; }
+    .prompt-dot.img { background: #10b981; }
+    textarea.prompt-out {
+      width: 100%; min-height: 76px; height: auto; resize: none; overflow: hidden;
+      font-family: 'Paperlogy', sans-serif; font-size: 11px; font-weight: 500;
+      line-height: 1.65; color: var(--text);
+      background: var(--bg); border: 1.5px solid var(--border);
+      border-radius: 3px; padding: 8px 10px; outline: none;
+    }
+    textarea.prompt-out:focus { border-color: #6ee7b7; background: #fff; }
+
+    /* editor area */
+    .editor { flex: 1; overflow: hidden; display: flex; flex-direction: column; min-height: 0; }
+
+    /* tab bar */
+    .tab-bar {
+      flex-shrink: 0; display: flex; gap: 0;
+      border-bottom: 2px solid var(--border);
+      background: #fff; overflow-x: auto;
+    }
+    .tab-bar::-webkit-scrollbar { height: 0; }
+    .tab-btn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 10px 16px; font-size: 12px; font-weight: 700;
+      cursor: pointer; border: none; border-right: 1px solid var(--border2);
+      border-bottom: 3px solid transparent; margin-bottom: -2px;
+      white-space: nowrap; transition: background .15s, color .15s, border-color .15s;
+      background: transparent; color: var(--muted);
+      font-family: 'Paperlogy', sans-serif; user-select: none;
+    }
+    .tab-btn:hover { background: #f9fafb; color: var(--text); }
+    .tab-btn:active { background: var(--bg); }
+    .tab-btn.active { background: #fff; color: var(--text); border-bottom-color: var(--green); }
+    .tab-btn.active:hover { background: #fff; }
+    .tab-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+
+    /* tab content */
+    .tab-content { flex: 1; overflow-y: auto; background: var(--bg); }
+    .tab-content::-webkit-scrollbar { width: 4px; }
+    .tab-content::-webkit-scrollbar-thumb { background: var(--border); }
+    .tab-pane { display: none; padding: 14px; }
+    .tab-pane.active { display: block; }
+
+    /* component group */
+    .comp-group { margin-bottom: 12px; }
+    .comp-label {
+      font-size: 9px; font-weight: 800; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--faint);
+      margin-bottom: 6px; padding: 0 2px;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .comp-attrs { display: flex; flex-direction: column; gap: 6px; }
+
+    /* attribute card */
+    .attr-card {
+      background: var(--card);
+      border: 1.5px solid var(--border);
+      border-radius: 4px; overflow: hidden;
+    }
+    .attr-top {
+      padding: 7px 12px;
+      border-bottom: 1px solid var(--border2);
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      background: #fafafa;
+    }
+    .attr-title { font-size: 11px; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 6px; }
+    .lock-badge { font-size: 9px; font-weight: 700; padding: 1px 6px; border-radius: 2px; background: #fef9c3; border: 1px solid #fde047; color: #854d0e; }
+    .inactive-badge { font-size: 9px; font-weight: 700; padding: 1px 6px; border-radius: 2px; background: #fee2e2; color: #b91c1c; }
+    .attr-btns { display: flex; gap: 3px; flex-shrink: 0; }
+    .mini-btn {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 3px 8px; border-radius: 2px; font-size: 10px; font-weight: 700;
+      cursor: pointer; border: 1.5px solid var(--border); background: var(--card);
+      color: var(--muted);
+      transition: background .15s, color .15s, border-color .15s, box-shadow .15s, transform .1s;
+      font-family: 'Paperlogy', sans-serif; user-select: none;
+    }
+    .mini-btn:hover {
+      background: var(--bg); color: var(--text);
+      border-color: #94a3b8;
+      box-shadow: 0 1px 3px rgba(0,0,0,.07);
+    }
+    .mini-btn:active { transform: scale(.95); box-shadow: none; background: #e9ecf0; }
+    .mini-btn svg { width: 11px; height: 11px; }
+    .attr-body { padding: 8px 12px; display: flex; gap: 8px; align-items: stretch; }
+    .attr-ko {
+      flex: 1; min-width: 0;
+      font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.65;
+      padding: 7px 10px; border-radius: 3px;
+      background: var(--bg); border: 1.5px solid var(--border);
+    }
+    .attr-sep { width: 2px; background: var(--border2); flex-shrink: 0; align-self: stretch; }
+    .attr-en {
+      flex: 1; min-width: 0;
+      font-family: 'Paperlogy', sans-serif;
+      font-size: 11px; font-weight: 500; line-height: 1.65; color: var(--text);
+      padding: 7px 10px; border-radius: 3px;
+      background: var(--card); border: 1.5px solid var(--border);
+      resize: none; outline: none; transition: border-color .12s;
+    }
+    .attr-en:focus { border-color: #6ee7b7; }
+
+    /* upload modal */
+    .modal-bg {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,.4); z-index: 300;
+      align-items: center; justify-content: center;
+    }
+    .modal-bg.open { display: flex; }
+    .modal {
+      background: #fff; border-radius: 4px;
+      border: 2px solid var(--border);
+      width: 560px; max-width: 95vw; max-height: 80vh;
+      display: flex; flex-direction: column;
+      box-shadow: 6px 6px 0 var(--border);
+    }
+    .modal-hdr {
+      padding: 14px 18px; border-bottom: 2px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--bg);
+    }
+    .modal-title { font-size: 14px; font-weight: 800; color: var(--text); text-transform: uppercase; letter-spacing: .03em; }
+    .modal-close {
+      cursor: pointer; padding: 4px; border-radius: 2px;
+      color: var(--muted); background: none; border: none;
+      transition: background .15s, color .15s, transform .1s;
+      user-select: none;
+    }
+    .modal-close:hover { background: var(--border); color: var(--text); }
+    .modal-close:active { transform: scale(.9); }
+    .modal-body { flex: 1; overflow-y: auto; padding: 14px 18px; display: flex; flex-direction: column; gap: 10px; }
+    .modal-desc { font-size: 12px; color: var(--muted); line-height: 1.65; }
+    .modal-ta {
+      width: 100%; height: 220px; resize: vertical;
+      font-family: 'Paperlogy', sans-serif; font-size: 11px;
+      line-height: 1.6; padding: 10px 12px;
+      border: 1.5px solid var(--border); border-radius: 3px;
+      background: var(--bg); outline: none; color: var(--text);
+    }
+    .modal-ta:focus { border-color: #6ee7b7; }
+    .modal-err { font-size: 11px; color: #dc2626; background: #fee2e2; border: 1.5px solid #fca5a5; border-radius: 3px; padding: 8px 12px; font-weight: 600; }
+    .modal-ftr { padding: 10px 18px; border-top: 2px solid var(--border); display: flex; gap: 6px; justify-content: flex-end; background: var(--bg); }
+
+    /* toast */
+    .toast {
+      position: fixed; bottom: 20px; right: 20px;
+      background: var(--text); color: #fff;
+      font-size: 12px; font-weight: 700;
+      padding: 9px 16px; border-radius: 3px;
+      box-shadow: 4px 4px 0 rgba(0,0,0,.2);
+      opacity: 0; transform: translateY(6px);
+      transition: all .18s; pointer-events: none; z-index: 400;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    /* empty state */
+    .empty { text-align: center; padding: 60px 20px; color: var(--muted); }
+    .empty h3 { font-size: 15px; font-weight: 800; margin-bottom: 6px; color: var(--text); }
+    .empty p { font-size: 12px; margin-bottom: 20px; line-height: 1.65; }
+
+    /* mobile */
+    @media (max-width: 768px) {
+      html, body { overflow: auto; height: auto; }
+      .app { flex-direction: column; height: auto; overflow: visible; }
+      .sb { display: none; }
+
+      .main { overflow: visible; }
+      .editor { overflow: visible; }
+      .tab-content { overflow: visible; }
+      .prompt-panel { flex-direction: column; }
+      .hdr-bc { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hdr">
+  <a href="index.html" class="hdr-logo">
+    <div class="lb"><div class="b1"></div><div class="b2"></div><div class="b3"></div></div>
+    <span class="hdr-name">TOOLB LAB</span>
+  </a>
+  <span class="hdr-sep">/</span>
+  <span class="hdr-bc"><span class="cur">1단계</span> 마스터 이미지 만들기</span>
+  <div class="hdr-r">
+    <button class="btn btn-blue" id="uploadBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      JSON 업로드
+    </button>
+    <a href="index.html" class="btn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      홈
+    </a>
+  </div>
+</header>
+
+<!-- APP -->
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sb" id="sidebar">
+    <!-- 템플릿 정보 -->
+    <div class="sb-sec">
+      <div class="sb-label">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        템플릿 정보
+      </div>
+      <div class="meta-grid" id="templateMeta">
+        <div class="meta-row"><span class="meta-k">이름</span><span class="meta-v" id="meta-name">—</span></div>
+        <div class="meta-row"><span class="meta-k">버전</span><span class="meta-v" id="meta-ver">—</span></div>
+      </div>
+    </div>
+
+    <!-- 컬러 팔레트 -->
+    <div class="sb-sec" id="paletteSection" style="display:none">
+      <div class="sb-label">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+        컬러 팔레트
+      </div>
+      <div class="palette-row" id="paletteChips"></div>
+    </div>
+
+    <!-- 섹션 네비게이션 -->
+    <div class="sb-sec">
+      <div class="sb-label">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        섹션 목록
+      </div>
+      <div class="nav-list" id="navList"></div>
+    </div>
+
+    <!-- 젬 가이드 -->
+    <div class="sb-sec">
+      <div class="sb-label">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        젬 가이드
+      </div>
+      <a class="btn btn-green" style="width:100%;justify-content:center;" href="https://gemini.google.com/gem/13HOLZGAzOKloWSBnxejnMvWDOJHNvdyu?usp=sharing" target="_blank" rel="noreferrer">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        1단계 젬 가이드 열기
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- PROMPT PANEL -->
+    <div class="prompt-panel" style="display:none">
+      <!-- 이미지 프롬프트 -->
+      <div class="prompt-box">
+        <div class="prompt-hdr">
+          <div class="prompt-label">
+            <span class="prompt-dot img"></span>
+            이미지 프롬프트
+          </div>
+          <button class="mini-btn" onclick="copyPrompt('img')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            복사
+          </button>
+        </div>
+        <textarea class="prompt-out" id="imgPromptOut" readonly placeholder="템플릿을 로드하면 자동으로 생성됩니다..."></textarea>
+      </div>
+    </div>
+
+    <!-- EDITOR -->
+    <div class="editor">
+      <div class="tab-bar" id="tabBar"></div>
+      <div class="tab-content" id="tabContent">
+        <div class="empty">
+          <h3>템플릿을 로드하세요</h3>
+          <p>JSON 업로드 버튼을 클릭하여 템플릿을 불러오거나,<br>기본 샘플이 자동으로 로드됩니다.</p>
+          <button class="btn btn-blue" onclick="document.getElementById('uploadBtn').click()">
+            JSON 업로드 시작
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- UPLOAD MODAL -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <div class="modal-hdr">
+      <span class="modal-title">JSON 템플릿 업로드</span>
+      <button class="modal-close" onclick="closeModal()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc">TB_V5 Lite 형식의 JSON을 붙여넣으세요. <code style="background:var(--bg);padding:1px 5px;border-radius:4px;font-family:monospace;">prompt_sections</code> 배열이 포함되어야 합니다.</p>
+      <textarea class="modal-ta" id="jsonInput" placeholder='{
+  "meta_data": { "template_name": "My Template", "version": "2.0.0" },
+  "prompt_sections": [
+    {
+      "section_id": "sec_subject",
+      "section_label_ko": "주요 피사체",
+      "is_active": true,
+      "components": [...]
+    }
+  ]
+}'></textarea>
+      <div class="modal-err" id="modalErr" style="display:none"></div>
+    </div>
+    <div class="modal-ftr">
+      <button class="btn" onclick="closeModal()">취소</button>
+      <button class="btn btn-blue" onclick="loadJson()">불러오기</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">복사됨!</div>
+
+<script>
+// ═══════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════
+let template = { meta_data: {}, global_settings: { prompt_separator: ", ", section_separator: ", ", remove_duplicates: true }, prompt_sections: [] };
+let activeTab = 0;
+
+// ═══════════════════════════════════════════
+//  PROMPT GENERATION
+// ═══════════════════════════════════════════
+function generatePromptString(tpl) {
+  if (!tpl || !Array.isArray(tpl.prompt_sections)) return '';
+  const parts = [], params = [];
+  const sep   = tpl.global_settings?.prompt_separator  || ', ';
+  const secSep = tpl.global_settings?.section_separator || ', ';
+
+  const sorted = [...tpl.prompt_sections]
+    .filter(s => s && s.is_active !== false)
+    .sort((a, b) => (a.order || 0) - (b.order || 0));
+
+  for (const section of sorted) {
+    if (section.is_midjourney_params) {
+      for (const comp of section.components || []) {
+        if (comp.is_active === false) continue;
+        for (const attr of comp.attributes || []) {
+          if (attr.is_active === false || !attr.value) continue;
+          params.push((attr.prefix || '') + attr.value);
+        }
+      }
+      continue;
+    }
+    const sp = [];
+    for (const comp of section.components || []) {
+      if (comp.is_active === false) continue;
+      for (const attr of comp.attributes || []) {
+        if (attr.is_active === false || (!attr.value && attr.value !== 0)) continue;
+        const _v = String(attr.value).trim().toLowerCase();
+        if (_v === 'none' || _v === '없음' || _v === 'n/a' || _v === '-' || _v === '') continue;
+        let v = Array.isArray(attr.value) ? attr.value.join(', ') : String(attr.value);
+        if (attr.weight?.enabled && attr.weight.value !== 1) v += '::' + attr.weight.value;
+        sp.push(v);
+      }
+    }
+    if (sp.length) parts.push(sp.join(sep));
+  }
+
+  let prompt = parts.join(secSep);
+  if (tpl.global_settings?.remove_duplicates) {
+    const words = prompt.split(',').map(s => s.trim()).filter(Boolean);
+    prompt = [...new Set(words)].join(', ');
+  }
+  if (params.length) prompt += ' ' + params.join(' ');
+  return prompt;
+}
+
+function generateVideoPrompt(imgPrompt) {
+  return '';
+}
+
+// ═══════════════════════════════════════════
+//  DISPLAY VALUE (Korean preferred)
+// ═══════════════════════════════════════════
+function getDisplayValue(attr) {
+  if (attr.value_ko) return attr.value_ko;
+  const v = Array.isArray(attr.value) ? attr.value.join(', ') : String(attr.value || '');
+  if (!attr.options) return v;
+  const opt = attr.options.find(o => typeof o === 'string' ? o === v : o.value === v);
+  if (!opt) return v;
+  if (typeof opt === 'string') return opt;
+  return opt.label_ko || opt.label || opt.value;
+}
+
+// ═══════════════════════════════════════════
+//  UPDATE ATTRIBUTE
+// ═══════════════════════════════════════════
+function updateAttr(sectionId, compId, attrId, newVal) {
+  const tpl = JSON.parse(JSON.stringify(template));
+  const s = tpl.prompt_sections.find(s => s.section_id === sectionId);
+  const c = s?.components.find(c => c.component_id === compId);
+  const a = c?.attributes.find(a => a.attr_id === attrId);
+  if (a) {
+    a.value = newVal;
+    template = tpl;
+    saveCache();
+    refreshPrompts();
+  }
+}
+
+
+function autoResizeTextarea(el) {
+  el.style.height = 'auto';
+  el.style.height = el.scrollHeight + 'px';
+}
+
+function refreshPrompts() {
+  const img = generatePromptString(template);
+  const el = document.getElementById('imgPromptOut');
+  el.value = img;
+  autoResizeTextarea(el);
+}
+
+// ═══════════════════════════════════════════
+//  COPY
+// ═══════════════════════════════════════════
+function copyPrompt() {
+  const el = document.getElementById('imgPromptOut');
+  navigator.clipboard.writeText(el.value).then(() => showToast('복사됨!'));
+}
+
+function copyText(text) {
+  navigator.clipboard.writeText(text).then(() => showToast('복사됨!'));
+}
+
+async function pasteText(sectionId, compId, attrId) {
+  try {
+    const text = await navigator.clipboard.readText();
+    if (text) {
+      updateAttr(sectionId, compId, attrId, text);
+      renderEditor();
+    }
+  } catch(e) { showToast('클립보드 접근 불가'); }
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+// ═══════════════════════════════════════════
+//  NORMALIZE TEMPLATE
+// ═══════════════════════════════════════════
+const COMP_MAP = {
+  comp_character: '캐릭터', comp_landscape: '풍경', comp_object: '사물',
+  comp_creature: '생물', comp_env: '환경', comp_camera: '카메라',
+  comp_style: '스타일', comp_outfit: '복장', comp_props: '소품',
+  comp_background: '배경', comp_lighting: '조명',
+  comp_camera_settings: '카메라 설정', comp_render: '렌더링 스타일',
+};
+
+function normalize(tpl) {
+  if (!tpl.meta_data) tpl.meta_data = {};
+  if (!tpl.global_settings) tpl.global_settings = { prompt_separator: ', ', section_separator: ', ', auto_capitalize: false, remove_duplicates: true };
+  if (!Array.isArray(tpl.prompt_sections)) tpl.prompt_sections = [];
+  for (const s of tpl.prompt_sections) {
+    if (s.is_active === undefined) s.is_active = true;
+    if (!s.section_label_ko) s.section_label_ko = s.section_label || s.section_id;
+    for (const c of s.components || []) {
+      if (c.is_active === undefined) c.is_active = true;
+      if (!c.component_label_ko) c.component_label_ko = COMP_MAP[c.component_id] || c.component_label || c.component_id;
+      for (const a of c.attributes || []) {
+        if (a.is_active === undefined) a.is_active = true;
+        if (!a.type) a.type = 'textarea';
+      }
+    }
+  }
+  return tpl;
+}
+
+// ═══════════════════════════════════════════
+//  RENDER
+// ═══════════════════════════════════════════
+const TAB_COLORS = [
+  { dot: '#22c55e', bg: '#f0fdf4', pane: 'pane-bg0' },
+  { dot: '#3b82f6', bg: '#eff6ff', pane: 'pane-bg1' },
+  { dot: '#f59e0b', bg: '#fefce8', pane: 'pane-bg2' },
+  { dot: '#a855f7', bg: '#fdf4ff', pane: 'pane-bg3' },
+  { dot: '#ef4444', bg: '#fff1f2', pane: 'pane-bg4' },
+];
+
+function renderAll() {
+  renderSidebar();
+  renderEditor();
+  refreshPrompts();
+}
+
+function renderSidebar() {
+  const tpl = template;
+  document.getElementById('meta-name').textContent = tpl.meta_data?.template_name || '—';
+  document.getElementById('meta-ver').textContent  = tpl.meta_data?.version || '—';
+
+  // palette
+  const pal = tpl.color_palette;
+  const palSec = document.getElementById('paletteSection');
+  if (pal && (pal.primary || pal.secondary || pal.accent)) {
+    palSec.style.display = '';
+    const chips = document.getElementById('paletteChips');
+    chips.innerHTML = ['primary','secondary','accent']
+      .filter(k => pal[k])
+      .map(k => `<span class="palette-chip">${pal[k]}</span>`)
+      .join('');
+  } else { palSec.style.display = 'none'; }
+
+  // nav
+  const navList = document.getElementById('navList');
+  navList.innerHTML = (tpl.prompt_sections || []).map((s, i) => {
+    const tc = TAB_COLORS[i % TAB_COLORS.length];
+    const count = (s.components || []).reduce((n, c) => n + (c.attributes || []).length, 0);
+    return `<div class="nav-item c${i % 5} ${i === activeTab ? 'active' : ''}" onclick="switchTab(${i})">
+      <span class="nav-dot" style="background:${tc.dot}"></span>
+      <span>${s.section_label_ko || s.section_id}</span>
+      <span class="nav-count">${count}</span>
+    </div>`;
+  }).join('');
+}
+
+function renderEditor() {
+  const tpl = template;
+  const sections = tpl.prompt_sections || [];
+  const tabBar = document.getElementById('tabBar');
+  const tabContent = document.getElementById('tabContent');
+  const promptPanel = document.querySelector('.prompt-panel');
+
+  if (sections.length === 0) {
+    tabBar.innerHTML = '';
+    tabBar.style.display = 'none';
+    promptPanel.style.display = 'none';
+    tabContent.innerHTML = `<div class="empty">
+      <h3>템플릿을 로드하세요</h3>
+      <p>JSON 업로드 버튼을 클릭하여 템플릿을 불러오세요.</p>
+      <button class="btn btn-blue" onclick="document.getElementById('uploadBtn').click()">
+        JSON 업로드 시작
+      </button>
+    </div>`;
+    return;
+  }
+
+  tabBar.style.display = '';
+  promptPanel.style.display = '';
+
+  // tab bar
+  tabBar.innerHTML = sections.map((s, i) => {
+    const tc = TAB_COLORS[i % TAB_COLORS.length];
+    return `<button class="tab-btn ${i === activeTab ? 'active' : ''}" onclick="switchTab(${i})">
+      <span class="tab-dot" style="background:${tc.dot};opacity:${i===activeTab?1:.35}"></span>
+      ${s.section_label_ko || s.section_id}
+    </button>`;
+  }).join('');
+
+  tabContent.innerHTML = sections.map((s, si) => {
+    const tc = TAB_COLORS[si % TAB_COLORS.length];
+    const isActive = si === activeTab;
+    const compsHtml = (s.components || []).map(comp => {
+      if (comp.is_active === false) return '';
+      const attrsHtml = (comp.attributes || []).map(attr => {
+        const displayVal = getDisplayValue(attr);
+        const engVal = Array.isArray(attr.value) ? attr.value.join(', ') : (attr.value || '');
+        const isInactive = attr.is_active === false;
+        const isNoneVal = ['none','없음','n/a','-',''].includes(String(attr.value || '').trim().toLowerCase());
+        return `<div class="attr-card" style="opacity:${isInactive ? .55 : isNoneVal ? .45 : 1}">
+          <div class="attr-top">
+            <div class="attr-title">
+              <span style="width:6px;height:6px;border-radius:50%;background:${tc.dot};flex-shrink:0;display:inline-block"></span>
+              ${attr.label_ko || attr.label || attr.attr_id}
+              ${attr.is_locked ? `<span class="lock-badge">🔒 고정</span>` : ''}
+              ${isInactive ? `<span class="inactive-badge">비활성</span>` : ''}
+            </div>
+            <div class="attr-btns">
+              <button class="mini-btn" onclick="copyText('${engVal.replace(/'/g,"\\'")}')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                복사
+              </button>
+              <button class="mini-btn" onclick="pasteText('${s.section_id}','${comp.component_id}','${attr.attr_id}')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                붙여넣기
+              </button>
+            </div>
+          </div>
+          <div class="attr-body">
+            <div class="attr-ko">${displayVal}</div>
+            <div class="attr-sep"></div>
+            <textarea class="attr-en" rows="2"
+              placeholder="영문 값 입력..."
+              oninput="updateAttr('${s.section_id}','${comp.component_id}','${attr.attr_id}',this.value)"
+            >${engVal}</textarea>
+          </div>
+        </div>`;
+      }).join('');
+
+      return `<div class="comp-group">
+        <div class="comp-label">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="6" height="6" rx="1"/><rect x="10" y="3" width="6" height="6" rx="1"/><rect x="18" y="3" width="4" height="6" rx="1"/><rect x="2" y="13" width="6" height="8" rx="1"/><rect x="10" y="13" width="12" height="8" rx="1"/></svg>
+          ${comp.component_label_ko || comp.component_id}
+        </div>
+        <div class="comp-attrs">${attrsHtml}</div>
+      </div>`;
+    }).join('');
+
+    return `<div class="tab-pane ${tc.pane} ${isActive ? 'active' : ''}" id="pane-${si}">
+      ${compsHtml}
+    </div>`;
+  }).join('');
+}
+
+function switchTab(idx) {
+  activeTab = idx;
+  renderSidebar();
+  renderEditor();
+}
+
+// ═══════════════════════════════════════════
+//  MODAL
+// ═══════════════════════════════════════════
+document.getElementById('uploadBtn').onclick = () => {
+  document.getElementById('jsonInput').value = '';
+  document.getElementById('modalErr').style.display = 'none';
+  document.getElementById('modalBg').classList.add('open');
+};
+
+function closeModal() {
+  document.getElementById('modalBg').classList.remove('open');
+}
+document.getElementById('modalBg').onclick = (e) => { if (e.target === e.currentTarget) closeModal(); };
+
+function loadJson() {
+  const raw = document.getElementById('jsonInput').value.trim();
+  const errEl = document.getElementById('modalErr');
+  errEl.style.display = 'none';
+
+  if (!raw) { errEl.textContent = 'JSON을 입력하세요.'; errEl.style.display = ''; return; }
+
+  let cleaned = raw.replace(/^```(?:json|JSON)?\s*\n?/gm, '').replace(/\n?```\s*$/gm, '').trim();
+  let parsed;
+  try { parsed = JSON.parse(cleaned); }
+  catch(e) { errEl.textContent = `JSON 파싱 오류: ${e.message}`; errEl.style.display = ''; return; }
+
+  if (!parsed || typeof parsed !== 'object') {
+    errEl.textContent = '유효한 JSON 객체가 아닙니다.'; errEl.style.display = ''; return;
+  }
+  if (!Array.isArray(parsed.prompt_sections)) {
+    errEl.textContent = '"prompt_sections" 배열이 없습니다.'; errEl.style.display = ''; return;
+  }
+
+  template = normalize(parsed);
+  activeTab = 0;
+  saveCache();
+  closeModal();
+  renderAll();
+  showToast('템플릿 로드 완료!');
+}
+
+// ═══════════════════════════════════════════
+//  CACHE (localStorage)
+// ═══════════════════════════════════════════
+const CACHE_KEY = 'toolb_step1_template';
+
+function saveCache() {
+  try { localStorage.setItem(CACHE_KEY, JSON.stringify(template)); } catch(e) {}
+}
+
+function loadCache() {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY);
+    if (!raw) return false;
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed.prompt_sections)) return false;
+    template = normalize(parsed);
+    return true;
+  } catch(e) { return false; }
+}
+
+// ═══════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════
+loadCache();
+renderAll();
+</script>
+</body>
+</html>

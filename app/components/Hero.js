@@ -54,8 +54,7 @@ export default function Hero() {
       className="relative h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: 'url(/images/main.png)' }}
     >
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-transparent" />
 
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto w-full">
         <h1 className="text-5xl sm:text-6xl md:text-5xl lg:text-7xl font-bold mb-7 leading-tight">

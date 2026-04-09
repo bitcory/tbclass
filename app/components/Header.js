@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ChevronDown, Lock, Palette, Brush, Camera, Sun, Film, UserCircle, Star, Video, LayoutDashboard, Settings, Shield, LayoutGrid } from 'lucide-react';
+import { ChevronDown, Lock, Palette, Brush, Camera, Sun, Film, UserCircle, Star, Video, LayoutDashboard, Settings, Shield, LayoutGrid, GraduationCap } from 'lucide-react';
 import Link from 'next/link';
 import { useClerkConfigured } from './ClerkWrapper';
 import { useUser, useAuth, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
@@ -89,6 +89,7 @@ export default function Header({ alwaysScrolled = false }) {
   const [guideDropdownOpen, setGuideDropdownOpen] = useState(false);
   const [toolbDropdownOpen, setToolbDropdownOpen] = useState(false);
   const [videoDropdownOpen, setVideoDropdownOpen] = useState(false);
+  const [lectureDropdownOpen, setLectureDropdownOpen] = useState(false);
   const [showLoginAlert, setShowLoginAlert] = useState(false);
   const [showAdminModal, setShowAdminModal] = useState(false);
   const [adminPassword, setAdminPassword] = useState('');
@@ -230,6 +231,13 @@ export default function Header({ alwaysScrolled = false }) {
               )}
             </div>
 
+            <button
+              onClick={() => { setLectureDropdownOpen(true); setGuideDropdownOpen(false); setToolbDropdownOpen(false); setVideoDropdownOpen(false); }}
+              className="flex items-center gap-1 text-sm xl:text-base transition-colors font-bold whitespace-nowrap text-emerald-400 hover:text-emerald-300"
+            >
+              영상강의
+            </button>
+
             <Link href="/library" className="text-sm xl:text-base transition-colors font-semibold whitespace-nowrap text-zinc-300 hover:text-white">
               자료실
             </Link>
@@ -273,6 +281,9 @@ export default function Header({ alwaysScrolled = false }) {
           <Link href="/video-guide" className="block py-2 text-zinc-300 hover:text-emerald-400 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             영상가이드
           </Link>
+          <a href="/toolblab/main.html" target="_blank" rel="noreferrer" className="block py-2 text-emerald-400 hover:text-emerald-300 transition-colors font-bold" onClick={() => setIsMobileMenuOpen(false)}>
+            영상강의
+          </a>
           <Link href="/composition" className="block py-2 text-zinc-300 hover:text-emerald-400 transition-colors font-medium" onClick={() => setIsMobileMenuOpen(false)}>
             특수기법
           </Link>
@@ -340,6 +351,32 @@ export default function Header({ alwaysScrolled = false }) {
             >
               확인
             </button>
+          </div>
+        </div>
+      )}
+
+      {/* Lecture (영상강의) modal */}
+      {lectureDropdownOpen && (
+        <div
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fadeIn"
+          onClick={() => setLectureDropdownOpen(false)}
+        >
+          <div
+            className="relative w-[96vw] h-[94vh] bg-zinc-950 rounded-3xl shadow-2xl overflow-hidden ring-1 ring-white/[0.08]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setLectureDropdownOpen(false)}
+              className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-zinc-900/80 hover:bg-zinc-800 text-white flex items-center justify-center text-2xl leading-none transition-colors ring-1 ring-white/[0.1]"
+              aria-label="닫기"
+            >
+              ×
+            </button>
+            <iframe
+              src="/toolblab/main.html"
+              title="영상강의"
+              className="w-full h-full bg-white border-0"
+            />
           </div>
         </div>
       )}

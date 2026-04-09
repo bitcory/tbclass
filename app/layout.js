@@ -37,7 +37,17 @@ export default function RootLayout({ children }) {
   return (
     <ClerkWrapper>
       <html lang="ko">
-        <body className={`${paperlogy.variable} font-sans antialiased bg-[#050505] text-zinc-100`}>
+        <body suppressHydrationWarning className={`${paperlogy.variable} font-sans antialiased bg-[#050505] text-zinc-100`}>
+          {/*
+            Strip browser-extension attributes (Bitdefender's `bis_skin_checked`,
+            Grammarly, etc.) before React hydrates so they don't cause hydration
+            mismatches. Inline so it runs as early as possible during HTML parse.
+          */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(){var ATTRS=['bis_skin_checked','bis_register','__processed_'];function clean(el){if(!el||!el.getAttributeNames)return;var names=el.getAttributeNames();for(var i=0;i<names.length;i++){var n=names[i];for(var j=0;j<ATTRS.length;j++){if(n===ATTRS[j]||n.indexOf(ATTRS[j])===0){el.removeAttribute(n);break;}}}}function sweep(){var all=document.getElementsByTagName('*');for(var i=0;i<all.length;i++)clean(all[i]);}sweep();try{new MutationObserver(function(ms){for(var i=0;i<ms.length;i++){var m=ms[i];if(m.type==='attributes')clean(m.target);else if(m.type==='childList'&&m.addedNodes){for(var k=0;k<m.addedNodes.length;k++){var n=m.addedNodes[k];if(n.nodeType===1){clean(n);if(n.getElementsByTagName){var d=n.getElementsByTagName('*');for(var l=0;l<d.length;l++)clean(d[l]);}}}}}}).observe(document.documentElement,{attributes:true,subtree:true,childList:true});}catch(e){}})();`,
+            }}
+          />
           <AmbientBackground />
           <div className="relative z-10">
             {children}

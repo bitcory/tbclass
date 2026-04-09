@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOOLB LAB</title>
+  <style>
+    @font-face {
+      font-family: 'Paperlogy';
+      src: url('fonts/Paperlogy-1Thin.ttf') format('truetype');
+      font-weight: 100;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Paperlogy';
+      src: url('fonts/Paperlogy-2ExtraLight.ttf') format('truetype');
+      font-weight: 200;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Paperlogy';
+      src: url('fonts/Paperlogy-3Light.ttf') format('truetype');
+      font-weight: 300;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Paperlogy';
+      src: url('fonts/Paperlogy-4Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Paperlogy';
+      src: url('fonts/Paperlogy-5Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Paperlogy';
+      src: url('fonts/Paperlogy-6SemiBold.ttf') format('truetype');
+      font-weight: 600;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Paperlogy';
+      src: url('fonts/Paperlogy-7Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Paperlogy';
+      src: url('fonts/Paperlogy-8ExtraBold.ttf') format('truetype');
+      font-weight: 800;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Paperlogy';
+      src: url('fonts/Paperlogy-9Black.ttf') format('truetype');
+      font-weight: 900;
+      font-display: swap;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Paperlogy', sans-serif;
+      background: #cbd5e1;
+      padding: 16px;
+    }
+
+    /* ════════════════════════════
+       BENTO GRID — 3×3, fills viewport
+    ════════════════════════════ */
+    .bento {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .bento>* {
+      min-width: 0;
+      min-height: 0;
+    }
+
+    /* ════════════════════════════
+       CARD 1 — PRICING (Step 1)
+    ════════════════════════════ */
+    .card-pricing {
+      background: #fff;
+      padding: 22px 22px;
+      border-radius: 16px;
+      min-height: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-text-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .pricing-label {
+      font-size: clamp(10px, 0.9vw, 14px);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #008F5E;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .pricing-title {
+      font-size: clamp(26px, 2.6vw, 44px);
+      font-weight: 700;
+      color: #334155;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      text-align: center;
+    }
+
+    .pricing-price {
+      position: absolute;
+      bottom: 28px;
+      left: 20px;
+      font-size: clamp(36px, 4.2vw, 64px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      background: linear-gradient(112.34deg, #68D970 -38.67%, #00996D 99.56%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+    }
+
+    .pricing-start-btn {
+      position: absolute;
+      bottom: 34px;
+      right: 18px;
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(112.34deg, #68D970 -38.67%, #00996D 99.56%);
+      color: #fff;
+      font-size: clamp(11px, 0.9vw, 14px);
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+    }
+
+    .pricing-start-btn:hover {
+      opacity: 0.85;
+    }
+
+    /* ════════════════════════════
+       CARD — TYPEFACE
+    ════════════════════════════ */
+    .card-typeface {
+      background: linear-gradient(315.26deg, #016837 -1.15%, #00B380 101.31%);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .typeface-noise,
+    .product-noise,
+    .texture-noise {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+      background-blend-mode: overlay;
+    }
+
+    .card-typeface .typeface-label {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      font-size: clamp(10px, 0.9vw, 14px);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1;
+    }
+
+    .card-typeface .font-name {
+      position: absolute;
+      top: 42px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: clamp(26px, 2.6vw, 44px);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #fff;
+    }
+
+    .card-typeface .typeface-start-btn {
+      position: absolute;
+      bottom: 34px;
+      right: 18px;
+      display: inline-flex;
+      align-items: center;
+      background: #fff;
+      color: #00996D;
+      font-size: clamp(11px, 0.9vw, 14px);
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .card-typeface .typeface-start-btn:hover {
+      opacity: 0.85;
+    }
+
+    /* ════════════════════════════
+       ACCESS CODE MODAL
+    ════════════════════════════ */
+    .access-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      animation: modalFadeIn 0.2s ease;
+    }
+
+    .access-modal-overlay.active {
+      display: flex;
+    }
+
+    @keyframes modalFadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .access-modal {
+      background: #fff;
+      border-radius: 20px;
+      padding: 36px 32px 28px;
+      width: min(92vw, 380px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+      position: relative;
+      animation: modalSlideUp 0.25s ease;
+    }
+
+    @keyframes modalSlideUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .access-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: none;
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      font-family: inherit;
+    }
+
+    .access-modal-close:hover {
+      background: #e2e8f0;
+    }
+
+    .access-modal-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    .access-modal-desc {
+      font-size: 13px;
+      color: #64748b;
+      text-align: center;
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    .access-modal-input {
+      width: 100%;
+      padding: 14px 18px;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.2em;
+      color: #0F172A;
+      outline: none;
+      transition: border-color 0.2s;
+      font-family: inherit;
+    }
+
+    .access-modal-input:focus {
+      border-color: #00996D;
+    }
+
+    .access-modal-input.error {
+      border-color: #ef4444;
+      animation: shake 0.4s;
+    }
+
+    @keyframes shake {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-6px);
+      }
+
+      75% {
+        transform: translateX(6px);
+      }
+    }
+
+    .access-modal-error {
+      font-size: 12px;
+      color: #ef4444;
+      text-align: center;
+      margin-top: 8px;
+      min-height: 16px;
+      font-weight: 600;
+    }
+
+    .access-modal-submit {
+      width: 100%;
+      margin-top: 14px;
+      padding: 14px;
+      background: linear-gradient(112.34deg, #68D970 -38.67%, #00996D 99.56%);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      font-family: inherit;
+      letter-spacing: 0.02em;
+    }
+
+    .access-modal-submit:hover {
+      opacity: 0.9;
+    }
+
+    .card-typeface .font-sample {
+      position: absolute;
+      bottom: 28px;
+      left: 18px;
+      font-size: clamp(36px, 4.2vw, 64px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .card-typeface .color-strip {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 18px;
+      display: flex;
+    }
+
+    .card-typeface .color-strip span {
+      flex: 1;
+    }
+
+    /* ════════════════════════════
+       CARD — BUILDING (Step 3)
+    ════════════════════════════ */
+    .card-building {
+      background: #1E293B;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-building img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+    }
+
+    .card-building .building-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.35) 35%, rgba(0, 0, 0, 0.05) 60%, transparent 100%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 45%);
+      pointer-events: none;
+    }
+
+    .card-building .building-label {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      font-size: clamp(11px, 1vw, 16px);
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.95);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+      line-height: 1;
+      z-index: 2;
+    }
+
+    .card-building .building-title {
+      position: absolute;
+      top: 42px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: clamp(26px, 2.6vw, 44px);
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      z-index: 2;
+    }
+
+    .card-building .building-name {
+      position: absolute;
+      bottom: 26px;
+      left: 22px;
+      font-size: clamp(36px, 4.2vw, 64px);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      background: linear-gradient(112.34deg, #68D970 -38.67%, #00996D 99.56%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.7));
+      display: inline-block;
+      z-index: 2;
+    }
+
+    .card-building .building-start-btn {
+      position: absolute;
+      bottom: 34px;
+      right: 18px;
+      display: inline-flex;
+      align-items: center;
+      background: #fff;
+      color: #0F172A;
+      font-size: clamp(11px, 0.9vw, 14px);
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+      z-index: 2;
+    }
+
+    .card-building .building-start-btn:hover {
+      opacity: 0.85;
+    }
+
+    /* ════════════════════════════
+       CARD — PRODUCT (Step 4)
+    ════════════════════════════ */
+    .card-product {
+      background: linear-gradient(315.26deg, #016837 -1.15%, #00B380 101.31%);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-product .product-label {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      font-size: clamp(10px, 0.9vw, 14px);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1;
+      z-index: 2;
+    }
+
+    .card-product .product-name {
+      position: absolute;
+      top: 42px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: clamp(26px, 2.6vw, 44px);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #fff;
+      z-index: 2;
+    }
+
+    .card-product .product-sample {
+      position: absolute;
+      bottom: 28px;
+      left: 18px;
+      font-size: clamp(36px, 4.2vw, 64px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+      z-index: 2;
+    }
+
+    .card-product .product-start-btn {
+      position: absolute;
+      bottom: 34px;
+      right: 18px;
+      display: inline-flex;
+      align-items: center;
+      background: #fff;
+      color: #00996D;
+      font-size: clamp(11px, 0.9vw, 14px);
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+      z-index: 2;
+    }
+
+    .card-product .product-start-btn:hover {
+      opacity: 0.85;
+    }
+
+    .card-product .product-start-btn:disabled,
+    .card-phone .phone-start-btn:disabled {
+      background: rgba(255, 255, 255, 0.35);
+      color: rgba(255, 255, 255, 0.75);
+      cursor: not-allowed;
+      pointer-events: none;
+      border: none;
+      font-family: inherit;
+    }
+
+    .card-product .product-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 64%;
+      max-width: 200px;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .card-product .color-strip {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 18px;
+      display: flex;
+      z-index: 1;
+    }
+
+    .card-product .color-strip span {
+      flex: 1;
+    }
+
+    /* ════════════════════════════
+       CARD — LOGO
+    ════════════════════════════ */
+    .card-logo {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-noise {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(38.04% 63.5% at 50.11% 94.49%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+      mix-blend-mode: overlay;
+      pointer-events: none;
+    }
+
+    .logo-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-svg {
+      width: clamp(48px, 5.5vw, 92px);
+      height: auto;
+    }
+
+    .brand-name {
+      font-size: clamp(18px, 2vw, 34px);
+      font-weight: 700;
+      color: #1E293B;
+      text-align: center;
+    }
+
+    /* ════════════════════════════
+       CARD — BILLBOARD
+    ════════════════════════════ */
+    .card-billboard {
+      background: #1E293B;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-billboard img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+    }
+
+    /* ════════════════════════════
+       CARD — SLOGAN
+    ════════════════════════════ */
+    .card-slogan {
+      background: radial-gradient(95.54% 95.25% at 47.69% 52.76%, #00B380 0%, #016837 100%);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+    }
+
+    .slogan-text {
+      font-size: clamp(16px, 1.7vw, 30px);
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ball {
+      position: absolute;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #3BA838 0%, #00793F 100%);
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.15), inset 0 -6px 20px rgba(218, 255, 222, 0.1);
+    }
+
+    .ball::before {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      background: #BFEFC2;
+      opacity: 0.8;
+      top: -8%;
+      left: 15%;
+      width: 80%;
+      height: 55%;
+      filter: blur(12px);
+    }
+
+    .ball::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      background: #016837;
+      opacity: 0.5;
+      bottom: -8%;
+      left: -7%;
+      width: 100%;
+      height: 50%;
+      filter: blur(10px);
+    }
+
+    /* ════════════════════════════
+       CARD — PHONE (Step 5)
+    ════════════════════════════ */
+    .card-phone {
+      background: linear-gradient(315.26deg, #016837 -1.15%, #00B380 101.31%);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-phone .phone-noise {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+      background-blend-mode: overlay;
+    }
+
+    .card-phone .phone-label {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      font-size: clamp(10px, 0.9vw, 14px);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1;
+      z-index: 2;
+    }
+
+    .card-phone .phone-name {
+      position: absolute;
+      top: 42px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: clamp(26px, 2.6vw, 44px);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #fff;
+      z-index: 2;
+    }
+
+    .card-phone .phone-sample {
+      position: absolute;
+      bottom: 28px;
+      left: 18px;
+      font-size: clamp(36px, 4.2vw, 64px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+      z-index: 2;
+    }
+
+    .card-phone .phone-start-btn {
+      position: absolute;
+      bottom: 34px;
+      right: 18px;
+      display: inline-flex;
+      align-items: center;
+      background: #fff;
+      color: #00996D;
+      font-size: clamp(11px, 0.9vw, 14px);
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+      z-index: 2;
+    }
+
+    .card-phone .phone-start-btn:hover {
+      opacity: 0.85;
+    }
+
+    .card-phone .phone-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 64%;
+      max-width: 200px;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .card-phone .color-strip {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 18px;
+      display: flex;
+      z-index: 1;
+    }
+
+    .card-phone .color-strip span {
+      flex: 1;
+    }
+
+    /* ════════════════════════════
+       CARD — TEXTURE
+    ════════════════════════════ */
+    .card-texture {
+      background: linear-gradient(315.26deg, #016837 -1.15%, #00B380 101.31%);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-texture img {
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      left: -10%;
+      top: -10%;
+      object-fit: cover;
+      mix-blend-mode: overlay;
+      opacity: 0.25;
+      transform: rotate(1.82deg);
+    }
+
+    .watermark-wrap {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      mix-blend-mode: color-burn;
+      opacity: 0.7;
+    }
+
+    .watermark-inner {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+      transform: rotate(-90.5deg);
+    }
+
+    .watermark-logo {
+      width: clamp(22px, 2.2vw, 36px);
+      height: auto;
+      flex-shrink: 0;
+    }
+
+    .watermark-name {
+      font-size: clamp(20px, 2.4vw, 38px);
+      font-weight: 700;
+      background: linear-gradient(270deg, rgba(0, 153, 109, 0) 0%, rgba(0, 153, 109, 0.42) 100%), #2FBC39;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      white-space: nowrap;
+    }
+
+    /* ════════════════════════════
+       MOBILE / NARROW
+    ════════════════════════════ */
+    @media (max-width: 900px) {
+      body {
+        padding: 10px;
+      }
+
+      .bento {
+        gap: 10px;
+      }
+
+      .card-typeface .font-sample {
+        font-size: clamp(28px, 6vw, 46px);
+      }
+
+      .card-product .product-sample {
+        font-size: clamp(28px, 6vw, 46px);
+      }
+
+      .card-phone .phone-sample {
+        font-size: clamp(28px, 6vw, 46px);
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      html,
+      body {
+        overflow: auto;
+      }
+
+      .bento {
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, minmax(140px, auto));
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="bento">
+
+    <!-- Row 1 -->
+    <div class="card-pricing">
+      <div class="pricing-text-group">
+        <p class="pricing-label">Step 1</p>
+        <p class="pricing-title">마스터 이미지 만들기</p>
+        <p class="pricing-price">1단계</p>
+      </div>
+      <a href="/lecture/step1" target="_top" class="pricing-start-btn">시작하기 →</a>
+    </div>
+
+    <div class="card-typeface">
+      <div class="typeface-noise"></div>
+      <span class="typeface-label">Step 2</span>
+      <span class="font-name">뮤직영상만들기</span>
+      <span class="font-sample">2단계</span>
+      <button type="button" class="typeface-start-btn" onclick="openAccessModal()">시작하기 →</button>
+      <div class="color-strip">
+        <span style="background:#00B380"></span>
+        <span style="background:#68E571"></span>
+        <span style="background:#fff"></span>
+        <span style="background:#1E293B"></span>
+      </div>
+    </div>
+
+    <div class="card-building">
+      <img src="/images/3class.jpg?v=4" alt="STEP 3 씨네마틱 영상" />
+      <div class="building-overlay"></div>
+      <span class="building-label">Step 3</span>
+      <span class="building-title">인트로영상만들기</span>
+      <span class="building-name">3단계</span>
+      <a href="/lecture/step3" target="_top" class="building-start-btn">시작하기 →</a>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="card-product">
+      <div class="product-noise"></div>
+      <img class="product-image" src="/images/ganggo.png" alt="광고영상 제작" />
+      <span class="product-label">Step 4</span>
+      <span class="product-name">광고영상 제작</span>
+      <span class="product-sample">4단계</span>
+      <button type="button" class="product-start-btn" disabled>준비중</button>
+      <div class="color-strip">
+        <span style="background:#00B380"></span>
+        <span style="background:#68E571"></span>
+        <span style="background:#fff"></span>
+        <span style="background:#1E293B"></span>
+      </div>
+    </div>
+
+    <div class="card-logo">
+      <div class="logo-noise"></div>
+      <div class="logo-center">
+        <svg class="logo-svg" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="12" fill="#00996D" />
+          <circle cx="80" cy="12" r="12" fill="#00996D" />
+          <circle cx="80" cy="80" r="12" fill="#00996D" />
+          <rect x="1" y="25" width="40" height="40" rx="10" fill="#68D970" />
+          <rect x="51" y="25" width="40" height="40" rx="10" fill="#68D970" />
+          <rect x="26" y="51" width="40" height="40" rx="10" fill="#00996D" />
+          <line x1="10" y1="50" x2="31" y2="29" stroke="white" stroke-width="2" />
+          <line x1="61" y1="50" x2="82" y2="29" stroke="white" stroke-width="2" />
+          <line x1="36" y1="80" x2="56" y2="60" stroke="white" stroke-width="2" />
+        </svg>
+        <p class="brand-name">TOOLB LAB</p>
+      </div>
+    </div>
+
+    <div class="card-phone">
+      <div class="phone-noise"></div>
+      <img class="phone-image" src="/images/youtube.png?v=2" alt="유튜브 수익화" />
+      <span class="phone-label">Step 5</span>
+      <span class="phone-name">유튜브 수익화과정</span>
+      <span class="phone-sample">5단계</span>
+      <button type="button" class="phone-start-btn" disabled>준비중</button>
+      <div class="color-strip">
+        <span style="background:#00B380"></span>
+        <span style="background:#68E571"></span>
+        <span style="background:#fff"></span>
+        <span style="background:#1E293B"></span>
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="card-billboard">
+      <img src="https://www.figma.com/api/mcp/asset/abaed19c-18e9-4ecd-82ca-717a35e4d04a" alt="Billboard Mockup" />
+    </div>
+
+    <div class="card-slogan">
+      <div class="ball" style="width:42%;height:60%;right:-12%;top:-8%;filter:blur(4px);opacity:0.9;"></div>
+      <div class="ball" style="width:26%;height:36%;right:32%;bottom:-18%;filter:blur(5.5px);opacity:0.85;"></div>
+      <div class="ball" style="width:6%;height:9%;left:65%;bottom:18%;filter:blur(2px);opacity:0.9;"></div>
+      <div class="ball" style="width:4%;height:6%;left:5%;top:25%;filter:blur(3px);opacity:0.9;"></div>
+      <p class="slogan-text">Connecting Ideas,<br />Empowering Innovation</p>
+    </div>
+
+    <div class="card-texture">
+      <div class="texture-noise"></div>
+      <img src="https://www.figma.com/api/mcp/asset/f5fcf006-5d25-47ce-8f78-70acda162942" alt="Texture" />
+      <div class="watermark-wrap">
+        <div class="watermark-inner">
+          <svg class="watermark-logo" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#09CD95" />
+            <circle cx="80" cy="12" r="12" fill="#09CD95" />
+            <circle cx="80" cy="80" r="12" fill="#00996D" />
+            <rect x="1" y="25" width="40" height="40" rx="10" fill="#68D970" />
+            <rect x="51" y="25" width="40" height="40" rx="10" fill="#68D970" />
+            <rect x="26" y="51" width="40" height="40" rx="10" fill="#00996D" />
+          </svg>
+          <span class="watermark-name"></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Access Code Modal -->
+  <div class="access-modal-overlay" id="accessModal" onclick="handleOverlayClick(event)">
+    <div class="access-modal" onclick="event.stopPropagation()">
+      <button type="button" class="access-modal-close" onclick="closeAccessModal()" aria-label="닫기">×</button>
+      <h3 class="access-modal-title">접속코드 입력</h3>
+      <p class="access-modal-desc">2단계 강의를 시작하려면<br />접속코드를 입력해주세요.</p>
+      <input type="text" class="access-modal-input" id="accessCodeInput" placeholder="접속코드" maxlength="20"
+        autocomplete="off" onkeydown="handleKeyDown(event)" oninput="clearError()" />
+      <div class="access-modal-error" id="accessCodeError"></div>
+      <button type="button" class="access-modal-submit" onclick="submitAccessCode()">확인</button>
+    </div>
+  </div>
+
+  <script>
+    const ACCESS_CODE = '0410';
+    const STEP2_URL = '/lecture/step2';
+
+    function openAccessModal() {
+      const modal = document.getElementById('accessModal');
+      modal.classList.add('active');
+      const input = document.getElementById('accessCodeInput');
+      input.value = '';
+      clearError();
+      setTimeout(() => input.focus(), 50);
+    }
+
+    function closeAccessModal() {
+      document.getElementById('accessModal').classList.remove('active');
+      clearError();
+    }
+
+    function handleOverlayClick(e) {
+      if (e.target.id === 'accessModal') closeAccessModal();
+    }
+
+    function handleKeyDown(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        submitAccessCode();
+      } else if (e.key === 'Escape') {
+        closeAccessModal();
+      }
+    }
+
+    function clearError() {
+      const input = document.getElementById('accessCodeInput');
+      const error = document.getElementById('accessCodeError');
+      input.classList.remove('error');
+      error.textContent = '';
+    }
+
+    function showError(msg) {
+      const input = document.getElementById('accessCodeInput');
+      const error = document.getElementById('accessCodeError');
+      input.classList.add('error');
+      error.textContent = msg;
+    }
+
+    function submitAccessCode() {
+      const input = document.getElementById('accessCodeInput');
+      const value = input.value.trim();
+      if (!value) {
+        showError('접속코드를 입력해주세요.');
+        return;
+      }
+      if (value === ACCESS_CODE) {
+        if (window.top && window.top !== window.self) {
+          window.top.location.href = STEP2_URL;
+        } else {
+          window.location.href = STEP2_URL;
+        }
+      } else {
+        showError('접속코드가 올바르지 않습니다.');
+      }
+    }
+  </script>
+
+</body>
+
+</html>
