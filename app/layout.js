@@ -19,7 +19,7 @@ const paperlogy = localFont({
 });
 
 // ─── Site constants ─────────────────────────────────────
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://tbplus.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://tbc.aitoolb.com';
 const SITE_NAME = 'TBPLUS';
 const SITE_TITLE = 'TB의 영상제작소 TBPLUS';
 const SITE_DESCRIPTION =
