@@ -521,6 +521,9 @@
       letter-spacing: 0.02em;
       transition: opacity 0.2s;
       z-index: 2;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
     }
 
     .card-building .building-start-btn:hover {
@@ -1029,7 +1032,7 @@
       <span class="typeface-label">Step 2</span>
       <span class="font-name">뮤직영상만들기</span>
       <span class="font-sample">2단계</span>
-      <button type="button" class="typeface-start-btn" onclick="openAccessModal()">시작하기 →</button>
+      <button type="button" class="typeface-start-btn" onclick="openAccessModal('step2')">시작하기 →</button>
       <div class="color-strip">
         <span style="background:#00B380"></span>
         <span style="background:#68E571"></span>
@@ -1044,7 +1047,7 @@
       <span class="building-label">Step 3</span>
       <span class="building-title">인트로영상만들기</span>
       <span class="building-name">3단계</span>
-      <a href="/lecture/step3" target="_top" class="building-start-btn">시작하기 →</a>
+      <button type="button" class="building-start-btn" onclick="openAccessModal('step3')">시작하기 →</button>
     </div>
 
     <!-- Row 2 -->
@@ -1134,7 +1137,7 @@
     <div class="access-modal" onclick="event.stopPropagation()">
       <button type="button" class="access-modal-close" onclick="closeAccessModal()" aria-label="닫기">×</button>
       <h3 class="access-modal-title">접속코드 입력</h3>
-      <p class="access-modal-desc">2단계 강의를 시작하려면<br />접속코드를 입력해주세요.</p>
+      <p class="access-modal-desc" id="accessModalDesc">강의를 시작하려면<br />접속코드를 입력해주세요.</p>
       <input type="text" class="access-modal-input" id="accessCodeInput" placeholder="접속코드" maxlength="20"
         autocomplete="off" onkeydown="handleKeyDown(event)" oninput="clearError()" />
       <div class="access-modal-error" id="accessCodeError"></div>
@@ -1143,10 +1146,28 @@
   </div>
 
   <script>
-    const ACCESS_CODE = '0410';
-    const STEP2_URL = '/lecture/step2';
+    // Step-specific access codes and targets
+    const ACCESS_CODES = {
+      step2: '0410',
+      step3: '0411',
+    };
+    const STEP_URLS = {
+      step2: '/lecture/step2',
+      step3: '/lecture/step3',
+    };
+    const STEP_LABELS = {
+      step2: '2단계',
+      step3: '3단계',
+    };
 
-    function openAccessModal() {
+    let pendingStep = null;
+
+    function openAccessModal(step) {
+      pendingStep = step;
+      const label = STEP_LABELS[step] || '';
+      const desc = document.getElementById('accessModalDesc');
+      desc.innerHTML = `${label} 강의를 시작하려면<br />접속코드를 입력해주세요.`;
+
       const modal = document.getElementById('accessModal');
       modal.classList.add('active');
       const input = document.getElementById('accessCodeInput');
@@ -1157,6 +1178,7 @@
 
     function closeAccessModal() {
       document.getElementById('accessModal').classList.remove('active');
+      pendingStep = null;
       clearError();
     }
 
@@ -1194,11 +1216,17 @@
         showError('접속코드를 입력해주세요.');
         return;
       }
-      if (value === ACCESS_CODE) {
+      const expected = ACCESS_CODES[pendingStep];
+      const targetUrl = STEP_URLS[pendingStep];
+      if (!expected || !targetUrl) {
+        showError('알 수 없는 단계입니다.');
+        return;
+      }
+      if (value === expected) {
         if (window.top && window.top !== window.self) {
-          window.top.location.href = STEP2_URL;
+          window.top.location.href = targetUrl;
         } else {
-          window.location.href = STEP2_URL;
+          window.location.href = targetUrl;
         }
       } else {
         showError('접속코드가 올바르지 않습니다.');
