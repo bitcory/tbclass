@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import {
   ArrowLeft, Upload, Copy, Clipboard, ExternalLink, Gem, X,
-  Clapperboard, Image as ImageIcon, Film, Layers, Palette, List,
+  Clapperboard, Image as ImageIcon, Film, Layers, Palette, List, Music,
 } from 'lucide-react';
 
 const CACHE_KEY = 'toolb_step3_intro';
@@ -422,7 +422,7 @@ export default function Step3Page() {
           )}
 
           {/* Gem guide */}
-          <div className="p-4">
+          <div className="p-4 space-y-2">
             <div className="flex items-center gap-1.5 mb-2.5 text-[12px] font-bold uppercase tracking-wider text-zinc-500">
               <Gem className="w-3.5 h-3.5" />
               젬 가이드
@@ -435,6 +435,15 @@ export default function Step3Page() {
             >
               <ExternalLink className="w-4 h-4" />
               3단계 젬 가이드 열기
+            </a>
+            <a
+              href="https://gemini.google.com/gem/1Wy6XhDIfeb1rO9AiYYDMdc6-wDoixF60?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center gap-1.5 w-full px-3 py-2 rounded-lg bg-rose-500/15 hover:bg-rose-500/25 border border-rose-500/30 text-rose-300 text-sm font-bold transition-colors"
+            >
+              <Music className="w-4 h-4" />
+              음악만들기
             </a>
           </div>
         </aside>
